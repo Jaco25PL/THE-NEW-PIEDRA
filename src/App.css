@@ -1,42 +1,228 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+
+@font-face {
+  font-family: "SabonNext";
+  src: url("/fonts/SabonNextLT.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Italic */
+@font-face {
+  font-family: "SabonNext";
+  src: url("/fonts/SabonNextLTItalic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Bold */
+@font-face {
+  font-family: "SabonNext";
+  src: url("/fonts/SabonNextLTBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Bold Italic */
+@font-face {
+  font-family: "SabonNext";
+  src: url("/fonts/SabonNextLTBoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
 }
 
-.card {
-  padding: 2em;
+/* Global resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.read-the-docs {
-  color: #888;
+body {
+  font-family: "SabonNext", serif;
+  font-weight: 400;
+  background-color: #fff;
+  color: #000;
+}
+
+/* Container to hold everything */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 80px;
+  background-color: #fff;
+}
+
+/* Left side: social icons in a row */
+.header-left {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+/* Center: main logo block */
+.header-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Adjust as needed to match your actual SVG size */
+.main-logo {
+  height: 50px;
+  width: auto;
+}
+
+/* Right side: nav + contact button */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Nav menu */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+/* Contact button */
+.contact-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+
+
+/* MAIN CONTENT: Split images */
+.main-content {
+  flex: 1;
+}
+
+/* Container that splits into two halves */
+.split-container {
+  display: flex;
+  flex-direction: row;  
+  max-width: 100%;
+  height: 70vh;
+  overflow: hidden;
+}
+
+
+.split-image {
+  position: relative;
+  max-width: 50%;
+  overflow: hidden;
+}
+
+.split-image img {
+  display: block;
+  width: 100%;
+}
+
+.split-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  backdrop-filter: blur(5px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.split-image:hover::before {
+  opacity: 1;
+}
+
+.split-image h2 {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+
+/* --- */
+
+/* .split-image {
+  position: relative;
+  max-width: 50%;
+  overflow: hidden;
+  display: flex;
+}
+
+.split-image img {
+  transition: filter 0.3s ease;
+}
+
+.split-image:hover img {
+  filter: blur(5px);
+}
+
+.split-image h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  font-weight: 400;
+} */
+
+
+
+
+/* FOOTER */
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 1rem 2rem;
+}
+
+.footer-top,
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0;
+}
+
+/* Simple link style in the footer */
+.footer-bottom a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 0.5rem;
 }
