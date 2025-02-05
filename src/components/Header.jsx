@@ -3,55 +3,37 @@ import '../App.css';
 export function Header() {
 
     return (
-        <header className="header">
-        {/* Left: social media icons */}
-        <div className="header-left">
-          {/* Inline <img> tags, or you could inline the SVG code directly */}
-          <a href="#facebook">
-            <img
-              src="./facebook_logo.svg"
-              alt="Facebook Icon"
-              className="social-icon"
-            />
-          </a>
-          <a href="#instagram">
-            <img
-              src="./Instagram_logo.svg"
-              alt="Instagram Icon"
-              className="social-icon"
-            />
-          </a>
-          <a href="#youtube">
-            <img
-              src="./youtube_logo.svg"
-              alt="YouTube Icon"
-              className="social-icon"
-            />
-          </a>
-        </div>
+        <header className="header-container">
+            <nav className="header-grid">
+              {/* 1) First column: Social icons (subdivided into three) */}
+              <div className="column social-column">
+                <img src="./images/instagram-logo.svg" alt="Instagram" />
+                <img src="./images/facebook-logo.svg" alt="Facebook" />
+                <img src="./images/youtube-logo.svg" alt="YouTube" />
+              </div>
 
-        {/* Center: main logo */}
-        <div className="header-center">
-          {/* The “PIEDRA Construcciones” black block logo. */}
-          <a href="#home">
-            <img
-              src="./piedra_logo.svg"
-              alt="Piedra Construcciones"
-              className="main-logo"
-            />
-          </a>
-        </div>
+              {/* 2) Second column */}
+              <div className="column"><a>HISTORIA</a> </div>
 
-        {/* Right: nav links + contact button */}
-        <nav className="header-right">
-          <ul className="nav-menu">
-            <li><a href="#historia">HISTORIA</a></li>
-            <li><a href="#construcciones">CONSTRUCCIONES</a></li>
-            <li><a href="#remodelaciones">REMODELACIONES</a></li>
-            <li><a href="#blog">BLOG</a></li>
-          </ul>
-          <button className="contact-btn">CONTACTAR</button>
-        </nav>
-      </header>
+              {/* 3) Third column */}
+              <div className="column"><a>CONSTRUCCIONES</a> </div>
+
+              {/* 4) Fourth column (Center - your logo, for example) */}
+              <div className="column logo-column">
+                <img className="main-logo" src="./images/piedra_logo-2.svg" alt="Piedra Construcciones" />
+              </div>
+
+              {/* 5) Fifth column */}
+              <div className="column"><a>REMODELACIONES</a> </div>
+
+              {/* 6) Sixth column */}
+              <div className="column"><a>BLOG</a> </div>
+
+              {/* 7) Seventh column: “Contactar” button */}
+              <div className="column">
+                <button type="button" className="contact-button">CONTACTAR</button>
+              </div>
+            </nav>
+        </header>
     )
 }

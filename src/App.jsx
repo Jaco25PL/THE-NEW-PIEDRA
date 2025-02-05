@@ -11,13 +11,10 @@ function App() {
 
   return (
     <div className="app-container">
-      {/* HEADER */}
       <Header/>
 
-      {/* MAIN CONTENT: Split images */}
       <Main/>
 
-      {/* FOOTER */}
       <Footer/>
     </div>
   )

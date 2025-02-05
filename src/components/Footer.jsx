@@ -5,22 +5,25 @@ export function Footer() {
     return (
 
     <footer className="footer">
-        <div className="footer-top">
-          <span>+598 091 234 567</span>
+
+        <div className="footer-section footer-top">
+          <a href="#whatsapp">+598 091 234 567</a>
           <span>|</span>
-          <span>piedraconstruy@gmail.com</span>
+          <a href="#mail">piedraconstr.uy@gmail.com</a>
           <span>|</span>
-          <span>Preguntas Frecuentes</span>
+          <a href="#q&a">Preguntas Frecuentes</a>
         </div>
-        <div className="footer-bottom">
+
+        <div className="footer-section footer-bottom">
           <a href="#tos">Terms of Service</a>
           <span>|</span>
           <a href="#privacy">Privacy Policy</a>
           <span>|</span>
           <a href="#contactar">Contactar</a>
           <span>|</span>
-          <span>Copyright © 2025 Piedra Construcciones</span>
+          <a href="#copyright">Copyright © 2025 Piedra Construcciones</a>
         </div>
+
       </footer>
     )
     
