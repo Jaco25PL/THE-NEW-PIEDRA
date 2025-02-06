@@ -1,21 +1,22 @@
 import '../App.css';
+import styles from '../styles/Main.module.css';
 
 export function Main() {
 
     return (
-        <main className="main-content">
-          <section className="split-container">
+        <main className={styles.mainContent}>
+          <section className={styles.splitContainer}>
             {/* Left half: Construcciones */}
-            <div className="split-image left-image">
-              <img className="image" src="./images/sample-house-1.jpg" alt="sample house" />
-              <h2>CONSTRUCCIONES</h2>
-            </div>
+            <a href='#' className={`${styles.splitImage} ${styles.leftImage}`}>
+              <img className={styles.image} src="./images/sample-house-1.jpg" alt="sample house" />
+              <h2>CONSTRUIR</h2>
+            </a >
 
             {/* Right half: Remodelaciones */}
-            <div className="split-image right-image">
-              <img className="image" src="./images/sample-house-2.jpg" alt="sample house" />
-              <h2>REMODELACIONES</h2>
-            </div>
+            <a href='#' className={`${styles.splitImage} ${styles.rightImage}`}>
+              <img className={styles.image} src="./images/sample-house-2.jpg" alt="sample house" />
+              <h2>REMODELAR</h2>
+            </a >
           </section>
         </main>
     )

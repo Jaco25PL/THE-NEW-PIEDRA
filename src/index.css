@@ -1,68 +1,238 @@
-/* :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* RESET AND GLOBAL STYLES */
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+:root {
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-a:hover {
-  color: #535bf2;
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  background-color: #fff;
+  color: #000;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+
+/* SABON NEXT FONTS */
+@font-face {
+  font-family: "SabonNext";
+  src: url("./assets/fonts/SabonNext/SabonNextLT.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+/* Sabon Bold */
+@font-face {
+  font-family: "SabonNext";
+  src: url("./assets/fonts/SabonNext/SabonNextLTBold.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Sabon Italic */
+@font-face {
+  font-family: "SabonNext";
+  src: url("./assets/fonts/SabonNext/SabonNextLTItalic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Bold Italic Bold*/
+@font-face {
+  font-family: "SabonNext";
+  src: url("./assets/fonts/SabonNext/SabonNextLTBoldItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* MONTSERRAT */
+/* Montserrat Thin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 100;
+  src: url('./assets/fonts/Montserrat/Montserrat-Thin.ttf') format('truetype');
+}
+
+/* Montserrat Thin Italic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 100;
+  src: url('./assets/fonts/Montserrat/Montserrat-ThinItalic.ttf') format('truetype');
+}
+
+/* Montserrat ExtraLight */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 200;
+  src: url('./assets/fonts/Montserrat/Montserrat-ExtraLight.ttf') format('truetype');
+}
+
+/* Montserrat ExtraLight Italic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 200;
+  src: url('./assets/fonts/Montserrat/Montserrat-ExtraLightItalic.ttf') format('truetype');
+}
+
+/* Montserrat Light */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./assets/fonts/Montserrat/Montserrat-Light.ttf') format('truetype');
+}
+
+/* Montserrat Light Italic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 300;
+  src: url('./assets/fonts/Montserrat/Montserrat-LightItalic.ttf') format('truetype');
+}
+
+/* Montserrat Regular */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+}
+
+/* Montserrat Italic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 400;
+  src: url('./assets/fonts/Montserrat/Montserrat-Italic.ttf') format('truetype');
+}
+
+/* Montserrat Medium */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  src: url('./assets/fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
+/* Montserrat Medium Italic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 500;
+  src: url('./assets/fonts/Montserrat/Montserrat-MediumItalic.ttf') format('truetype');
+}
+
+/* Montserrat SemiBold */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./assets/fonts/Montserrat/Montserrat-SemiBold.ttf') format('truetype');
+}
+
+/* Montserrat SemiBold Italic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 600;
+  src: url('./assets/fonts/Montserrat/Montserrat-SemiBoldItalic.ttf') format('truetype');
+}
+
+/* Montserrat Bold */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./assets/fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
+}
+
+/* Montserrat Bold Italic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 700;
+  src: url('./assets/fonts/Montserrat/Montserrat-BoldItalic.ttf') format('truetype');
+}
+
+/* Montserrat ExtraBold */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  src: url('./assets/fonts/Montserrat/Montserrat-ExtraBold.ttf') format('truetype');
+}
+
+/* Montserrat ExtraBold Italic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 800;
+  src: url('./assets/fonts/Montserrat/Montserrat-ExtraBoldItalic.ttf') format('truetype');
+}
+
+/* Montserrat Black */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 900;
+  src: url('./assets/fonts/Montserrat/Montserrat-Black.ttf') format('truetype');
+}
+
+/* Montserrat Black Italic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 900;
+  src: url('./assets/fonts/Montserrat/Montserrat-BlackItalic.ttf') format('truetype');
+}
+
+/* TAI HERITAGE FONTS */
+/* Tai Heritage Regular */
+@font-face {
+  font-family: 'TaiHeritage';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/TaiHeritage/TaiHeritagePro-Regular.ttf') format('truetype');
+}
+
+/* Tai Heritage Bold */
+@font-face {
+  font-family: 'TaiHeritage';
+  font-style: normal;
+  font-weight: 900;
+  src: url('./assets/fonts/TaiHeritage/TaiHeritagePro-Bold.ttf') format('truetype');
+}
+
+/* LINUX LIBERTINE FONTS */
+/* Linux Regular */
+@font-face {
+  font-family: 'LinuxLibertine';
+  font-weight: 400;
+  font-style: normal;
+  src: url('./assets/fonts/LinuxLibertineO/LinLibertine_DR.otf') format('opentype');
+}
+
+/* Linux Bold */
+@font-face {
+  font-family: 'LinuxLibertine';
+  font-weight: 400;
+  font-style: bold;
+  src: url('./assets/fonts/LinuxLibertineO/LinLibertine_M.otf') format('opentype');
+}

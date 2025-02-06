@@ -3,6 +3,7 @@
 // import youtubeIcon from "./assets/youtube.svg";
 // import mainLogo from "./assets/main-logo.svg";
 import './App.css'
+import styles from './styles/App.module.css'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 import { Main } from './components/Main'
@@ -10,7 +11,7 @@ import { Main } from './components/Main'
 function App() {
 
   return (
-    <div className="app-container">
+    <div className={styles.appContainer}>
       <Header/>
 
       <Main/>

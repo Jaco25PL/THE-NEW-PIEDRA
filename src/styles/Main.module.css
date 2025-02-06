@@ -1,0 +1,73 @@
+.mainContent {
+    width: 100%;
+    height: 90vh;
+  }
+  
+  .splitContainer {
+    display: flex;
+    flex-direction: row;  
+    max-width: 100%;
+    height: 100%;
+  }
+  
+  .splitImage::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,   a   A0, 0, 0);
+    backdrop-filter: blur(0px);
+    backdrop-filter: inherit;
+    transition: all 0.5s ease;
+    z-index: 2;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+  }
+  
+  .splitImage:hover::before {
+    backdrop-filter: blur(10px); 
+  }
+  
+  .splitImage::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease;
+    z-index: 4;
+    background-image: url('./images/noise.png');
+  }
+  
+  .splitImage:hover::after {
+    opacity: 1;
+  }
+  
+  
+  .splitImage {
+    position: relative;
+    max-width: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .splitImage h2  {
+    position: absolute;
+    z-index: 6; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: 300;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+  } 
