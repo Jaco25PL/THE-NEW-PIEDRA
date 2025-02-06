@@ -56,18 +56,75 @@
     justify-content: center;
   }
   
-  .splitImage h2  {
+  .content    {
     position: absolute;
     z-index: 6; 
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
-    font-size: 2rem;
     letter-spacing: 2px;
     font-weight: 300;
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
-  } 
+    text-align: center  ;
+  }
+  
+.content h2 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+/* .reveal {
+  visibility: hidden;
+  opacity: 0;
+  
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+.splitImage:hover .reveal {
+  visibility: visible;
+  opacity: 1;
+  
+} */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  -webkit-transition: transform 0.5s ease, opacity 0.5s ease;
+  -moz-transition: transform 0.5s ease, opacity 0.5s ease;
+  -ms-transition: transform 0.5s ease, opacity 0.5s ease;
+  -o-transition: transform 0.5s ease, opacity 0.5s ease;
+  -webkit-transform: translateY(20px);
+  -moz-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  -o-transform: translateY(20px);
+}
+
+.splitImage:hover .reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.content h2 {
+  transition: transform 0.5s ease;
+  -webkit-transition: transform 0.5s ease;
+  -moz-transition: transform 0.5s ease;
+  -ms-transition: transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+}
+
+.splitImage:hover .content h2 {
+  transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
+}

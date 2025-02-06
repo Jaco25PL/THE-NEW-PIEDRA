@@ -23,7 +23,8 @@ export function Header() {
               {/* 4) Fourth column (Center - your logo, for example) */}
               <div className={`${styles.column} ${styles.logoColomn}`}>
                 <a href="#">
-                    <img className={styles.mainLogo} src="./images/piedra_logo-2.svg" alt="Piedra Construcciones" />
+                    <img className={styles.mainLogo} src="./images/PIEDRA-B.svg" alt="Piedra Construcciones" />
+                    {/* <img className={styles.mainLogo} src="./images/piedra_logo-2.svg" alt="Piedra Construcciones" /> */}
                 </a>
               </div>
 

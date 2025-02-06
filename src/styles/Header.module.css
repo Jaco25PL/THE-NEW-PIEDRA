@@ -60,6 +60,8 @@
   height: 6rem;  
   width: auto;
   margin: 0 5rem;
+  background-color: #000;
+  /* padding: 1.2rem 2rem; */
 }
 
 .contactButton {
@@ -81,4 +83,21 @@
 
 .contactButton:hover {
   background-color: #d1b371;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .headerGrid {
+    display: none;
+    flex-direction: column;
+  }
+
+  .column {
+    font-size: .7rem;
+  }
+
+  .mainLogo {
+    margin: 0;
+  }
 }

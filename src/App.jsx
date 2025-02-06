@@ -1,7 +1,3 @@
-// import facebookIcon from "./pfacebook_logo.svg";
-// import instagramIcon from "./assets/instagram.svg";
-// import youtubeIcon from "./assets/youtube.svg";
-// import mainLogo from "./assets/main-logo.svg";
 import './App.css'
 import styles from './styles/App.module.css'
 import { Footer } from './components/Footer'
