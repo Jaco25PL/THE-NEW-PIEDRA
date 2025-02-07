@@ -34,7 +34,7 @@
   font-weight: 600;
 }
 
-.socialColumn {
+/* .socialColumn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,7 +54,7 @@
 
 .socialColumn img:hover {
   background-color: #d1b371;
-}
+} */
 
 .mainLogo{
   height: 6rem;  
@@ -62,6 +62,10 @@
   margin: 0 5rem;
   background-color: #000;
   /* padding: 1.2rem 2rem; */
+}
+
+.mainLogoBlack {
+  display: block;
 }
 
 .contactButton {
@@ -85,19 +89,20 @@
   background-color: #d1b371;
 }
 
+.mobileNavContainer{
+  display: none;
+}
+
+
 /* MOBILE */
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
+  
   .headerGrid {
     display: none;
-    flex-direction: column;
   }
-
-  .column {
-    font-size: .7rem;
-  }
-
-  .mainLogo {
-    margin: 0;
+  
+  .mobileNavContainer {
+    display: block;
   }
 }

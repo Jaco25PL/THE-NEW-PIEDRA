@@ -1,18 +1,15 @@
 import '../App.css';
 import styles from '../styles/Header.module.css'
+import { Social } from './Social';
+import { MobileNav } from './MobileNav';
 
 export function Header() {
 
     return (
         <header className={styles.headerContainer}>
             <nav className={styles.headerGrid}>
-              <div className={`${styles.socialColumn} ${styles.column}`}>
-
-                <a href="http://" target="_blank" ><img src="./images/instagram-logo.svg" alt="Instagram" /></a>
-                <a href="http://" target="_blank" ><img src="./images/facebook-logo.svg" alt="Facebook" /></a>
-                <a href="http://" target="_blank" ><img src="./images/youtube-logo.svg" alt="YouTube" /></a>        
-                
-              </div>
+  
+              <Social />
 
               {/* 2) Second column */}
               <div className={styles.column}><a href='#'>HISTORIA</a> </div>
@@ -23,8 +20,8 @@ export function Header() {
               {/* 4) Fourth column (Center - your logo, for example) */}
               <div className={`${styles.column} ${styles.logoColomn}`}>
                 <a href="#">
-                    <img className={styles.mainLogo} src="./images/PIEDRA-B.svg" alt="Piedra Construcciones" />
-                    {/* <img className={styles.mainLogo} src="./images/piedra_logo-2.svg" alt="Piedra Construcciones" /> */}
+                    <img className={`${styles.mainLogo} ${styles.mainLogoBlack}`} src="./images/PIEDRA-B.svg" alt="Piedra Construcciones" />
+                    {/* <img className={`${styles.mainLogo} ${styles.mainLogoWhtie}`} src="./images/PIEDRA-W.svg" alt="Piedra Construcciones" /> */}
                 </a>
               </div>
 
@@ -39,6 +36,11 @@ export function Header() {
                 <button type="button" className={styles.contactButton}>CONTACTAR</button>
               </div>
             </nav>
+
+            <div className={styles.mobileNavContainer}>
+              <MobileNav />
+            </div>
+
         </header>
     )
 }

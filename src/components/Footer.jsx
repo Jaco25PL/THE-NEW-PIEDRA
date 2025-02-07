@@ -1,5 +1,6 @@
 import '../App.css';
 import styles from '../styles/Footer.module.css';
+import { Social } from './Social';
 
 export function Footer() {
 
@@ -26,6 +27,10 @@ export function Footer() {
 
         <div className={`${styles.footerSection} ${styles.footerRight}`}>          
           <p>Queremos ayudarte a construir o transformar el hogar que siempre soñastes</p>
+        </div>
+
+        <div className={styles.social}>
+          <Social/>
         </div>
 
       </footer>
