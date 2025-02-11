@@ -48,16 +48,16 @@ export function MobileNav() {
       <div className={`${styles.mobileMenuContainer} ${isOpen ? styles.openNav : styles.closedNav}`}>
         <ul className={styles.mobileMenu}>
             <li className={styles.row}>
-            <button type="button" >HISTORIA</button>
+            <a href="#" >HISTORIA</a>
             </li>
             <li className={styles.row}>
-            <button type="button" >CONSTRUCCIONES</button>
+            <a href="#" >CONSTRUCCIONES</a>
             </li>
             <li className={styles.row}>
-            <button type="button" >REMODELACIONES</button>
+            <a href="#" >REMODELACIONES</a>
             </li>
             <li className={styles.row}>
-            <button type="button" >BLOG</button>
+            <a href="#" >BLOG</a>
             </li>
         </ul>
       </div>
