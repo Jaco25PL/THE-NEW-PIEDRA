@@ -38,7 +38,9 @@
 @media (max-width: 1000px) {
 
     .socialColumn{
-        display: none;
+        margin: 0 1.5rem;
+        justify-content: left;
+        align-items: start;
     }
 
 }

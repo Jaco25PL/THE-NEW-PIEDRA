@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "../styles/MobileNav.module.css";
+import { Social } from "./Social";
 
 // export function MobileNav({ scrollTo, scrollToAbout, scrollToServices, scrollToProjects }) {
 export function MobileNav() {
@@ -60,6 +61,20 @@ export function MobileNav() {
             <a href="#" >BLOG</a>
             </li>
         </ul>
+
+          <ul className={styles.mobileContactInfo}>
+            <li className={styles.mobileContactRow}>
+              <img src="./images/phone-icon.svg" alt="phone icon" />
+              <a href="#" target="blank">094 159 591</a>
+            </li>
+            <li  className={styles.mobileContactRow}>
+              <img src="./images/envelope-icon.svg" alt="email icon" />
+              <a href="#" target="blank">PIEDRACONSTR.UY@gmail.com</a>
+            </li>
+          </ul>
+
+          <Social/>
+
       </div>
       
     </div>
