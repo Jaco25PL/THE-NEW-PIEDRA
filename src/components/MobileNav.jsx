@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "../styles/MobileNav.module.css";
 import { Social } from "./Social";
+import {Link} from 'react-router-dom';
 
 // export function MobileNav({ scrollTo, scrollToAbout, scrollToServices, scrollToProjects }) {
 export function MobileNav() {
@@ -23,9 +24,9 @@ export function MobileNav() {
         <div></div>
 
         <div className={styles.logoContainer}>
-            <a href="#">
+            <Link  to="/">
                 <img src="./images/PIEDRA-W-MOB.svg" alt="PIEDRA logo" />
-            </a>
+            </Link>
         </div>
 
 
@@ -49,27 +50,31 @@ export function MobileNav() {
       <div className={`${styles.mobileMenuContainer} ${isOpen ? styles.openNav : styles.closedNav}`}>
         <ul className={styles.mobileMenu}>
             <li className={styles.row}>
-            <a href="#" >HISTORIA</a>
+              <Link to="/historia">HISTORIA</Link>
             </li>
             <li className={styles.row}>
-            <a href="#" >CONSTRUCCIONES</a>
+              <Link to="/construcciones">CONSTRUCCIONES</Link>
             </li>
             <li className={styles.row}>
-            <a href="#" >REMODELACIONES</a>
+              <Link to="/remodelaciones">REMODELACIONES</Link>
             </li>
             <li className={styles.row}>
-            <a href="#" >BLOG</a>
+              <Link to="/contacto">CONTACTO</Link>
             </li>
         </ul>
 
           <ul className={styles.mobileContactInfo}>
             <li className={styles.mobileContactRow}>
               <img src="./images/phone-icon.svg" alt="phone icon" />
-              <a href="#" target="blank">094 159 591</a>
+              <a href="https://api.whatsapp.com/send?phone=59893595589" target="blank">094 159 591</a>
+            </li>
+            <li className={styles.mobileContactRow}>
+              <img src="./images/blog-icon.svg" alt="email icon" />
+              <Link to="/blog" target="_blank">BLOG</Link>
             </li>
             <li  className={styles.mobileContactRow}>
               <img src="./images/envelope-icon.svg" alt="email icon" />
-              <a href="#" target="blank">PIEDRACONSTR.UY@gmail.com</a>
+              <a href="mailto:piedraconstr.uy@gmail.com" target="blank">PIEDRACONSTR.UY@gmail.com</a>
             </li>
           </ul>
 

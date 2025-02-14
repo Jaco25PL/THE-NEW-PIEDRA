@@ -226,6 +226,8 @@ button {
 .mobileContactRow{
     list-style-type: none;
     letter-spacing: 1px;
+    display: flex;
+    align-items: center;
 }
 
 .mobileContactRow a:hover{
@@ -236,4 +238,8 @@ button {
     width: 2rem;
     height: 1rem;
     margin-right: .8rem;
+}
+
+.mobileContactRow:nth-child(2) img {
+    height: 1.4rem;
 }

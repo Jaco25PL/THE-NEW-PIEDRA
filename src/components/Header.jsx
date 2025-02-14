@@ -2,6 +2,8 @@ import '../App.css';
 import styles from '../styles/Header.module.css'
 import { Social } from './Social';
 import { MobileNav } from './MobileNav';
+import { Link } from 'react-router-dom';
+
 
 export function Header() {
 
@@ -12,28 +14,28 @@ export function Header() {
               <Social />
 
               {/* 2) Second column */}
-              <div className={styles.column}><a href='#'>HISTORIA</a> </div>
+              <div className={styles.column}><Link to="/historia">HISTORIA</Link> </div>
 
               {/* 3) Third column */}
-              <div className={styles.column}><a href='#'>CONSTRUCCIONES</a> </div>
+              <div className={styles.column}><Link to="/construcciones">CONSTRUCCIONES</Link> </div>
 
               {/* 4) Fourth column (Center - your logo, for example) */}
               <div className={`${styles.column} ${styles.logoColomn}`}>
-                <a href="#">
+                <Link to="/">
                     <img className={`${styles.mainLogo} ${styles.mainLogoBlack}`} src="./images/PIEDRA-B.svg" alt="Piedra Construcciones" />
                     {/* <img className={`${styles.mainLogo} ${styles.mainLogoWhtie}`} src="./images/PIEDRA-W.svg" alt="Piedra Construcciones" /> */}
-                </a>
+                </Link>
               </div>
 
               {/* 5) Fifth column */}
-              <div className={styles.column}><a href='#'>REMODELACIONES</a> </div>
+              <div className={styles.column}><Link to="/remodelaciones">REMODELACIONES</Link> </div>
 
               {/* 6) Sixth column */}
-              <div className={styles.column}><a href='#'>BLOG</a> </div>
+              <div className={styles.column}><Link to="/blog">BLOG</Link> </div>
 
               {/* 7) Seventh column: “Contactar” button */}
               <div className={styles.column}>
-                <button type="button" className={styles.contactButton}>CONTACTAR</button>
+                <Link to="/contacto"className={styles.contactButton}>CONTACTAR</Link>
               </div>
             </nav>
 
