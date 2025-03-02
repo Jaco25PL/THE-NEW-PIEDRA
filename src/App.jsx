@@ -7,7 +7,9 @@ import styles from './styles/App.module.css'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 import { Home } from './pages/Home'
-// import { Main } from './components/Main'
+import { Construir } from './pages/Construir'
+import { NotFound } from './pages/404'
+import { Remodelar } from './pages/Remodelar'
 
 function App() {
 
@@ -18,7 +20,9 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home/>} />
-          <Route path="*" element={<div>Page Not Found</div>} />
+          <Route path='/construir' element={<Construir/>} />
+          <Route path='/remodelar' element={<Remodelar/>} />
+          <Route path="*" element={<NotFound/>} />
         </Routes>
       </main>
       <Footer/>

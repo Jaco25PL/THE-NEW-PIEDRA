@@ -1,0 +1,110 @@
+.constructionPage {
+  width: 100%;
+  margin: 0 auto;
+  font-family: inherit;
+  color: #333;
+}
+
+.heroSection {
+  position: relative;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: black; */
+  color: white;
+  padding: 50px 20px;
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  z-index: 0;
+  opacity: 0.9;
+}
+
+.heroSection div {
+  max-width: 800px;
+  text-align: left;
+  position: absolute;
+  z-index: 10;
+}
+
+.heroLetter {
+  font-size: 8rem;
+  font-weight: bold;
+  display: block;
+  color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: -20px;
+  left: 0;
+  z-index: -1;
+}
+
+.heroSection h1 {
+  font-size: 2.5rem;
+  margin: 10px 0;
+}
+
+.heroSection p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* ----------------------------- */
+
+.introSection {
+  text-align: center;
+  padding: 20px;
+}
+
+.designsSection {
+  padding: 40px;
+  background: #f9f9f9;
+}
+
+.designBenefits {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.stepsSection {
+  padding: 40px;
+}
+
+.gallerySection {
+  padding: 40px;
+  text-align: center;
+}
+
+.gallery img {
+  width: 45%;
+  margin: 5px;
+}
+
+.testimonialsSection {
+  background: #eee;
+  padding: 40px;
+  text-align: center;
+}
+
+.testimonials blockquote {
+  font-style: italic;
+  margin: 20px;
+}
+
+.contactSection {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
+
+.contactInfo {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}

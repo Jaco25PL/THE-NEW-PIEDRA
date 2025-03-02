@@ -53,10 +53,10 @@ export function MobileNav() {
               <Link to="/historia">HISTORIA</Link>
             </li>
             <li className={styles.row}>
-              <Link to="/construcciones">CONSTRUCCIONES</Link>
+              <Link to="/construir">CONSTRUIR</Link>
             </li>
             <li className={styles.row}>
-              <Link to="/remodelaciones">REMODELACIONES</Link>
+              <Link to="/remodelar">REMODELAR</Link>
             </li>
             <li className={styles.row}>
               <Link to="/contacto">CONTACTO</Link>

@@ -25,7 +25,7 @@ export function Main() {
 
             {/* Right half: Remodelaciones */}
             <Link 
-              to="/remodelaciones" 
+              to="/remodelar" 
               target='_blank'
               rel='nooper noreferrer'
               className={`${styles.splitImage} ${styles.rightImage}`}>

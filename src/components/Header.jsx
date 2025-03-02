@@ -17,7 +17,7 @@ export function Header() {
               <div className={styles.column}><Link to="/historia">HISTORIA</Link> </div>
 
               {/* 3) Third column */}
-              <div className={styles.column}><Link to="/construcciones">CONSTRUCCIONES</Link> </div>
+              <div className={styles.column}><Link to="/construir">CONSTRUIR</Link> </div>
 
               {/* 4) Fourth column (Center - your logo, for example) */}
               <div className={`${styles.column} ${styles.logoColomn}`}>
@@ -28,14 +28,14 @@ export function Header() {
               </div>
 
               {/* 5) Fifth column */}
-              <div className={styles.column}><Link to="/remodelaciones">REMODELACIONES</Link> </div>
+              <div className={styles.column}><Link to="/remodelar">REMODELAR</Link> </div>
 
               {/* 6) Sixth column */}
               <div className={styles.column}><Link to="/blog">BLOG</Link> </div>
 
               {/* 7) Seventh column: “Contactar” button */}
-              <div className={styles.column}>
-                <Link to="/contacto"className={styles.contactButton}>CONTACTAR</Link>
+              <div className={`${styles.column}`}>
+                <Link to="/contacto"><span className={styles.contactButton}>CONTACTAR</span></Link>
               </div>
             </nav>
 
