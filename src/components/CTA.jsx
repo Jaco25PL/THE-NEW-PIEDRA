@@ -35,9 +35,9 @@ export function CTA() {
       
       <div className={styles.testimonial}>
         <div className={styles.faces}>
-          <div className={styles.face}></div>
-          <div className={styles.face}></div>
-          <div className={styles.face}></div>
+          <div className={styles.face}><img src="./images/face-1.png" alt="" /></div>
+          <div className={styles.face}><img src="./images/face-2.png" alt="" /></div>
+          <div className={styles.face}><img src="./images/face-3.jpeg" alt="" /></div>
         </div>
         <div className={styles.ratings}>
           <p className={styles.ratingText}>150+ hogares renovados</p>
