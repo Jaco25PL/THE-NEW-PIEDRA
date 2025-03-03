@@ -1,0 +1,177 @@
+/* Main Container */
+.faqContainer {
+    display: flex;
+    margin: 2rem 8rem;
+    gap: 3rem;
+    justify-content: center;
+}
+
+/* Image Section */
+
+.imageContainer {
+    flex: 0 0 45%;
+    background-image: url('./images/faq-img.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100%; /* Set based on your needs */
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 1/1;
+}
+
+/* FAQ Content Section */
+.faqContent {
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    position: relative;
+    /* margin-bottom: 1rem; */
+}
+
+.headerLine {
+    /* position: absolute; */
+    /* top: -10px; */
+    /* left: 0; */
+    /* right: 0; */
+    /* border-top: 2px solid #d1b371; */
+}
+
+.title {
+    /* position: absolute; */
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    line-height: .7;
+    color: #d1b371;
+    margin-bottom: 2rem;
+    font-family: sabonNext, serif;
+}
+
+/* FAQ Items */
+.faqList {
+    flex-grow: 1;
+}
+
+.faqItem {
+    border-bottom: 2.5px solid #d1b371;
+    padding: 1.5rem 0;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+.faqItem:first-child{
+    border-top: 2.5px solid #d1b371;
+}
+
+.questionRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 1rem; */
+}
+
+.question {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+    flex: 1;
+}
+
+/* Toggle Icon */
+.toggleIcon {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+.iconLine1, .iconLine2 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+.iconLine1 {
+    width: 100%;
+    outline: 1px #000 solid;
+    top: 50%;
+    /* transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%); */
+}
+
+.iconLine2 {
+    outline: 1px #000 solid;
+    height: 100%;
+    left: 50%;
+    /* transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%); */
+}
+
+.toggleIcon.active .iconLine2 {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+
+.toggleIcon.active .iconLine1 {
+    transform:  rotate(90deg);
+    -webkit-transform:  rotate(90deg);
+    -moz-transform:  rotate(90deg);
+    -ms-transform:  rotate(90deg);
+    -o-transform:  rotate(90deg);
+}
+
+/* Answer Section */
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    -webkit-transition: max-height 0.5s ease-in-out;
+    -moz-transition: max-height 0.5s ease-in-out;
+    -ms-transition: max-height 0.5s ease-in-out;
+    -o-transition: max-height 0.5s ease-in-out;
+}
+
+
+.answer.show {
+    max-height: 200px; 
+}
+
+.answer p {
+    margin: 1rem 2rem 0 0 ;
+    color: #666;
+    line-height: 1.5;
+    text-align: left;
+}
+
+
