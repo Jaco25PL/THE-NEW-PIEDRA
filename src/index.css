@@ -1,6 +1,7 @@
 /* RESET AND GLOBAL STYLES */
 
 :root {
+  --gold-color: #d1b371;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -29,6 +30,15 @@ body {
   background-color: #fff;
   color: #000;
 }
+
+/* FONTS WE'RE USING
+
+  - Sabon Next
+  - Montserrat
+  - Tai Heritage
+  - Linux Libertine
+
+*/
 
 
 /* SABON NEXT FONTS */

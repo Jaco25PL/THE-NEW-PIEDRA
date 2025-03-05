@@ -1,0 +1,11 @@
+.title{
+    color: var(--gold-color);
+    font-family: SabonNext, serif;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    line-height: .7;
+    /* font-size: 2rem; */
+    /* letter-spacing: 2px; */
+    /* font-weight: 400; */
+}
