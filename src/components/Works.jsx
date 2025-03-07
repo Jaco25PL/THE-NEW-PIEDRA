@@ -49,28 +49,28 @@ export function Works() {
     return (
         <div className={styles.container}>
             <Titles title="ANTES & DESPUÉS" />
+            
             <p className={styles.subtitle}>
                 Tu casa tiene un potencial increíble, nosotros lo hacemos realidad
             </p>
         
 
-                {/* Prev Arrow */}
-                <button 
-                    className={styles.navigationArrow} 
-                    onClick={handleNextImage}
-                >
-                    <img src="./images/arrow-B.svg" alt="Previous Arrow" />
-                </button>
+            {/* Prev Arrow */}
+            <button 
+                className={`${styles.navigationArrow} ${styles.prevArrow}`} 
+                onClick={handleNextImage}
+            >
+                <img src="./images/arrow-B.svg" alt="Previous Arrow" />
+            </button>
 
-                {/* Next Arrow */}
-                <button 
-                    className={styles.navigationArrow} 
-                    onClick={handlePrevImage}
-                >
-                    <img src="./images/arrow-B.svg" alt="Previous Arrow" />
-                    
-                </button>
-
+            {/* Next Arrow */}
+            <button 
+                className={`${styles.navigationArrow} ${styles.nextArrow}`} 
+                onClick={handlePrevImage}
+            >
+                <img src="./images/arrow-B.svg" alt="Next Arrow" />
+                
+            </button>
 
 
             <div className={styles.sliderWrapper}>
@@ -89,8 +89,6 @@ export function Works() {
                         DESPUÉS
                     </button>
                 </div>
-
-
 
                 {/* Image Indicators */}
                 <div className={styles.imageIndicators}>
