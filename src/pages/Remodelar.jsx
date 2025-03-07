@@ -1,3 +1,4 @@
+import { AboutUsCont } from '../components/AboutUsCont'
 import { Clients } from '../components/Clients'
 import { CTA } from '../components/CTA'
 import { FAQ } from '../components/FAQ'
@@ -12,19 +13,16 @@ export function Remodelar() {
       
       <div className={styles.stats}></div>
 
-      <section className={styles.usContainer}></section>
-      {/* <section className={styles.samplesContainer}></section> */}
+      <AboutUsCont />
+
       <Works/>
       
-      {/* <div className={styles.clinets}></div> */}
       <Clients/>
 
-      {/* <section className={styles.FAQContainer}></section> */}
       <FAQ/>
 
       <CTA/>
 
-      {/* <section className={styles.callToAction}></section> */}
     </div>
   )
 }

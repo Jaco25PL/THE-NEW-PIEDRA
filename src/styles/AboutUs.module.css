@@ -1,0 +1,127 @@
+.aboutUsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 8rem;
+    padding: 2rem 0;
+}
+
+.aboutUsContainer::after {
+    content: "";
+    display: block;
+    width: 20%;
+    height: 2.5px;
+    position: relative;
+    top: 2rem;
+    background-color: var(--gold-color);
+}
+
+.aboutUsContainer::before {
+    content: "";
+    display: block;
+    width: 20%;
+    height: 2.5px;
+    position: relative;
+    top: -2rem;
+    background-color: var(--gold-color);
+}
+  
+.section {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    gap: 1rem;
+}
+  
+/* .reversed {
+    flex-direction: row-reverse;
+} */
+  
+.imageContainer {
+    flex: 1;
+    aspect-ratio: 2/1;
+    overflow: hidden;
+}
+  
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+  
+.textContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.textContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+  
+.features {
+    margin: 2rem 0;
+    padding-left: 2rem;
+    width: 100%;
+}
+  
+.featureItem {
+    display: flex;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    align-items: flex-start;
+}
+  
+.checkmark {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+  
+  .featureText {
+    flex: 1;
+  }
+  
+  .featureTitle {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem 0;
+  }
+  
+  .featureDescription {
+    margin: 0;
+    color: #666;
+    font-size: 0.95rem;
+  }
+  
+  .actionButton {
+    background-color: var(--gold-color);
+    border: none;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .actionButton:hover {
+    opacity: 0.9;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .section, .reversed {
+      flex-direction: column;
+    }
+    
+    .imageContainer {
+      height: 300px;
+    }
+  }
