@@ -1,102 +1,46 @@
 import styles from '../styles/AboutUs.module.css'
-import { AboutUsFeature } from './AboutUsFeature'
-import { Titles } from './Titles'
+import { AboutUs } from './AboutUs'
+
+const content = [
+  {
+    id: 1,
+    img: '/images/render-sample.jpeg',
+    title: '¿POR QUÉ ELEGIRNOS?', 
+    sub1: 'Render 3D Personalizado',
+    sub2: 'Garantía De Por Vida',
+    sub3: 'Entregas A Tiempo',
+    desc1: 'Diseños que se ajustan a tu vida (no al revés).',
+    desc2: 'Si algo falla, lo reparamos sin preguntas.',
+    desc3: 'Tu tranquilidad es nuestra responsabilidad.',
+    btn_title: 'RESERVA UNA VISITA HOY',
+    btn_action: 'https://wa.me/59893595589',
+  },
+  {
+    id: 2,
+    img: '/images/render.jpg',
+    title: 'NUESTRO PROCESO',
+    sub1: 'Paso 1: Presupuesto',
+    sub2: 'Paso 2: Diseño 3D',
+    sub3: 'Paso 3: Remodelación',
+    sub4: 'Paso 4: Entrega',
+    desc1: 'Analizamos tu espacio Sin Compromiso.',
+    desc2: 'Te mostramos cómo lucirá tu futura casa.',
+    desc3: 'Recibe fotos diarias del proceso.',
+    desc4: 'Entrega a tiempo de tu nuevo espacio.',
+    btn_title: 'CONSULTA PRESUPUESTO GRATIS',
+    btn_action: 'https://wa.me/59893595589',
+  },
+]
+
 
 export function AboutUsCont() {
   
     return (
         <div className={styles.aboutUsContainer}>
 
-            {/* First Section - Image Left, Text Right */}
-            <section className={styles.section}>
-                <div className={styles.imageContainer}>
-                    <img 
-                        src="/images/render-sample.jpeg" 
-                        alt="Interior design rendering" 
-                        className={styles.image}
-                    />
-                </div>
+            <AboutUs content={content[0]}/>
+            <AboutUs content={content[1]}/>
 
-                <div className={styles.textContainer}>
-                    <div className={styles.textContent}>
-                        <Titles title="¿POR QUÉ ELEGIRNOS?" />
-
-                        <div className={styles.features}>
-
-                            <AboutUsFeature title='Render 3D Personalizado' description='Diseños que se ajustan a tu vida (no al revés).' />
-
-                            <AboutUsFeature title='Garantía De Por Vida' description='Si algo falla, lo reparamos sin preguntas.' />
-
-                            <AboutUsFeature title='Entregas A Tiempo' description='Tu tranquilidad es nuestra responsabilidad.' />
-
-                        </div>
-
-                        <button className={styles.actionButton}>
-                            RESERVA UNA VISITA HOY
-                        </button>
-                    </div>
-                </div>
-            </section>
-        
-            {/* Second Section - Text Left, Image Right */}
-            <section className={`${styles.section} ${styles.reversed}`}>
-              <div className={styles.textContainer}>
-                <div className={styles.textContent}>
-                  <Titles title="NUESTRO PROCESO" />
-
-                  <div className={styles.features}>
-                    <div className={styles.featureItem}>
-                      <span className={styles.checkmark}>✓</span>
-                      <div className={styles.featureText}>
-                        <h3 className={styles.featureTitle}>Paso 1: Presupuesto</h3>
-                        <p className={styles.featureDescription}>Analizamos tu espacio Sin Compromiso.</p>
-                      </div>
-                    </div>
-
-                    <div className={styles.featureItem}>
-                      <span className={styles.checkmark}>✓</span>
-                      <div className={styles.featureText}>
-                        <h3 className={styles.featureTitle}>Paso 2: Diseño 3D</h3>
-                        <p className={styles.featureDescription}>Te mostramos cómo lucirá tu futura casa.</p>
-                      </div>
-                    </div>
-
-                    <div className={styles.featureItem}>
-                      <span className={styles.checkmark}>✓</span>
-                      <div className={styles.featureText}>
-                        <h3 className={styles.featureTitle}>Paso 3: Remodelación</h3>
-                        <p className={styles.featureDescription}>Recibe fotos diarias del proceso.</p>
-                      </div>
-                    </div>
-
-                    <div className={styles.featureItem}>
-                      <span className={styles.checkmark}>✓</span>
-                      <div className={styles.featureText}>
-                        <h3 className={styles.featureTitle}>Paso 4: Entrega</h3>
-                        <p className={styles.featureDescription}>Entrega a tiempo de tu nuevo espacio.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <button className={styles.actionButton}>
-                    CONSULTA PRESUPUESTO GRATIS
-                  </button>
-                </div>
-              </div>
-
-                <div className={styles.imageContainer}>
-                    <img 
-                            src="/images/render.jpg" 
-                            alt="Modern house design" 
-                            className={styles.image}
-                    />
-                </div>
-            </section>
         </div>
-
-
-
-
-
     )
 }

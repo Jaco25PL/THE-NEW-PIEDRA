@@ -1,4 +1,5 @@
 import styles from '../styles/CTA.module.css';
+import { CTAButton } from './CTAButton';
 
 
 export function CTA() {
@@ -17,14 +18,16 @@ export function CTA() {
             <p className={styles.subheading}>
               Tu hogar merece lo mejor. Agenda una consulta gratuita sin compromiso y descubre cómo podemos hacer realidad tu visión.
             </p>
-            <a
+
+            <CTAButton text="RESERVA UNA VISITA HOY" action={`https://wa.me/${whatsappNumber}`} />
+            {/* <a
               href={`https://wa.me/${whatsappNumber}`}
               className={styles.whatsappButton}
               target="_blank"
               rel="noopener noreferrer"
             >
               ESCRIBIR POR WHATSAPP
-            </a>
+            </a> */}
             <div className={styles.features}>
               <span>✓ Render 3D</span>
               <span>✓ Cuotas Sin Interés</span>

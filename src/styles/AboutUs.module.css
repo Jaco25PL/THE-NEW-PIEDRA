@@ -34,13 +34,18 @@
     gap: 1rem;
 }
   
-/* .reversed {
+.pair {
     flex-direction: row-reverse;
-} */
+}
   
+
+
+
+
 .imageContainer {
-    flex: 1;
-    aspect-ratio: 2/1;
+    flex: 1;    
+    max-height: 26rem;
+    /* aspect-ratio: 2/1; */
     overflow: hidden;
 }
   
@@ -51,6 +56,10 @@
     display: block;
 }
   
+
+
+
+
 .textContainer {
     flex: 1;
     display: flex;
@@ -67,7 +76,8 @@
 }
   
 .features {
-    margin: 2rem 0;
+    margin-top: 2rem ;
+    margin-bottom: .5rem ;
     padding-left: 2rem;
     width: 100%;
 }
@@ -85,21 +95,19 @@
     margin-right: 0.5rem;
 }
   
-  .featureText {
+.featureText {
     flex: 1;
-  }
+}
   
-  .featureTitle {
+.featureTitle {
     font-weight: bold;
     font-size: 1.1rem;
-    margin: 0 0 0.5rem 0;
-  }
+    margin-bottom: .5rem;
+}
   
-  .featureDescription {
-    margin: 0;
+.featureDescription {
     color: #666;
-    font-size: 0.95rem;
-  }
+}
   
   .actionButton {
     background-color: var(--gold-color);
@@ -109,7 +117,11 @@
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -ms-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+}
   
   .actionButton:hover {
     opacity: 0.9;

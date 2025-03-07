@@ -60,7 +60,7 @@
     /* margin-top: 1rem; */
   }
   
-  .whatsappButton {
+.whatsappButton {
     background-color: var(--gold-color);
     /* background-color: #d1b371; */
     padding: 0.8rem 1.5rem;
@@ -81,7 +81,7 @@
 
 .whatsappButton:hover {
     font-weight: 600;
-  }
+}
   
   .testimonial {
     margin-top: 1rem;
