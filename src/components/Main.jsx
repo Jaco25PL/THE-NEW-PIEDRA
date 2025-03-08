@@ -26,8 +26,9 @@ export function Main() {
             {/* Right half: Remodelaciones */}
             <Link 
               to="/remodelar" 
-              target='_blank'
-              rel='nooper noreferrer'
+              // href="/remodelar"
+              // target='_blank'
+              // rel='nooper noreferrer'
               className={`${styles.splitImage} ${styles.rightImage}`}>
               <img className={styles.image} src="./images/sample-house-2.jpg" alt="sample house" />
  
@@ -37,7 +38,7 @@ export function Main() {
                 <p>Desde cocinas ahasta salas, cada detalle cuenta</p>
                 </div>
               </div>
-            </Link >
+            </Link>
           </section>
         </main>
     )

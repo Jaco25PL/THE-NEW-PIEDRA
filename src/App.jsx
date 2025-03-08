@@ -18,12 +18,12 @@ function App() {
     <div className={styles.appContainer}>
       <Header/>
       <main>
-        <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path='/construir' element={<Construir/>} />
-          <Route path='/remodelar' element={<Remodelar/>} />
-          <Route path="*" element={<NotFound/>} />
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path='/construir' element={<Construir/>} />
+            <Route path='/remodelar' element={<Remodelar/>} />
+            <Route path="*" element={<NotFound/>} />
+          </Routes>
       </main>
       <Footer/>
     </div>
@@ -32,11 +32,3 @@ function App() {
 }
 
 export default App
-
-
-
-// <div className={styles.appContainer}>
-
-  // <Main/>
-
-// </div>
