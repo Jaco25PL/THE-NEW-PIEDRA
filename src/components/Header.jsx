@@ -12,7 +12,7 @@ export function Header() {
     console.log(isScrolling)
 
     return (
-        <header className={styles.headerContainer}>
+        <header className={`${styles.headerContainer} ${isScrolling ? styles.headerContainerScrolled : styles.headerContainerNotScrolled}`}>
             <nav className={styles.headerGrid}>
   
               <Social />
@@ -28,9 +28,9 @@ export function Header() {
                 <Link to="/">
                     {
                         isScrolling ? 
-                        <img className={`${styles.mainLogo} ${styles.mainLogoWhite}`} src="./images/PIEDRA-B-SM.svg" alt="Piedra Construcciones" />
+                        <img className={`${isScrolling ? styles.showLogo : styles.hideLogo} ${styles.scrollLogo} ${styles.mainLogoWhite}`} src="./images/PIEDRA-B-SM.svg" alt="Piedra Construcciones" />
                         :
-                        <img className={`${styles.mainLogo} ${styles.mainLogoBlack}`} src="./images/PIEDRA-B.svg" alt="Piedra Construcciones" />
+                        <img className={`${isScrolling ? styles.hideLogo : styles.showLogo} ${styles.mainLogo} ${styles.mainLogoBlack}`} src="./images/PIEDRA-B.svg" alt="Piedra Construcciones" />
                     }
                     {/* <img className={`${styles.mainLogo} ${styles.mainLogoBlack}`} src="./images/PIEDRA-B-SM.svg" alt="Piedra Construcciones" /> */}
                     {/* <img className={`${styles.mainLogo} ${styles.mainLogoBlack}`} src="./images/PIEDRA-B.svg" alt="Piedra Construcciones" /> */}

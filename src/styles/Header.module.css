@@ -1,10 +1,23 @@
 
 .headerContainer {
   background-color: #ffffff;
-  max-height: 6rem;   
+  max-height: 6rem;
   position: sticky;
   top: 0;
   z-index: 1000;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.headerContainerNotScrolled{
+  max-height: 6rem;
+}
+
+.headerContainerScrolled {
+  max-height: 4rem;
 }
   
 .showLogo {
@@ -14,6 +27,8 @@
 .hideLogo {
   display: none;
 }
+
+
 
 .headerGrid {
   display: flex;
@@ -42,10 +57,44 @@
 }
 
 .mainLogo{
-  height: 6rem;  
+  height: 6rem;
   width: auto;
   margin: 0 5rem;
   background-color: #000;
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+}
+
+.scrollLogo {
+  height: 4rem;
+  width: auto;
+  margin: 0 5rem;
+  padding: 0;
+  background-color: #000;
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+}
+
+.hideLogo{
+  opacity: 0;
+}
+
+.showLogo{
+  opacity: 1;
+}
+
+.adjustHeightOff{
+  height: 6rem;
+}
+
+.adjustHeightOn{
+  height: 4rem;
 }
 
 .mainLogoBlack {
