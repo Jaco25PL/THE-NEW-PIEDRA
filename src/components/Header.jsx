@@ -3,9 +3,13 @@ import styles from '../styles/Header.module.css'
 import { Social } from './Social';
 import { MobileNav } from './MobileNav';
 import { Link } from 'react-router-dom';
-
+import { useHeaderScroll } from '../hooks/useHeaderScroll';
 
 export function Header() {
+
+    const { isScrolling } = useHeaderScroll()
+
+    console.log(isScrolling)
 
     return (
         <header className={styles.headerContainer}>
@@ -22,8 +26,14 @@ export function Header() {
               {/* 4) Fourth column (Center - your logo, for example) */}
               <div className={`${styles.column} ${styles.logoColomn}`}>
                 <Link to="/">
-                    <img className={`${styles.mainLogo} ${styles.mainLogoBlack}`} src="./images/PIEDRA-B.svg" alt="Piedra Construcciones" />
-                    {/* <img className={`${styles.mainLogo} ${styles.mainLogoWhtie}`} src="./images/PIEDRA-W.svg" alt="Piedra Construcciones" /> */}
+                    {
+                        isScrolling ? 
+                        <img className={`${styles.mainLogo} ${styles.mainLogoWhite}`} src="./images/PIEDRA-B-SM.svg" alt="Piedra Construcciones" />
+                        :
+                        <img className={`${styles.mainLogo} ${styles.mainLogoBlack}`} src="./images/PIEDRA-B.svg" alt="Piedra Construcciones" />
+                    }
+                    {/* <img className={`${styles.mainLogo} ${styles.mainLogoBlack}`} src="./images/PIEDRA-B-SM.svg" alt="Piedra Construcciones" /> */}
+                    {/* <img className={`${styles.mainLogo} ${styles.mainLogoBlack}`} src="./images/PIEDRA-B.svg" alt="Piedra Construcciones" /> */}
                 </Link>
               </div>
 

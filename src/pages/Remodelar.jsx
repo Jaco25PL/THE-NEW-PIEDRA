@@ -6,9 +6,12 @@ import { Works } from '../components/Works'
 import { Stats } from '../components/Stats'
 import styles from '../styles/Remodelar.module.css'
 import { HeaderRemodelar } from '../components/HeaderRemodelar'
-// import { Link } from 'react-router-dom'
+// import { useHeaderScroll } from '../hooks/useHeaderScroll'
 
 export function Remodelar() {
+
+  // const { isScrolling } = useHeaderScroll()
+
   return (
     <div className={styles.remodelarContainer}>
 

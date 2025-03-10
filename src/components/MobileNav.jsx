@@ -3,8 +3,8 @@ import styles from "../styles/MobileNav.module.css";
 import { Social } from "./Social";
 import {Link} from 'react-router-dom';
 
-// export function MobileNav({ scrollTo, scrollToAbout, scrollToServices, scrollToProjects }) {
 export function MobileNav() {
+
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
@@ -25,7 +25,7 @@ export function MobileNav() {
 
         <div className={styles.logoContainer}>
             <Link  to="/">
-                <img src="./images/PIEDRA-W-MOB.svg" alt="PIEDRA logo" />
+                <img src="./images/PIEDRA-W.svg" alt="PIEDRA logo" />
             </Link>
         </div>
 
@@ -42,23 +42,20 @@ export function MobileNav() {
           </button>
         </div>
 
-        {/* <div className={styles.contactContainer}>
-          <a href="#" type="button" className={styles.contactButton}>CONTACTAR</a>
-        </div> */}
       </nav>
 
       <div className={`${styles.mobileMenuContainer} ${isOpen ? styles.openNav : styles.closedNav}`}>
         <ul className={styles.mobileMenu}>
-            <li className={styles.row}>
+            <li className={styles.row} onClick={handleClick}>
               <Link to="/historia">HISTORIA</Link>
             </li>
-            <li className={styles.row}>
+            <li className={styles.row} onClick={handleClick}>
               <Link to="/construir">CONSTRUIR</Link>
             </li>
-            <li className={styles.row}>
+            <li className={styles.row} onClick={handleClick}>
               <Link to="/remodelar">REMODELAR</Link>
             </li>
-            <li className={styles.row}>
+            <li className={styles.row} onClick={handleClick}>
               <Link to="/contacto">CONTACTO</Link>
             </li>
         </ul>
@@ -81,7 +78,6 @@ export function MobileNav() {
           <Social/>
 
       </div>
-      
     </div>
   );
 }
