@@ -23,7 +23,7 @@ export function Main() {
                 </div>
             </Link >
 
-            {/* Right half: Remodelaciones */}
+            {/* Right half: Remodelaciones */}  
             <Link 
               to="/remodelar" 
               // href="/remodelar"
