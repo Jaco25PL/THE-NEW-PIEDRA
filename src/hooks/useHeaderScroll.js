@@ -2,13 +2,14 @@ import { useEffect, useState } from "react"
 
 export function useHeaderScroll() {
     const [isScrolling, setIsScrolling] = useState(false)
+    const [isStopScrolling, setIsStopScrolling] = useState(true)
     
     
     useEffect(() => {
     
         let timeoutId = null
         
-        const handleScroll = () => {
+        const handleScrollOn = () => {
 
 
             const scrollY = window.scrollY
@@ -25,19 +26,37 @@ export function useHeaderScroll() {
         }
 
 
-            handleScroll()
+            handleScrollOn()
 
-            window.addEventListener('scroll', handleScroll)
+            window.addEventListener('scroll', handleScrollOn)
 
             return () => {
-                window.removeEventListener('scroll', handleScroll)
+                window.removeEventListener('scroll', handleScrollOn)
                 if (timeoutId) {
                     clearTimeout(timeoutId)
                 }
             }
     }, [])
+
+    useEffect(() => {
+        // let timeoutId = null
+        
+        const handleScrollOff = () => {
+
+            const scrollY = window.scrollY
+            const height = 10
+        
+            scrollY <= height ? setIsStopScrolling(true) : setIsStopScrolling(false)
+        }
+        handleScrollOff()
+        window.addEventListener('scroll', handleScrollOff)
+        return () => {
+            window.removeEventListener('scroll', handleScrollOff)
+        }
+    }, [])
     
     return {
-        isScrolling
+        isScrolling,
+        isStopScrolling
     }
 }

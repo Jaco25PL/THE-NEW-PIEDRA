@@ -11,9 +11,9 @@ export function Main() {
             <Link 
               to="/construir"
               target='_blank'
-              rel='nooper noreferrer'
+              rel='noopener noreferrer'
               className={`${styles.splitImage} ${styles.leftImage}`}>
-              <img className={styles.image} src="./images/sample-house-1.jpg" alt="sample house" />
+              <img className={styles.image} src="/images/sample-house-1.jpg" alt="sample house" />
               
               <div className={styles.content}>
                 <h2>CONSTRUIR</h2>
@@ -28,9 +28,9 @@ export function Main() {
               to="/remodelar" 
               // href="/remodelar"
               // target='_blank'
-              // rel='nooper noreferrer'
+              // rel='noopener noreferrer'
               className={`${styles.splitImage} ${styles.rightImage}`}>
-              <img className={styles.image} src="./images/sample-house-2.jpg" alt="sample house" />
+              <img className={styles.image} src="/images/sample-house-2.jpg" alt="sample house" />
  
               <div className={styles.content}>
                 <h2>REMODELAR</h2>
