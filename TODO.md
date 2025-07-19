@@ -56,8 +56,8 @@
 
 src/
   ├── assets/
-  │   ├── fonts/            # Keep your fonts here (already doing this)
-  │   └── icons/            # SVG icons that might be imported directly in components
+-  │   ├── fonts/            # Keep your fonts here (already doing this)
+-  │   └── icons/            # SVG icons tshat might be imported directly in components
   │
   ├── components/
   │   ├── common/           # Shared components across all pages

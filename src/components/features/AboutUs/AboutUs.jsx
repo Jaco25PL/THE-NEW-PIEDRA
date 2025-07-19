@@ -1,8 +1,8 @@
-import styles from '../styles/AboutUs.module.css';
+import styles from '../../../styles/AboutUs.module.css';
 import propTypes from 'prop-types';
-import { Titles } from './Titles';
+import { Titles } from '../../common/Titles/Titles';
 import { AboutUsFeature } from './AboutUsFeature';
-import { CTAButton } from './CTAButton';
+import { CTAButton } from '../../common/Button/CTAButton';
 
 export function AboutUs({ content }) {
 

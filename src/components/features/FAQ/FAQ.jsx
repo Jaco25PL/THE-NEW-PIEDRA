@@ -1,4 +1,4 @@
-import styles from '../styles/FAQ.module.css';
+import styles from '../../../styles/FAQ.module.css';
 import { useState } from 'react';
 
 export function FAQ() {
@@ -19,7 +19,7 @@ export function FAQ() {
         <div className={styles.faqContainer}>
             {/* Left Image Section */}
             <div className={styles.imageContainer}>
-                {/* <img src="./images/faq-img.jpeg" alt="FAQ Illustration" className={styles.faqImage} /> */}
+                {/* <img src="'/images/faq-img.jpeg" alt="FAQ Illustration" className={styles.faqImage} /> */}
                 <div className={styles.faqImage}></div>
             </div>
 

@@ -1,6 +1,6 @@
-import '../App.css';
-import styles from '../styles/Footer.module.css';
-import { Social } from './Social';
+import '../../../App.css';
+import styles from '../../../styles/Footer.module.css';
+import { Social } from '../Social/Social';
 
 export function Footer() {
 

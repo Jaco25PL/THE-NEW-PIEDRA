@@ -1,4 +1,4 @@
-import styles from '../styles/Clients.module.css'
+import styles from '../../../styles/Clients.module.css'
 import PropTypes from 'prop-types';
 
 export const ReviewCard = ({ review }) => {
@@ -46,7 +46,7 @@ export const ReviewCard = ({ review }) => {
                 </div>
 
                 <div className={styles.googleLogo}>
-                    <img src="./images/Google_logo.svg" alt="Google logo" />
+                    <img src="/images/Google_logo.svg" alt="Google logo" />
                 </div>
             </div>
             

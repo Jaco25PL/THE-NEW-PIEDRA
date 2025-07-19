@@ -1,9 +1,9 @@
 
-import styles from '../styles/HeaderRemodelar.module.css';
-import { CTAButton } from './CTAButton';
-import { Testimonials } from './Testimonials';
+import styles from '../../../styles/HeaderRemodelar.module.css';
+import { CTAButton } from '../../common/Button/CTAButton';
+import { Testimonials } from '../../common/Testimonials/Testimonials';
 
-export function HeaderRemodelar ( ) {
+export function RemodelarHero ( ) {
 
     return (
 
@@ -25,7 +25,7 @@ export function HeaderRemodelar ( ) {
             </p>
 
             <div className={styles.ctaButton}>
-              <CTAButton text='CONSULTA GRATIS + DISEÑO 3D' action=''/> 
+              <CTAButton text='CONSULTA GRATIS + DISEÑO 3D' action='https://wa.me/59893595589'/> 
             </div>
 
             <div className={styles.featuresContainer}>

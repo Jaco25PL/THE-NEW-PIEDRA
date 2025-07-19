@@ -1,4 +1,4 @@
-import styles from '../styles/AboutUs.module.css'
+import styles from '../../../styles/AboutUs.module.css'
 import propTypes from 'prop-types'
 
 export function AboutUsFeature({ title, description }) {

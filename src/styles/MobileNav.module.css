@@ -189,7 +189,7 @@
     display: block;           /* or inline-block depending on your layout */
     width: .8rem;              /* set desired width */
     height: .8rem;             /* set desired height */
-    background-image: url("./public/images/arrow-right-B.svg");
+    background-image: url("./publi'/images/arrow-right-B.svg");
     background-repeat: no-repeat;
     background-size: contain; /* adjust as needed, can also use 'cover' or specific dimensions */
     margin-left: auto;

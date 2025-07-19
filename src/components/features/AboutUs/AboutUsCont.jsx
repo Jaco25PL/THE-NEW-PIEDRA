@@ -1,4 +1,4 @@
-import styles from '../styles/AboutUs.module.css'
+import styles from '../../../styles/AboutUs.module.css'
 import { AboutUs } from './AboutUs'
 
 const content = [

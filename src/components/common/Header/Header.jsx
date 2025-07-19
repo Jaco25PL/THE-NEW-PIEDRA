@@ -1,9 +1,9 @@
-import '../App.css';
-import styles from '../styles/Header.module.css'
-import { Social } from './Social';
+import '../../../App.css';
+import styles from '../../../styles/Header.module.css'
+import { Social } from '../Social/Social';
 import { MobileNav } from './MobileNav';
+import { useHeaderScroll } from '../../../hooks/useHeaderScroll';
 import { Link } from 'react-router-dom';
-import { useHeaderScroll } from '../hooks/useHeaderScroll';
 
 export function Header() {
 
@@ -28,16 +28,16 @@ export function Header() {
                 <Link to="/">
                     {/* {
                         isScrolling ? 
-                        <img className={`${isScrolling ? styles.showLogo : styles.hideLogo} ${styles.scrollLogo} ${styles.mainLogoWhite}`} src="./images/PIEDRA-B-SM.svg" alt="Piedra Construcciones" />
+                        <img className={`${isScrolling ? styles.showLogo : styles.hideLogo} ${styles.scrollLogo} ${styles.mainLogoWhite}`} src="'/images/PIEDRA-B-SM.svg" alt="Piedra Construcciones" />
                         :
-                        <img className={`${isScrolling ? `${styles.hideLogo} ${styles.adjustHeightOn}` : `${styles.showLogo}  ${styles.adjustHeightOff}`}  ${styles.mainLogo} ${styles.mainLogoBlack}`} src="./images/PIEDRA-B.svg" alt="Piedra Construcciones" />
+                        <img className={`${isScrolling ? `${styles.hideLogo} ${styles.adjustHeightOn}` : `${styles.showLogo}  ${styles.adjustHeightOff}`}  ${styles.mainLogo} ${styles.mainLogoBlack}`} src="'/images/PIEDRA-B.svg" alt="Piedra Construcciones" />
                     } */}
 
                     {
-                        isScrolling && <img className={`${isScrolling ? styles.showLogo : styles.hideLogo} ${styles.scrollLogo} ${styles.mainLogoWhite}`} src="./images/PIEDRA-B-SM.svg" alt="Piedra Construcciones" />
+                        isScrolling && <img className={`${isScrolling ? styles.showLogo : styles.hideLogo} ${styles.scrollLogo} ${styles.mainLogoWhite}`} src="/images/PIEDRA-B-SM.svg" alt="Piedra Construcciones" />
                     }                   
                     {
-                        isStopScrolling && <img className={`${isScrolling ? `${styles.hideLogo} ${styles.adjustHeightOn}` : `${styles.showLogo}  ${styles.adjustHeightOff}`}  ${styles.mainLogo} ${styles.mainLogoBlack}`} src="./images/PIEDRA-B.svg" alt="Piedra Construcciones" />
+                        isStopScrolling && <img className={`${isScrolling ? `${styles.hideLogo} ${styles.adjustHeightOn}` : `${styles.showLogo}  ${styles.adjustHeightOff}`}  ${styles.mainLogo} ${styles.mainLogoBlack}`} src="/images/PIEDRA-B.svg" alt="Piedra Construcciones" />
                     }
                 </Link>
               </div>

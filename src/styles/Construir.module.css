@@ -1,6 +1,3 @@
 .container {
-  color: var(--gold-color);
-  text-align: center;
-  font-family: SabonNext, serif;
   min-height: 90vh;
 }

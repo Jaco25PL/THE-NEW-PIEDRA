@@ -1,11 +1,11 @@
-import { AboutUsCont } from '../components/AboutUsCont'
-import { Clients } from '../components/Clients'
-import { CTA } from '../components/CTA'
-import { FAQ } from '../components/FAQ'
-import { Works } from '../components/Works'
-import { Stats } from '../components/Stats'
 import styles from '../styles/Remodelar.module.css'
-import { HeaderRemodelar } from '../components/HeaderRemodelar'
+import { AboutUsCont } from '../components/features/AboutUs/AboutUsCont'
+import { Clients } from '../components/features/Clients/Clients'
+import { CTA } from '../components/features/CTA/CTA'
+import { FAQ } from '../components/features/FAQ/FAQ'
+import { Works } from '../components/features/Works/Works'
+import { Stats } from '../components/features/Stats/Stats'
+import { RemodelarHero } from '../components/layout/Heroes/RemodelarHero'
 // import { useHeaderScroll } from '../hooks/useHeaderScroll'
 
 export function Remodelar() {
@@ -15,7 +15,7 @@ export function Remodelar() {
   return (
     <div className={styles.remodelarContainer}>
 
-      <HeaderRemodelar/>
+      <RemodelarHero/>
 
       <Stats />
 

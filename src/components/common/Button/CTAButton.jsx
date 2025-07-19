@@ -1,4 +1,4 @@
-import styles from '../styles/CTAButton.module.css'
+import styles from '../../../styles/CTAButton.module.css'
 import propTypes from 'prop-types'
 
 export function CTAButton({ text, action }) {

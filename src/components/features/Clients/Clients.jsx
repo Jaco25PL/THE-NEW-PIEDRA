@@ -1,7 +1,7 @@
-import styles from '../styles/Clients.module.css'
-import { Titles } from './Titles';
+import styles from '../../../styles/Clients.module.css'
+import { Titles } from '../../common/Titles/Titles';
 import { ReviewCard } from './ClientCard';
-import { customerReviews } from '../data/customerReviews';
+import { customerReviews } from '../../../data/customerReviews';
 
 export function Clients () {
     return (

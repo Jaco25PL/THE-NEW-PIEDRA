@@ -1,26 +1,26 @@
-import styles from '../styles/Works.module.css'
-import { Titles } from './Titles'
+import styles from '../../../styles/Works.module.css'
+import { Titles } from '../../common/Titles/Titles'
 import { useState } from 'react';
 
 const SliderImages = [
     {
-      before: './images/sample-house-1.jpg',
-      after: './images/sample-house-2.jpg'
+      before: '/images/sample-house-1.jpg',
+      after: '/images/sample-house-2.jpg'
     },
     {
-      before: './images/sample-house-3.jpg',
-      after: './images/sample-house-1.jpg'
+      before: '/images/sample-house-3.jpg',
+      after: '/images/sample-house-1.jpg'
     },
     {
-      before: './images/sample-house-3.jpg',
-      after: './images/sample-house-1.jpg'
+      before: '/images/sample-house-3.jpg',
+      after: '/images/sample-house-1.jpg'
     },
     {
-      before: './images/sample-house-3.jpg',
-      after: './images/sample-house-1.jpg'
+      before: '/images/sample-house-3.jpg',
+      after: '/images/sample-house-1.jpg'
     }
     // Add more images as needed
-  ];
+];
 
 
 export function Works() {
@@ -60,7 +60,7 @@ export function Works() {
                 className={`${styles.navigationArrow} ${styles.prevArrow}`} 
                 onClick={handleNextImage}
             >
-                <img src="./images/arrow-B.svg" alt="Previous Arrow" />
+                <img src="/images/arrow-B.svg" alt="Previous Arrow" />
             </button>
 
             {/* Next Arrow */}
@@ -68,7 +68,7 @@ export function Works() {
                 className={`${styles.navigationArrow} ${styles.nextArrow}`} 
                 onClick={handlePrevImage}
             >
-                <img src="./images/arrow-B.svg" alt="Next Arrow" />
+                <img src="/images/arrow-B.svg" alt="Next Arrow" />
                 
             </button>
 
@@ -109,7 +109,7 @@ export function Works() {
                     className={styles.moreInfoButton}
                 >
                     <span>VER MÁS</span>
-                    <img src="./images/go-link.svg" alt="" />
+                    <img src="/images/go-link.svg" alt="" />
                 </a>
 
                 {/* Image Slider */}

@@ -1,4 +1,4 @@
-import styles from '../styles/Titles.module.css'
+import styles from '../../../styles/Titles.module.css'
 import PropTypes from 'prop-types'
 
 
