@@ -25,7 +25,7 @@ export function MobileNav() {
 
         <div className={styles.logoContainer}>
             <Link  to="/">
-                <img src="'/images/PIEDRA-W.svg" alt="PIEDRA logo" />
+                <img src="/images/PIEDRA-W.svg" alt="PIEDRA logo" />
             </Link>
         </div>
 
@@ -47,7 +47,7 @@ export function MobileNav() {
       <div className={`${styles.mobileMenuContainer} ${isOpen ? styles.openNav : styles.closedNav}`}>
         <ul className={styles.mobileMenu}>
             <li className={styles.row} onClick={handleClick}>
-              <Link to="/historia">HISTORIA</Link>
+              <Link to="/nosotros">NOSOTROS</Link>
             </li>
             <li className={styles.row} onClick={handleClick}>
               <Link to="/construir">CONSTRUIR</Link>
