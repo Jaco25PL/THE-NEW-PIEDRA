@@ -62,15 +62,15 @@ export function MobileNav() {
 
           <ul className={styles.mobileContactInfo}>
             <li className={styles.mobileContactRow}>
-              <img src="'/images/phone-icon.svg" alt="phone icon" />
+              <img src="/images/phone-icon.svg" alt="phone icon" />
               <a href="https://api.whatsapp.com/send?phone=59893595589" target="blank">094 159 591</a>
             </li>
             <li className={styles.mobileContactRow}>
-              <img src="'/images/blog-icon.svg" alt="email icon" />
+              <img src="/images/blog-icon.svg" alt="email icon" />
               <Link to="/blog" target="_blank">BLOG</Link>
             </li>
             <li  className={styles.mobileContactRow}>
-              <img src="'/images/envelope-icon.svg" alt="email icon" />
+              <img src="/images/envelope-icon.svg" alt="email icon" />
               <a href="mailto:piedraconstr.uy@gmail.com" target="blank">PIEDRACONSTR.UY@gmail.com</a>
             </li>
           </ul>
