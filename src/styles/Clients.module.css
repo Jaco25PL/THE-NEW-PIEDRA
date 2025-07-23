@@ -6,7 +6,7 @@
     padding: 2rem 0;
 }
 
-.satisfiedCustomersContainer::after {
+/* .satisfiedCustomersContainer::after {
     content: "";
     display: block;
     width: 20%;
@@ -24,7 +24,7 @@
     position: relative;
     top: -2rem;
     background-color: var(--gold-color);
-}
+} */
   
 .subtitle {
     color: #000;

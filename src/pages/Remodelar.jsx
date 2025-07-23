@@ -6,16 +6,19 @@ import { FAQ } from '../components/features/FAQ/FAQ'
 import { Works } from '../components/features/Works/Works'
 import { Stats } from '../components/features/Stats/Stats'
 import { RemodelarHero } from '../components/layout/Heroes/RemodelarHero'
-// import { useHeaderScroll } from '../hooks/useHeaderScroll'
 
 export function Remodelar() {
-
-  // const { isScrolling } = useHeaderScroll()
 
   return (
     <div className={styles.remodelarContainer}>
 
-      <RemodelarHero/>
+      <RemodelarHero
+        bgImage='/images/render-4.jpg'
+        title='Renueva Tu Hogar,'
+        titleBottom='Mejora Tu Vida'
+        subTitle='Remodelar tu casa es más que cambiar su apariencia'
+        subTitleBottom='ES MEJORAR TU DÍA A DÍA.'
+      />
 
       <Stats />
 

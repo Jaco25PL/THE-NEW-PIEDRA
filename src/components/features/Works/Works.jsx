@@ -1,4 +1,5 @@
 import styles from '../../../styles/Works.module.css'
+import { SectionDivider } from '../../common/SectionDivider/SectionDivider';
 import { Titles } from '../../common/Titles/Titles'
 import { useState } from 'react';
 
@@ -48,6 +49,9 @@ export function Works() {
 
     return (
         <div className={styles.container}>
+
+            <SectionDivider position='top'/>
+
             <Titles title="ANTES & DESPUÉS" />
             
             <p className={styles.subtitle}>

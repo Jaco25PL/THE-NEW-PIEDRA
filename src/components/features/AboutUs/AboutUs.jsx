@@ -7,8 +7,13 @@ import { CTAButton } from '../../common/Button/CTAButton';
 export function AboutUs({ content }) {
 
     return (
-        <section className={`${styles.section} ${content.id % 2 === 0 ? styles.pair : ''}`}>
+        
+
+        <div className={`${styles.section} ${content.id % 2 === 0 ? styles.pair : ''}`}>
+
             <div className={styles.imageContainer}>
+
+
                 <img 
                     src={content.img} 
                     alt="Interior design rendering" 
@@ -34,10 +39,11 @@ export function AboutUs({ content }) {
                         
                     </div>
 
-                    <CTAButton text={content.btn_title} action={content.btn_action} />
+                    <CTAButton text={content.btn_title} action={content.btn_action} color='gold'/>
                 </div>
             </div>
-        </section>
+        </div>
+        
     )
 }
 

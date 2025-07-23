@@ -9,23 +9,31 @@ import { CTA } from '../components/features/CTA/CTA';
 
 export function Construir() {
 
-
     return (
        <div className={styles.container}>
        
-             <RemodelarHero/>
+            <RemodelarHero
+                bgImage='/images/render.jpg'
+                title='Construye La Casa'
+                titleBottom='De Tus Sueños'
+                subTitle='No solo levantamos paredes, creamos hogares que mejoran'
+                subTitleBottom='tu calidad de vida.'
+            />
        
-             <Stats />
-       
-             <AboutUsCont />
-       
-             <Works/>
-             
-             <Clients/>
-       
-             <FAQ/>
-       
-             <CTA/>
+            <Stats />
+    
+            <AboutUsCont />
+    
+            <Works/>
+            
+            <Clients/>
+    
+            <FAQ/>
+    
+            <CTA
+                heading='Tu Casa Soñada Existe.'
+                headingBottom='Nosotros La Construimos'
+            />
        
            </div>
     )

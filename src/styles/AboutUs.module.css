@@ -6,7 +6,7 @@
     padding: 2rem 0;
 }
 
-.aboutUsContainer::after {
+/* .aboutUsContainer::after {
     content: "";
     display: block;
     width: 20%;
@@ -24,7 +24,7 @@
     position: relative;
     top: -2rem;
     background-color: var(--gold-color);
-}
+} */
   
 .section {
     display: flex;

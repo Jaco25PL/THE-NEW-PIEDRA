@@ -18,7 +18,7 @@ export function Header() {
               <Social />
 
               {/* 2) Second column */}
-              <div className={styles.column}><Link to="/historia">HISTORIA</Link> </div>
+              <div className={styles.column}><Link to="/nosotros">NOSOTROS</Link> </div>
 
               {/* 3) Third column */}
               <div className={styles.column}><Link to="/construir">CONSTRUIR</Link> </div>

@@ -10,6 +10,8 @@ import { Home } from './pages/Home'
 import { Construir } from './pages/Construir'
 import { NotFound } from './pages/404'
 import { Remodelar } from './pages/Remodelar'
+import { Nosotros } from './pages/Nosotros'
+import { Blog } from './pages/Blog'
 
 function App() {
 
@@ -22,6 +24,8 @@ function App() {
             <Route path="/" element={<Home/>} />
             <Route path='/construir' element={<Construir/>} />
             <Route path='/remodelar' element={<Remodelar/>} />
+            <Route path='/nosotros' element={<Nosotros/>} />
+            <Route path='/blog' element={<Blog/>} />
             <Route path="*" element={<NotFound/>} />
           </Routes>
       </main>

@@ -4,6 +4,8 @@
     margin: 2rem 8rem;
     gap: 3rem;
     justify-content: center;
+    /* Add min-height to prevent layout jumping */
+    min-height: 600px;
 }
 
 /* Image Section */
@@ -57,17 +59,19 @@
 /* FAQ Items */
 .faqList {
     flex-grow: 1;
+    /* Add fixed height to prevent content jumping */
+    position: relative;
 }
 
 .faqItem {
     border-bottom: 2.5px solid var(--gold-color);
     padding: 1.5rem 0;
     cursor: pointer;
-    transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
 }
 
 .faqItem:first-child{
@@ -89,90 +93,82 @@
     flex: 1;
 }
 
-/* Toggle Icon */
+/* Toggle Icon - Chevron Arrow */
 .toggleIcon {
     position: relative;
     width: 20px;
     height: 20px;
-    transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
+    transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
 }
 
 .iconLine1, .iconLine2 {
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 8px;
+    height: 2px;
     background-color: #000;
-    transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-}
-
-.iconLine1 {
-    width: 100%;
-    outline: 1px #000 solid;
     top: 50%;
-    /* transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%); */
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
 }
 
+/* Left side of chevron - pointing down */
+.iconLine1 {
+    left: 4px;
+    transform: translateY(-50%) rotate(45deg);
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    -moz-transform: translateY(-50%) rotate(45deg);
+    -ms-transform: translateY(-50%) rotate(45deg);
+    -o-transform: translateY(-50%) rotate(45deg);
+}
+
+/* Right side of chevron - pointing down */
 .iconLine2 {
-    outline: 1px #000 solid;
-    height: 100%;
-    left: 50%;
-    /* transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%); */
+    right: 4px;
+    transform: translateY(-50%) rotate(-45deg);
+    -webkit-transform: translateY(-50%) rotate(-45deg);
+    -moz-transform: translateY(-50%) rotate(-45deg);
+    -ms-transform: translateY(-50%) rotate(-45deg);
+    -o-transform: translateY(-50%) rotate(-45deg);
 }
 
-.toggleIcon.active .iconLine2 {
-    transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
+/* Rotate entire icon 180deg when active to point up */
+.toggleIcon.active {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
 }
 
-.toggleIcon.active .iconLine1 {
-    transform:  rotate(90deg);
-    -webkit-transform:  rotate(90deg);
-    -moz-transform:  rotate(90deg);
-    -ms-transform:  rotate(90deg);
-    -o-transform:  rotate(90deg);
-}
-
-/* Answer Section */
+/* Answer Section - Updated for smoother transitions */
 .answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
-    -webkit-transition: max-height 0.5s ease-in-out;
-    -moz-transition: max-height 0.5s ease-in-out;
-    -ms-transition: max-height 0.5s ease-in-out;
-    -o-transition: max-height 0.5s ease-in-out;
+    opacity: 0;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+    -webkit-transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+    -moz-transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+    -ms-transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+    -o-transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+    padding-top: 0;
 }
-
 
 .answer.show {
     max-height: 200px; 
+    opacity: 1;
+    padding-top: 1rem;
 }
 
 .answer p {
-    margin: 1rem 2rem 0 0 ;
+    margin: 0 2rem 0 0;
     color: #666;
     line-height: 1.5;
     text-align: left;
 }
-
-

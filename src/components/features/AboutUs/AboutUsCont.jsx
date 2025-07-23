@@ -1,11 +1,12 @@
 import styles from '../../../styles/AboutUs.module.css'
 import { AboutUs } from './AboutUs'
+import { SectionDivider } from '../../common/SectionDivider/SectionDivider'
 
 const content = [
   {
     id: 1,
     img: '/images/render-sample.jpeg',
-    title: '¿POR QUÉ ELEGIRNOS?', 
+    title: '¿POR QUÉ ELEGIRNOS?',   
     sub1: 'Render 3D Personalizado',
     sub2: 'Garantía De Por Vida',
     sub3: 'Entregas A Tiempo',
@@ -36,11 +37,14 @@ const content = [
 export function AboutUsCont() {
   
     return (
-        <div className={styles.aboutUsContainer}>
+        <section className={styles.aboutUsContainer}>
+
+            <SectionDivider position='top'/>
+          
 
             <AboutUs content={content[0]}/>
-            <AboutUs content={content[1]}/>
+            <AboutUs content={content[1]}/> 
 
-        </div>
+        </section>
     )
 }

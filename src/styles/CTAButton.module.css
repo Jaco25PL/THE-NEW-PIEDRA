@@ -1,11 +1,12 @@
 .whatsappButton {
     color: #fff;
-    background-color: var(--gold-color);
+    /* background-color: var(--gold-color); */
     padding: 0.8rem 1.5rem;
     text-decoration: none;
     font-weight: 400;
     border-radius: 0;
     margin: .5rem 0;
+    width: fit-content;
     transition: all 0.3s ease;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -17,6 +18,18 @@
     -o-transition: all 0.3s ease;
 }
 
-.whatsappButton:hover {
-    font-weight: 600;
+.whatsappButtonGold {
+    background-color: var(--gold-color);
+}
+
+.whatsappButtonGold:hover {
+    background-color: #000;
+}
+
+.whatsappButtonDark {
+    background-color: #000;
+}
+
+.whatsappButtonDark:hover {
+    background-color: var(--gold-color);
 }

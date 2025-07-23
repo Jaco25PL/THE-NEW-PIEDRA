@@ -1,27 +1,39 @@
 
+// import { Remodelar } from '../../../pages/Remodelar';
 import styles from '../../../styles/HeaderRemodelar.module.css';
 import { CTAButton } from '../../common/Button/CTAButton';
 import { Testimonials } from '../../common/Testimonials/Testimonials';
+import PropTypes from 'prop-types';
 
-export function RemodelarHero ( ) {
+
+export function RemodelarHero ({
+    title = 'PIEDRA',
+    titleBottom = 'Construcciones',
+    subTitle = 'Una empresa familiar',
+    subTitleBottom = 'Una empresa de confianza',
+    bgImage = '/images/render-4.jpg',
+  } ) {
 
     return (
 
-      <div className={styles.heroContainer}>
+      <div 
+        className={styles.heroContainer}
+        style={{ backgroundImage: `url(${bgImage})` }}
+      >
       
         <div className={styles.overlay}>
           <div className={styles.heroContent}>
             <div className={styles.titleContainer}>
               <span className={styles.decorativeLetter}>P</span>
               <h1 className={styles.heroTitle}>
-                Construye La Casa<br />
-                De Tus Sueños
+                <span>{title}</span>
+                <span className={styles.block} >{titleBottom}</span>
               </h1>
             </div>
 
             <p className={styles.heroSubtitle}>
-              No solo levantamos paredes, creamos hogares que mejoran<br />
-              tu calidad de vida.
+              <span>{subTitle}</span>
+              <span className={styles.block}>{subTitleBottom}</span>
             </p>
 
             <div className={styles.ctaButton}>
@@ -54,4 +66,12 @@ export function RemodelarHero ( ) {
       </div>
 
     )
+}
+
+RemodelarHero.propTypes = {
+  title: PropTypes.string, 
+  titleBottom: PropTypes.string,
+  subTitle: PropTypes.string,
+  subTitleBottom: PropTypes.string,
+  bgImage: PropTypes.string,
 }

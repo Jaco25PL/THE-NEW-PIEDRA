@@ -121,7 +121,7 @@ src/
   │   │   └── index.jsx
   │   ├── Remodelar/
   │   │   └── index.jsx
-  │   ├── Construir/
+  │   ├── Construir/  
   │   │   └── index.jsx
   │   ├── Blog/
   │   │   └── index.jsx

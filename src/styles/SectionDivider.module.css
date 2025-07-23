@@ -1,0 +1,25 @@
+.sectionDividerT, .sectionDividerB {
+    width: 95vw;
+}
+
+.sectionDividerT::before {
+    content: "";
+    display: block;
+    width: 20%;
+    height: 2.5px;
+    position: relative;
+    margin: 0 auto;
+    top: -2rem;
+    background-color: var(--gold-color);
+}
+
+.sectionDividerB::after {
+    content: "";
+    display: block;
+    width: 20%;
+    height: 2.5px;
+    position: relative;
+    margin: 0 auto;
+    top: 2rem;
+    background-color: var(--gold-color);
+}

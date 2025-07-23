@@ -1,0 +1,131 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 8rem;
+    margin-bottom: 0;
+    padding: 2rem 0;    
+    /* background-color: #f9f9f9; */
+}
+
+/* .container::after {
+    content: "";
+    display: block;
+    width: 20%;
+    height: 2.5px;
+    position: relative;
+    top: 2rem;
+    background-color: var(--gold-color);
+} */
+
+/* .container::before {
+    content: "";
+    display: block;
+    width: 20%;
+    height: 2.5px;
+    position: relative;
+    top: -2rem;
+    background-color: var(--gold-color);
+} */
+
+.subtitle {
+    color: #000;
+    margin: 1rem 0 4rem;
+    text-align: center;
+    font-size: 1.1rem;
+    font-family: Montserrat, sans-serif;
+    max-width: 70%;
+    line-height: 1.4;
+}
+
+.stepsContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 3rem;
+    max-width: 1200px;
+}
+
+.stepItem {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0;
+    position: relative;
+}
+
+.stepTitle {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+    color: #333;
+    font-family: Montserrat, sans-serif;
+    text-transform: none;
+}
+
+.stepDescription {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+    font-family: Montserrat, sans-serif;
+    text-align: left;
+}
+
+/* Remove step numbers styles since they're not needed */
+.stepNumber {
+    display: none;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    .container {
+        margin: 2rem 4rem;
+    }
+    
+    .stepsContainer {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container {
+        margin: 2rem 2rem;
+    }
+    
+    .stepsContainer {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .stepItem {
+        padding: 1rem 0;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .stepDescription {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 2rem 1rem;
+    }
+    
+    .subtitle {
+        max-width: 90%;
+        font-size: 1rem;
+    }
+    
+    .stepTitle {
+        font-size: 1rem;
+    }
+    
+    .stepDescription {
+        font-size: 0.9rem;
+    }
+}

@@ -1,9 +1,15 @@
 import styles from '../../../styles/CTA.module.css';
 import { CTAButton } from '../../common/Button/CTAButton';
 import { Testimonials } from '../../common/Testimonials/Testimonials';
+import PropTypes from 'prop-types';
 
 
-export function CTA() {
+export function CTA({
+  heading = "¿Listo Para",
+  headingBottom = "Transformar tu Casa?",
+  subheading = "Tu hogar merece lo mejor. Agenda una consulta gratuita sin compromiso y descubre cómo podemos hacer realidad tu visión."
+
+}) {
 
 
     const whatsappNumber = '59893595589';
@@ -13,11 +19,11 @@ export function CTA() {
       <div className={styles.contentOverlay}>
         <div className={styles.content}>
             <div className={styles.headingContainer}>
-                  <h1 className={styles.heading}>¿Listo Para</h1>
-                  <h1 className={styles.heading}>Transformar tu Casa?</h1>
+                  <h1 className={styles.heading}>{heading}</h1>
+                  <h1 className={styles.heading}>{headingBottom}</h1>
             </div>
             <p className={styles.subheading}>
-              Tu hogar merece lo mejor. Agenda una consulta gratuita sin compromiso y descubre cómo podemos hacer realidad tu visión.
+              {subheading}
             </p>
 
             <CTAButton text="RESERVA UNA VISITA HOY" action={`https://wa.me/${whatsappNumber}`} />
@@ -55,3 +61,9 @@ export function CTA() {
   );
 
 }
+
+CTA.propTypes = {
+  heading: PropTypes.string,
+  headingBottom: PropTypes.string,
+  subheading: PropTypes.string,
+};
