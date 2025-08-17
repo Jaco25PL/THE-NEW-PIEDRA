@@ -1,11 +1,11 @@
 # PIEDRA Website TODO List
 
 ## Pages to Create
-- [ ] **Historia Page**
+- [✅] **Historia Page**
   - Implement layout and content
   - Ensure consistent styling
 
-- [ ] **Construir Page**
+- [✅] **Construir Page**
   - Similar structure to remodelar page
   - Adapt content for construction focus
 
@@ -49,6 +49,13 @@
 - [ ] Review and fix header buttons
   - Check functionality
   - Improve styling
+
+
+
+- Do works with an slider to comera before and after
+- do the thing on stats compoent
+- fix nav
+
 
 ----------------------------
 

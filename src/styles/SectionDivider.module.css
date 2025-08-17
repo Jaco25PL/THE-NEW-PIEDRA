@@ -9,7 +9,7 @@
     height: 2.5px;
     position: relative;
     margin: 0 auto;
-    top: -2rem;
+    top: -4rem;
     background-color: var(--gold-color);
 }
 
@@ -20,6 +20,6 @@
     height: 2.5px;
     position: relative;
     margin: 0 auto;
-    top: 2rem;
+    top: 4rem;
     background-color: var(--gold-color);
 }

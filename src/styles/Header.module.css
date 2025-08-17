@@ -5,11 +5,11 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
+  transition: max-height 0.3s ease, background-color 0.3s ease;
+  -webkit-transition: max-height 0.3s ease, background-color 0.3s ease;
+  -moz-transition: max-height 0.3s ease, background-color 0.3s ease;
+  -ms-transition: max-height 0.3s ease, background-color 0.3s ease;
+  -o-transition: max-height 0.3s ease, background-color 0.3s ease;
 }
 
 .headerContainerNotScrolled{
@@ -20,13 +20,7 @@
   max-height: 4rem;
 }
   
-.showLogo {
-  display: block;
-}
-
-.hideLogo {
-  display: none;
-}
+/* Show/Hide handled via opacity to allow smooth transitions (avoid display toggling) */
 
 
 
@@ -83,10 +77,16 @@
 
 .hideLogo{
   opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .25s ease;
 }
 
 .showLogo{
   opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity .25s ease;
 }
 
 .adjustHeightOff{

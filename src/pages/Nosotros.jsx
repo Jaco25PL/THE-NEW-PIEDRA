@@ -1,6 +1,6 @@
 import styles from '../styles/pages/Nosotros.module.css';
 import { RemodelarHero } from '../components/layout/Heroes/RemodelarHero';
-import { Stats } from '../components/features/Stats/Stats';
+// import { Stats } from '../components/features/Stats/Stats';
 import { RenovarPasos } from '../components/features/AboutUs/RenovarPasos';
 import { Clients } from '../components/features/Clients/Clients';
 import { Services } from '../components/features/AboutUs/Services';
@@ -36,7 +36,7 @@ export function Nosotros () {
             subTitleBottom='con la misma pasión del primer día.'
         />
                
-        <Stats />
+        {/* <Stats /> */}
 
         {/* <SectionDivider/> */}
 
@@ -49,7 +49,7 @@ export function Nosotros () {
         {/* <FAQ/> */}
         <FAQ faqItems={customFaqItems}/>
 
-        <CTA/>
+        <CTA heading="¿Estás buscando una empresa" headingBottom='segura y confiable?'/> 
 
     </div>
   );

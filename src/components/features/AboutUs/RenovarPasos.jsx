@@ -1,12 +1,12 @@
 import styles from '../../../styles/RenovarPasos.module.css';
 import { Titles } from '../../common/Titles/Titles';
-import { SectionDivider } from '../../common/SectionDivider/SectionDivider';
+// import { SectionDivider } from '../../common/SectionDivider/SectionDivider';
 
 export function RenovarPasos() {
     return (
         <section className={styles.container}>
 
-            <SectionDivider position='top' />
+            {/* <SectionDivider position='top' /> */}
 
             <Titles title='¿CÓMO PODÉS RENOVAR TU ESPACIO?'/>
             

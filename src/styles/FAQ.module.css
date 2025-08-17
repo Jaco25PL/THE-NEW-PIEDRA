@@ -2,10 +2,12 @@
 .faqContainer {
     display: flex;
     margin: 2rem 8rem;
+    margin-top: 8rem;
     gap: 3rem;
     justify-content: center;
     /* Add min-height to prevent layout jumping */
     min-height: 600px;
+    
 }
 
 /* Image Section */

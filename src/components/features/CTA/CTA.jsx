@@ -26,7 +26,7 @@ export function CTA({
               {subheading}
             </p>
 
-            <CTAButton text="RESERVA UNA VISITA HOY" action={`https://wa.me/${whatsappNumber}`} />
+            <CTAButton text="QUIERO MÁS INFORMACIÓN" action={`https://wa.me/${whatsappNumber}`} />
             {/* <a
               href={`https://wa.me/${whatsappNumber}`}
               className={styles.whatsappButton}

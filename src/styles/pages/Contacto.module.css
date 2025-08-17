@@ -1,0 +1,124 @@
+/* Contacto.module.css - revamped to mirror CTA style */
+
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  background-image: url('/images/render-4.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 3rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* center overall section content */
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.contentOverlay {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.content {
+  max-width: 900px;
+  margin: 0 auto; /* center block */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center by default */
+  text-align: center; /* center by default */
+  gap: 1rem;
+}
+
+.headingContainer {
+  line-height: 1;
+}
+
+.heading {
+  font-family: SabonNext, serif;
+  font-weight: 300;
+  font-size: 4.5rem;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.subheading {
+  font-size: 1.1rem;
+  /* max-width: 720px; */
+  margin: 2.5rem 0 1rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* original spacing */
+  align-items: flex-start; /* left-align only the links block */
+  justify-content: center;
+  margin-top: 0.75rem;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.95;
+  transition: opacity 0.2s ease, transform 0.2s ease; /* restore subtle hover */
+}
+
+.link:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.linkText {
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .heading {
+    font-size: 3.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 2.25rem 1rem;
+    min-height: 50vh;
+  }
+
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .subheading {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 2rem;
+  }
+
+  .subheading {
+    font-size: 0.9rem;
+  }
+}

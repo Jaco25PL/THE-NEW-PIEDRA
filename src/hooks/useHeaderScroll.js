@@ -1,60 +1,68 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 export function useHeaderScroll() {
     const [isScrolling, setIsScrolling] = useState(false)
     const [isStopScrolling, setIsStopScrolling] = useState(true)
-    
-    
+
+    // Refs para estado derivado sin re-render y control de rAF
+    const lastYRef = useRef(0)
+    const tickingRef = useRef(false)
+    const isScrollingRef = useRef(false)
+
     useEffect(() => {
-    
-        let timeoutId = null
-        
-        const handleScrollOn = () => {
+        const TOP_OFFSET = 10       // px que consideras "arriba del todo"
+        const MIN_HIDE_Y = 300      // desde dónde puede ocultarse el header
+        const DELTA = 5             // histéresis para evitar parpadeos
 
+        const onScroll = () => {
+            if (tickingRef.current) return
+            tickingRef.current = true
 
-            const scrollY = window.scrollY
+            requestAnimationFrame(() => {
+                const y = window.scrollY
+                const lastY = lastYRef.current
 
-            const height = 300
-        
-            if (timeoutId) {
-                clearTimeout(timeoutId)
-            }
+                // Top fijo: mostrar header y marcar stopScrolling
+                const atTop = y <= TOP_OFFSET
+                setIsStopScrolling(atTop)
 
-            timeoutId = setTimeout(() => {
-                scrollY >= height ? setIsScrolling(true) : setIsScrolling(false)
-            }, 30)
-        }
+                let nextIsScrolling = isScrollingRef.current
 
+                if (atTop) {
+                    nextIsScrolling = false
+                } else {
+                    const goingDown = y > lastY + DELTA
+                    const goingUp = y < lastY - DELTA
 
-            handleScrollOn()
-
-            window.addEventListener('scroll', handleScrollOn)
-
-            return () => {
-                window.removeEventListener('scroll', handleScrollOn)
-                if (timeoutId) {
-                    clearTimeout(timeoutId)
+                    if (goingDown && y > MIN_HIDE_Y) {
+                        nextIsScrolling = true
+                    } else if (goingUp) {
+                        nextIsScrolling = false
+                    }
                 }
-            }
-    }, [])
 
-    useEffect(() => {
-        // let timeoutId = null
-        
-        const handleScrollOff = () => {
+                if (nextIsScrolling !== isScrollingRef.current) {
+                    isScrollingRef.current = nextIsScrolling
+                    setIsScrolling(nextIsScrolling)
+                }
 
-            const scrollY = window.scrollY
-            const height = 10
-        
-            scrollY <= height ? setIsStopScrolling(true) : setIsStopScrolling(false)
+                lastYRef.current = y
+                tickingRef.current = false
+            })
         }
-        handleScrollOff()
-        window.addEventListener('scroll', handleScrollOff)
+
+        // Inicialización
+        lastYRef.current = window.scrollY
+        isScrollingRef.current = false
+        setIsStopScrolling(window.scrollY <= TOP_OFFSET)
+        setIsScrolling(false)
+
+        window.addEventListener('scroll', onScroll, { passive: true })
         return () => {
-            window.removeEventListener('scroll', handleScrollOff)
+            window.removeEventListener('scroll', onScroll)
         }
     }, [])
-    
+
     return {
         isScrolling,
         isStopScrolling

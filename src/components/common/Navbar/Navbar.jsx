@@ -5,9 +5,9 @@ import { MobileNav } from './MobileNav';
 import { useHeaderScroll } from '../../../hooks/useHeaderScroll';
 import { Link } from 'react-router-dom';
 
-export function Header() {
+export function Navbar() {
 
-    const { isScrolling , isStopScrolling } = useHeaderScroll()
+  const { isScrolling } = useHeaderScroll()
 
     console.log(isScrolling)
 
@@ -26,19 +26,20 @@ export function Header() {
               {/* 4) Fourth column (Center - your logo, for example) */}
               <div className={`${styles.column} ${styles.logoColomn}`}>
                 <Link to="/">
-                    {/* {
-                        isScrolling ? 
-                        <img className={`${isScrolling ? styles.showLogo : styles.hideLogo} ${styles.scrollLogo} ${styles.mainLogoWhite}`} src="'/images/PIEDRA-B-SM.svg" alt="Piedra Construcciones" />
-                        :
-                        <img className={`${isScrolling ? `${styles.hideLogo} ${styles.adjustHeightOn}` : `${styles.showLogo}  ${styles.adjustHeightOff}`}  ${styles.mainLogo} ${styles.mainLogoBlack}`} src="'/images/PIEDRA-B.svg" alt="Piedra Construcciones" />
-                    } */}
-
-                    {
-                        isScrolling && <img className={`${isScrolling ? styles.showLogo : styles.hideLogo} ${styles.scrollLogo} ${styles.mainLogoWhite}`} src="/images/PIEDRA-B-SM.svg" alt="Piedra Construcciones" />
-                    }                   
-                    {
-                        isStopScrolling && <img className={`${isScrolling ? `${styles.hideLogo} ${styles.adjustHeightOn}` : `${styles.showLogo}  ${styles.adjustHeightOff}`}  ${styles.mainLogo} ${styles.mainLogoBlack}`} src="/images/PIEDRA-B.svg" alt="Piedra Construcciones" />
-                    }
+                    {isScrolling && (
+                      <img
+                        className={`${styles.showLogo} ${styles.scrollLogo}`}
+                        src="/images/PIEDRA-B-SM.svg"
+                        alt="Piedra Construcciones"
+                      />
+                    )}
+                    {!isScrolling && (
+                      <img
+                        className={`${styles.showLogo} ${styles.mainLogo} ${styles.mainLogoBlack}`}
+                        src="/images/PIEDRA-B.svg"
+                        alt="Piedra Construcciones"
+                      />
+                    )}
                 </Link>
               </div>
 
