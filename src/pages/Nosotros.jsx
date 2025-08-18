@@ -29,7 +29,7 @@ export function Nosotros () {
     <div className={styles.container}>
 
         <RemodelarHero
-            bgImage='/images/render.jpg'
+            bgImage='/images/render-2.jpg'
             title='Piedra Construcciones,'
             titleBottom='Una Empresa Familiar'
             subTitle='30+ años más transformando espacios en Uruguay,'

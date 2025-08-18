@@ -18,7 +18,7 @@ const content = [
   },
   {
     id: 2,
-    img: '/images/render.jpg',
+    img: '/images/render-2.jpg',
     title: 'NUESTRO PROCESO',
     sub1: 'Paso 1: Presupuesto',
     sub2: 'Paso 2: Diseño 3D',

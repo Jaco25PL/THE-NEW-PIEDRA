@@ -30,18 +30,18 @@ export function Contacto() {
 
           <nav className={styles.links} aria-label="Otros medios de contacto">
             <a href={`mailto:${email}`} className={styles.link}>
-              <span className={styles.icon} aria-hidden="true">{/* SVG aquí */}</span>
+              <span className={styles.icon} aria-hidden="true"><img src="/images/envelope-logo.svg" alt="Envelope logo" /></span>
               <span className={styles.linkText}>{email}</span>
             </a>
 
             <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className={styles.link}>
-              <span className={styles.icon} aria-hidden="true">{/* SVG aquí */}</span>
-              <span className={styles.linkText}>@{instagramUser}</span>
+              <span className={styles.icon} aria-hidden="true"><img src="/images/instagram-logo.svg" alt="Instagram" /></span>
+              <span className={styles.linkText}>{instagramUser}</span>
             </a>
 
             <a href={tiktokUrl} target="_blank" rel="noopener noreferrer" className={styles.link}>
-              <span className={styles.icon} aria-hidden="true">{/* SVG aquí */}</span>
-              <span className={styles.linkText}>@{tiktokUser}</span>
+              <span className={styles.icon} aria-hidden="true"><img src="/images/tiktok-logo.svg" alt="TikTok" /></span>
+              <span className={styles.linkText}>{tiktokUser}</span>
             </a>
 
             <a
@@ -50,8 +50,8 @@ export function Contacto() {
               rel="noopener noreferrer"
               className={styles.link}
             >
-              <span className={styles.icon} aria-hidden="true">{/* SVG aquí */}</span>
-              <span className={styles.linkText}>{whatsappNumber}</span>
+              <span className={styles.icon} aria-hidden="true"><img src="/images/whatsapp-logo.svg" alt="WhatsApp logo" /></span>
+              <span className={styles.linkText}>093 595 589</span>
             </a>
           </nav>
         </div>

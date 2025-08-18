@@ -13,7 +13,7 @@ export function Construir() {
        <div className={styles.container}>
        
             <RemodelarHero
-                bgImage='/images/render.jpg'
+                bgImage='/images/render-1.jpg'
                 title='Construye La Casa'
                 titleBottom='De Tus Sueños'
                 subTitle='No solo levantamos paredes, creamos hogares que mejoran'
