@@ -9,11 +9,12 @@
   - Similar structure to remodelar page
   - Adapt content for construction focus
 
+<!-- 
 - [ ] **Blog Page**
   - Create blog layout
-  - Implement article previews
+  - Implement article previews -->
 
-- [ ] **Contactar Page**
+- [✅] **Contactar Page**
   - Create contact form
   - Add validation
   - Connect to backend/email service
