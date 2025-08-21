@@ -11,6 +11,10 @@ export function MobileNav() {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   if (isOpen) {
     document.body.style.overflow = "hidden";
   } else {  
@@ -24,7 +28,7 @@ export function MobileNav() {
         <div></div>
 
         <div className={styles.logoContainer}>
-            <Link  to="/">
+            <Link  to="/" onClick={closeMenu}>
                 <img src="/images/PIEDRA-W.svg" alt="PIEDRA logo" />
             </Link>
         </div>
@@ -46,17 +50,17 @@ export function MobileNav() {
 
       <div className={`${styles.mobileMenuContainer} ${isOpen ? styles.openNav : styles.closedNav}`}>
         <ul className={styles.mobileMenu}>
-            <li className={styles.row} onClick={handleClick}>
-              <Link to="/nosotros">NOSOTROS</Link>
+            <li className={styles.row}>
+              <Link to="/nosotros" onClick={closeMenu}>NOSOTROS</Link>
             </li>
-            <li className={styles.row} onClick={handleClick}>
-              <Link to="/construir">CONSTRUIR</Link>
+            <li className={styles.row}>
+              <Link to="/construir" onClick={closeMenu}>CONSTRUIR</Link>
             </li>
-            <li className={styles.row} onClick={handleClick}>
-              <Link to="/remodelar">REMODELAR</Link>
+            <li className={styles.row}>
+              <Link to="/remodelar" onClick={closeMenu}>REMODELAR</Link>
             </li>
-            <li className={styles.row} onClick={handleClick}>
-              <Link to="/contacto">CONTACTO</Link>
+            <li className={styles.row}>
+              <Link to="/contacto" onClick={closeMenu}>CONTACTO</Link>
             </li>
         </ul>
 
