@@ -37,14 +37,6 @@
     /* margin-bottom: 1rem; */
 }
 
-.headerLine {
-    /* position: absolute; */
-    /* top: -10px; */
-    /* left: 0; */
-    /* right: 0; */
-    /* border-top: 2px solid #d1b371; */
-}
-
 .title {
     /* position: absolute; */
     text-align: center;
@@ -69,11 +61,11 @@
     border-bottom: 2.5px solid var(--gold-color);
     padding: 1.5rem 0;
     cursor: pointer;
-    transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
 }
 
 .faqItem:first-child{
@@ -149,23 +141,27 @@
     -o-transform: rotate(180deg);
 }
 
-/* Answer Section - Updated for smoother transitions */
+/* Answer Section - Sequential animations to prevent jumping */
 .answer {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
-    -webkit-transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
-    -moz-transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
-    -ms-transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
-    -o-transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+    transition: max-height 0.25s ease-in-out, opacity 0.2s ease-in-out, padding 0.25s ease-in-out;
+    -webkit-transition: max-height 0.25s ease-in-out, opacity 0.2s ease-in-out, padding 0.25s ease-in-out;
+    -moz-transition: max-height 0.25s ease-in-out, opacity 0.2s ease-in-out, padding 0.25s ease-in-out;
+    -ms-transition: max-height 0.25s ease-in-out, opacity 0.2s ease-in-out, padding 0.25s ease-in-out;
+    -o-transition: max-height 0.25s ease-in-out, opacity 0.2s ease-in-out, padding 0.25s ease-in-out;
     padding-top: 0;
+    padding-bottom: 0;
+    transition-delay: 0s;
 }
 
 .answer.show {
-    max-height: 200px; 
+    max-height: 150px; 
     opacity: 1;
     padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    transition-delay: 0.15s;
 }
 
 .answer p {
@@ -173,4 +169,126 @@
     color: #666;
     line-height: 1.5;
     text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .faqContainer {
+        margin: 6rem 4rem;
+        gap: 2rem;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .faqContainer {
+        flex-direction: column;
+        margin: 4rem 2rem;
+        gap: 2rem;
+        min-height: auto;
+    }
+    
+    .imageContainer {
+        flex: none;
+        height: 250px;
+        aspect-ratio: auto;
+        order: -1;
+    }
+    
+    .faqContent {
+        flex: none;
+    }
+    
+    .title {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    
+    .question {
+        font-size: 0.95rem;
+        line-height: 1.3;
+        padding-right: 1rem;
+    }
+    
+    .faqItem {
+        padding: 1.2rem 0;
+    }
+    
+    .answer p {
+        margin: 0 1rem 0 0;
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 480px) {
+    .faqContainer {
+        margin: 3rem 1rem;
+        gap: 1.5rem;
+    }
+    
+    .imageContainer {
+        height: 200px;
+    }
+    
+    .title {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+    
+    .question {
+        font-size: 0.9rem;
+        padding-right: 0.5rem;
+    }
+    
+    .faqItem {
+        padding: 1rem 0;
+    }
+    
+    .answer p {
+        margin: 0 0.5rem 0 0;
+        font-size: 0.85rem;
+    }
+    
+    .toggleIcon {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .iconLine1, .iconLine2 {
+        width: 7px;
+        height: 1.5px;
+    }
+}
+
+@media (max-width: 360px) {
+    .faqContainer {
+        margin: 2rem 0.5rem;
+        gap: 1rem;
+    }
+    
+    .imageContainer {
+        height: 180px;
+    }
+    
+    .title {
+        font-size: 1.2rem;
+    }
+    
+    .question {
+        font-size: 0.85rem;
+    }
+    
+    .faqItem {
+        padding: 0.8rem 0;
+    }
+    
+    .answer p {
+        font-size: 0.8rem;
+        margin-right: 0.25rem;
+    }
 }

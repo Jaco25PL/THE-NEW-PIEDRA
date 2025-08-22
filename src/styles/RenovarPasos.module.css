@@ -56,12 +56,15 @@
 }
 
 .stepTitle {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
     letter-spacing: 0.5px;
     color: #333;
-    font-family: Montserrat, sans-serif;
+    /* font-family: Montserrat, sans-serif; */
+    font-family: SabonNext, sans-serif;
+
+
     text-transform: none;
 }
 
@@ -133,6 +136,7 @@
     .stepTitle {
         font-size: 1.3rem;
         margin-bottom: 1rem;
+        font-family: SabonNext;
     }
     
     .stepDescription {
@@ -165,7 +169,7 @@
     }
     
     .stepTitle {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         margin-bottom: 0.8rem;
         line-height: 1.3;
     }
