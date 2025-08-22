@@ -1,12 +1,12 @@
 
 // import { Remodelar } from '../../../pages/Remodelar';
-import styles from '../../../styles/HeaderRemodelar.module.css';
+import styles from '../../../styles/PiedraHero.module.css';
 import { CTAButton } from '../../common/Button/CTAButton';
 import { Testimonials } from '../../common/Testimonials/Testimonials';
 import PropTypes from 'prop-types';
 
 
-export function RemodelarHero ({
+export function PiedraHero ({
     title = 'PIEDRA',
     titleBottom = 'Construcciones',
     subTitle = 'Una empresa familiar',
@@ -68,7 +68,7 @@ export function RemodelarHero ({
     )
 }
 
-RemodelarHero.propTypes = {
+PiedraHero.propTypes = {
   title: PropTypes.string, 
   titleBottom: PropTypes.string,
   subTitle: PropTypes.string,

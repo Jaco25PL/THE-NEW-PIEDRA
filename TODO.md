@@ -20,9 +20,14 @@
   - Connect to backend/email service
 
 ## Responsive Design
-- [ ] Implement mobile responsive design
-  - Test on different device sizes
-  - Fix breakpoint issues
+- [✅] Contactar Page
+- [✅] Piedra Hero
+- [ ] Nosotros Page
+- [ ] Constriir Page
+- [ ] Remodelar Page
+- [✅] Blog Page
+
+
 
 ## Content Updates
 - [ ] Replace placeholder data with real information:

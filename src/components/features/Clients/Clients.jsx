@@ -11,7 +11,7 @@ export function Clients () {
             <SectionDivider position='top'/>
 
             <Titles title="CLIENTES SATISFECHOS"/>
-            <p className={styles.subtitle}>89% de nuestros clientes nos eligen por segunda vez</p>
+            <p className={styles.subtitle}><b>97% de nuestros clientes</b> nos eligen por segunda vez</p>
             <div className={styles.reviewsContainer}>
                 {customerReviews.map(review => (
                     <ReviewCard key={review.id} review={review} />

@@ -104,7 +104,7 @@
 }
 
 .serviceTitle {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: #333;
     font-family: SabonNext, sans-serif;
@@ -137,7 +137,8 @@
 /* Responsive design */
 @media (max-width: 1200px) {
     .container {
-        margin: 2rem 4rem;
+        margin-left: 4rem;
+        margin-right: 4rem;
     }
     
     .servicesGrid {
@@ -147,7 +148,8 @@
 
 @media (max-width: 1000px) {
     .container {
-        margin: 2rem 2rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
     
     .servicesGrid {
@@ -180,7 +182,8 @@
 
 @media (max-width: 768px) {
     .container {
-        margin: 2rem 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
     
     .subtitle {
@@ -189,7 +192,7 @@
     }
     
     .serviceTitle {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
     
     .serviceDescription {

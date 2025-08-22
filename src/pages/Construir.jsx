@@ -1,5 +1,5 @@
 import styles from '../styles/Construir.module.css'
-import { RemodelarHero } from '../components/layout/Heroes/RemodelarHero';
+import { PiedraHero } from '../components/layout/Heroes/PiedraHero';
 import { Stats } from '../components/features/Stats/Stats';
 import { AboutUsCont } from '../components/features/AboutUs/AboutUsCont';
 import { Works } from '../components/features/Works/Works';
@@ -12,7 +12,7 @@ export function Construir() {
     return (
        <div className={styles.container}>
        
-            <RemodelarHero
+            <PiedraHero
                 bgImage='/images/render-1.jpg'
                 title='Construye La Casa'
                 titleBottom='De Tus Sueños'

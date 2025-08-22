@@ -1,5 +1,5 @@
 import styles from '../styles/pages/Nosotros.module.css';
-import { RemodelarHero } from '../components/layout/Heroes/RemodelarHero';
+import { PiedraHero } from '../components/layout/Heroes/PiedraHero';
 // import { Stats } from '../components/features/Stats/Stats';
 import { RenovarPasos } from '../components/features/AboutUs/RenovarPasos';
 import { Clients } from '../components/features/Clients/Clients';
@@ -28,7 +28,7 @@ export function Nosotros () {
   return (
     <div className={styles.container}>
 
-        <RemodelarHero
+        <PiedraHero
             bgImage='/images/render-2.jpg'
             title='Piedra Construcciones,'
             titleBottom='Una Empresa Familiar'

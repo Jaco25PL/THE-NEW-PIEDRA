@@ -9,3 +9,30 @@
     /* letter-spacing: 2px; */
     /* font-weight: 400; */
 }
+
+/* Responsive styles */
+@media (max-width: 1000px) {
+    .title{
+        line-height: 1.1;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        line-height: 1.3;
+    }
+}
+
+@media (max-width: 360px) {
+    .title {
+        line-height: 1.4;
+    }
+}

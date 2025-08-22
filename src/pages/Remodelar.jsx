@@ -5,14 +5,14 @@ import { CTA } from '../components/features/CTA/CTA'
 import { FAQ } from '../components/features/FAQ/FAQ'
 import { Works } from '../components/features/Works/Works'
 import { Stats } from '../components/features/Stats/Stats'
-import { RemodelarHero } from '../components/layout/Heroes/RemodelarHero'
+import { PiedraHero } from '../components/layout/Heroes/PiedraHero'
 
 export function Remodelar() {
 
   return (
     <div className={styles.remodelarContainer}>
 
-      <RemodelarHero
+      <PiedraHero
         bgImage='/images/render-4.jpg'
         title='Renueva Tu Hogar,'
         titleBottom='Mejora Tu Vida'

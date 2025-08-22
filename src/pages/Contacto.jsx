@@ -29,9 +29,14 @@ export function Contacto() {
           />
 
           <nav className={styles.links} aria-label="Otros medios de contacto">
-            <a href={`mailto:${email}`} className={styles.link}>
-              <span className={styles.icon} aria-hidden="true"><img src="/images/envelope-logo.svg" alt="Envelope logo" /></span>
-              <span className={styles.linkText}>{email}</span>
+            <a
+              href={`https://wa.me/${whatsappNumber}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.link}
+            >
+              <span className={styles.icon} aria-hidden="true"><img src="/images/whatsapp-logo.svg" alt="WhatsApp logo" /></span>
+              <span className={styles.linkText}>093 595 589</span>
             </a>
 
             <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className={styles.link}>
@@ -44,14 +49,11 @@ export function Contacto() {
               <span className={styles.linkText}>{tiktokUser}</span>
             </a>
 
-            <a
-              href={`https://wa.me/${whatsappNumber}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.link}
-            >
-              <span className={styles.icon} aria-hidden="true"><img src="/images/whatsapp-logo.svg" alt="WhatsApp logo" /></span>
-              <span className={styles.linkText}>093 595 589</span>
+
+
+            <a href={`mailto:${email}`} className={styles.link}>
+              <span className={styles.icon} aria-hidden="true"><img src="/images/envelope-logo.svg" alt="Envelope logo" /></span>
+              <span className={styles.linkText}>{email}</span>
             </a>
           </nav>
         </div>

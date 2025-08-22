@@ -137,3 +137,91 @@
     line-height: 1.5;
     letter-spacing: 0;
   }
+
+/* Responsive Design */
+ @media (max-width: 1200px) {
+    .satisfiedCustomersContainer {
+        margin: 6rem 4rem;
+    }
+    
+    .reviewsContainer {
+        grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .satisfiedCustomersContainer {
+        margin-left: 2rem ;
+        margin-right: 2rem ;
+    }
+    
+    .subtitle {
+        font-size: 1.1rem;
+        margin: 1rem 0 2rem;
+    }
+    
+    .reviewsContainer {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+    
+    .reviewCard {
+        max-width: 100%;
+        padding: 1.2rem 1rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .satisfiedCustomersContainer {
+        margin-left: 1rem ;
+        margin-right: 1rem ;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+    }
+    
+    .reviewsContainer {
+        gap: 1.2rem;
+        margin-top: 1rem;
+    }
+    
+    .reviewCard {
+        padding: 1rem 0.8rem;
+    }
+    
+    .cardHeaderUser {
+        gap: 0.8rem;
+    }
+    
+    .profilePicture {
+        width: 3rem;
+        height: 3rem;
+    }
+    
+    .reviewText {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .satisfiedCustomersContainer {
+        margin-left: .5rem ;
+        margin-right: .5rem ;
+    }
+    
+    .subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .reviewCard {
+        padding: 0.8rem 0.6rem;
+    }
+    
+    .reviewText {
+        font-size: 0.85rem;
+    }
+} 
