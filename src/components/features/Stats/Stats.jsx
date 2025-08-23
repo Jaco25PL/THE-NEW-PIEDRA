@@ -5,7 +5,7 @@ export function Stats () {
     return (
         <section className={styles.statsBannerContainer}>
             <div className={styles.statsItem}>
-                <h2 className={styles.statsNumber}>150+</h2>
+                <h2 className={styles.statsNumber}>65+</h2>
                 <p className={styles.statsDescription}>Proyectos Completados</p>
             </div>
 

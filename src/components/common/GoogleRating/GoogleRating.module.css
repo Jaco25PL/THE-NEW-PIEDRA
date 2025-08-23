@@ -1,0 +1,96 @@
+.googleRatingContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.googleLogo {
+    height: 30px;
+    width: auto;
+}
+
+.googleLogoDesktop {
+    height: 6rem;
+    width: auto;
+    display: block;
+}
+
+.googleLogoMobile {
+    height: 2.5rem;
+    width: auto;
+    display: none;
+}
+
+.ratingSection {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.googleRatingText {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0 0 0.25rem 0;
+    font-family: 'Product Sans', 'Roboto', Arial, sans-serif;
+    font-weight: 600;
+}
+
+.ratingDisplay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.ratingNumber {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffc002;
+    padding-top: 4px;
+    font-family: 'Product Sans', 'Roboto', Arial, sans-serif;
+}
+
+.ratingStars {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.starFilled {
+    color: #ffc002;
+    font-size: 1.2rem;
+}
+
+.averageText {
+    font-size: 0.8rem;
+    color: #666;
+    margin: 0;
+    font-family: 'Product Sans', 'Roboto', Arial, sans-serif;
+    font-weight: 400;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .googleRatingContainer {
+        gap: 0.75rem;
+    }
+
+    .googleLogoDesktop {
+        display: none;
+    }
+
+    .googleLogoMobile {
+        display: block;
+        height: 2.5rem;
+    }
+    
+    .ratingNumber {
+        font-size: 1.1rem;
+    }
+    
+    .starFilled {
+        font-size: 1.1rem;
+    }
+}

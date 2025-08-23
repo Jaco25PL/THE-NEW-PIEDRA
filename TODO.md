@@ -21,11 +21,19 @@
 
 ## Responsive Design
 - [✅] Contactar Page
-- [✅] Piedra Hero
-- [ ] Nosotros Page
+- [✅] Nosotros Page
 - [ ] Constriir Page
 - [ ] Remodelar Page
 - [✅] Blog Page
+  - [✅] Piedra Hero
+  - [✅] CTA 
+  - [✅] FAQ
+  - [ ] Works
+  - [✅] Footer
+  - [✅] Navigation
+  - [ ] Sats
+  - [ ] Why us?
+  
 
 
 

@@ -1,26 +1,26 @@
 export const customerReviews = [
     {
       id: 1,
-      name: 'María González',
-      profilePic: '/images/face-1.png',
-      rating: 4,
-      date: 'Hace 3 días',
-      comment: 'Un servicio increíble. Superaron todas mis expectativas. La atención al cliente fue excepcional y el resultado final fue exactamente lo que estaba buscando.'
+      name: 'Nelson D\'Angelo',
+      profilePic: '/images/clients/nd_client.png',
+      rating: 5,
+      date: 'hace 3 semanas',
+      comment: 'Muy buen trato personal y atención permanente en los trabajos realizados el cumplimiento siempre excelente y los presupuestos económicos. Empresa recomendable.'
     },
     {
       id: 2,
-      name: 'Carlos Rodríguez',
-      profilePic: '/images/face-2.png',
+      name: 'María Fernández',
+      profilePic: '/images/clients/mf_client.png',
       rating: 5,
-      date: 'Hace 7 días',
-      comment: 'Quedé completamente satisfecho con el trabajo realizado. La profesionalidad y dedicación de su equipo son realmente destacables. Sin duda, los recomendaré. Quedé completamente satisfecho con el trabajo realizado. La profesionalidad y dedicación de su equipo son realmente destacables. Sin duda, los recomendaré.'
+      date: 'hace 1 mes',
+      comment: 'Hola, Piedra me hizo una reforma en casa hace 4 años que quedó súper bien, quedamos más que conformes, e hizo el frente de mi casa hace ese tiempo y está impecable hasta ahora. Hacen un trabajo de excelente calidad y seriedad ante todo. Muy recomendable.'
     },
     {
       id: 3,
-      name: 'Ana Martínez',
-      profilePic: '/images/face-3.jpeg',
-      rating: 4,
-      date: 'Hace 10 días',
-      comment: 'Una experiencia muy positiva. Resolvieron mi problema de manera rápida y eficiente. El seguimiento y la comunicación fueron excelentes.'
+      name: 'Zaida González',
+      profilePic: '/images/clients/zg_client.png',
+      rating: 5,
+      date: 'hace 2 meses',
+      comment: 'Son excelentes en lo que hacen y muy prolijos. Los precios son de acuerdo al trabajo que realizan. Son muy accesibles. Los súper recomiendo.'
     }
   ];

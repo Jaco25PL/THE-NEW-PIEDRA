@@ -46,7 +46,7 @@ export const ReviewCard = ({ review }) => {
                 </div>
 
                 <div className={styles.googleLogo}>
-                    <img src="/images/Google_logo.svg" alt="Google logo" />
+                    <img src="/images/logos/google_logo.svg" alt="Google logo" />
                 </div>
             </div>
             

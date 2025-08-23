@@ -13,6 +13,7 @@ import { Remodelar } from './pages/Remodelar'
 import { Nosotros } from './pages/Nosotros'
 import { Blog } from './pages/Blog'
 import { Contacto } from './pages/Contacto'
+import TestReviews from './pages/TestReviews'
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
             <Route path='/nosotros' element={<Nosotros/>} />
             <Route path='/blog' element={<Blog/>} />
             <Route path='/contacto' element={<Contacto/>} />
+            <Route path='/test-reviews' element={<TestReviews/>} />
             <Route path="*" element={<NotFound/>} />
           </Routes>
       </main>

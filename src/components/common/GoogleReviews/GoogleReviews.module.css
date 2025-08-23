@@ -1,0 +1,249 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    padding: 12px 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', Arial, sans-serif;
+    max-width: 400px;
+    min-width: 300px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.ratingSection {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.ratingNumber {
+    font-size: 14px;
+    color: #666;
+    margin-left: 4px;
+}
+
+.error {
+    margin-top: 4px;
+}
+
+.error small {
+    color: #666;
+    font-size: 11px;
+}
+
+.ratingText {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    margin-right: 4px;
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+.star {
+    font-size: 16px;
+    color: #ffb400;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.starHalf {
+    font-size: 16px;
+    color: #ffb400;
+    opacity: 0.7;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.starEmpty {
+    font-size: 16px;
+    color: #ddd;
+    text-shadow: none;
+}
+
+.reviewInfo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 2px;
+}
+
+.reviewCount {
+    font-size: 14px;
+    color: #666;
+    font-weight: 400;
+}
+
+.googleLogo {
+    display: flex;
+    align-items: center;
+}
+
+.googleText {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+}
+
+.red {
+    color: #ea4335;
+}
+
+.yellow {
+    color: #fbbc04;
+}
+
+.blue {
+    color: #4285f4;
+}
+
+.green {
+    color: #34a853;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .container {
+        max-width: 280px;
+        min-width: 260px;
+        padding: 10px 12px;
+    }
+    
+    .ratingText {
+        font-size: 16px;
+    }
+    
+    .star, .starHalf, .starEmpty {
+        font-size: 14px;
+    }
+    
+    .reviewCount {
+        font-size: 13px;
+    }
+    
+    .googleText {
+        font-size: 14px;
+    }
+}
+
+/* Reviews Section Styles */
+.reviewsSection {
+    margin-top: 16px;
+    border-top: 1px solid #e8e8e8;
+    padding-top: 16px;
+}
+
+.reviewsTitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 12px 0;
+}
+
+.reviewsList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.reviewItem {
+    padding: 12px;
+    border: 1px solid #f0f0f0;
+    border-radius: 6px;
+    background-color: #fafafa;
+}
+
+.reviewHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.reviewAuthor {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.authorPhoto {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.authorInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.authorName {
+    font-weight: 500;
+    font-size: 14px;
+    color: #333;
+}
+
+.reviewTime {
+    font-size: 12px;
+    color: #666;
+}
+
+.reviewRating {
+    display: flex;
+    gap: 1px;
+}
+
+.reviewStar {
+    font-size: 12px;
+    opacity: 0.3;
+}
+
+.reviewStar.filled {
+    opacity: 1;
+}
+
+.reviewText {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #444;
+    margin: 0;
+}
+
+.loading {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.clickHint {
+    text-align: center;
+    margin-top: 8px;
+    padding: 8px;
+    background-color: #f0f8ff;
+    border-radius: 4px;
+    border: 1px solid #e3f2fd;
+}
+
+.clickHint small {
+    color: #1976d2;
+    font-size: 12px;
+    font-weight: 500;
+}

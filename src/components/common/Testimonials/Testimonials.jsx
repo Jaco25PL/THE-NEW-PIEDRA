@@ -12,7 +12,7 @@ export function Testimonials() {
         </div>
         <div className={styles.ratings}>
           <div className={styles.stars}>★★★★★</div>
-          <p className={styles.ratingText}>150+ hogares renovados</p>
+          <p className={styles.ratingText}>65+ hogares renovados</p>
         </div>
       </div>
     )
