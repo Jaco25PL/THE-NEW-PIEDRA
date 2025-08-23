@@ -1,6 +1,7 @@
 import styles from '../../../styles/Works.module.css'
 import { SectionDivider } from '../../common/SectionDivider/SectionDivider';
 import { Titles } from '../../common/Titles/Titles'
+import { BeforeAfterSlider } from '../../common/BeforeAfterSlider/BeforeAfterSlider';
 import { useState } from 'react';
 
 const SliderImages = [
@@ -26,12 +27,7 @@ const SliderImages = [
 
 export function Works() {
 
-    const [currentView, setCurrentView] = useState('ANTES');
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-    const handleViewChange = (view) => {
-    setCurrentView(view);
-    };
 
     const handlePrevImage = () => {
         setCurrentImageIndex((prev) => 
@@ -45,8 +41,6 @@ export function Works() {
         );
     };
 
-
-
     return (
         <div className={styles.container}>
 
@@ -57,40 +51,21 @@ export function Works() {
             <p className={styles.subtitle}>
                 Tu casa tiene un potencial increíble, nosotros lo hacemos realidad
             </p>
-        
-
-            {/* Prev Arrow */}
-            <button 
-                className={`${styles.navigationArrow} ${styles.prevArrow}`} 
-                onClick={handleNextImage}
-            >
-                <img src="/images/arrow-B.svg" alt="Previous Arrow" />
-            </button>
-
-            {/* Next Arrow */}
-            <button 
-                className={`${styles.navigationArrow} ${styles.nextArrow}`} 
-                onClick={handlePrevImage}
-            >
-                <img src="/images/arrow-B.svg" alt="Next Arrow" />
-                
-            </button>
-
 
             <div className={styles.sliderWrapper}>
-                {/* View Selection Buttons */}
-                <div className={styles.viewSelector}>
+                {/* Navigation Buttons */}
+                <div className={styles.navigationControls}>
                     <button 
-                        className={`${styles.viewButton} ${currentView === 'ANTES' ? styles.activeView : ''}`}
-                        onClick={() => handleViewChange('ANTES')}
+                        className={styles.navButton}
+                        onClick={handlePrevImage}
                     >
-                        ANTES
+                        ANTERIOR
                     </button>
                     <button 
-                        className={`${styles.viewButton} ${currentView === 'DESPUES' ? styles.activeView : ''}`}
-                        onClick={() => handleViewChange('DESPUES')}
+                        className={styles.navButton}
+                        onClick={handleNextImage}
                     >
-                        DESPUÉS
+                        SIGUIENTE
                     </button>
                 </div>
 
@@ -116,15 +91,11 @@ export function Works() {
                     <img src="/images/go-link.svg" alt="" />
                 </a>
 
-                {/* Image Slider */}
-                <div className={styles.imageSlider}>
-                    <img 
-                        src={currentView === 'ANTES' 
-                          ? SliderImages[currentImageIndex].before 
-                          : SliderImages[currentImageIndex].after
-                        } 
-                        alt={`${currentView} image`}
-                        className={styles.sliderImage}
+                {/* Before/After Slider */}
+                <div className={styles.sliderContainer}>
+                    <BeforeAfterSlider 
+                        beforeImage={SliderImages[currentImageIndex].before}
+                        afterImage={SliderImages[currentImageIndex].after}
                     />
                 </div>
             </div>

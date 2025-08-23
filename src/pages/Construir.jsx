@@ -1,4 +1,4 @@
-import styles from '../styles/Construir.module.css'
+import styles from '../styles/pages/Construir.module.css'
 import { PiedraHero } from '../components/layout/Heroes/PiedraHero';
 import { Stats } from '../components/features/Stats/Stats';
 import { AboutUsCont } from '../components/features/AboutUs/AboutUsCont';

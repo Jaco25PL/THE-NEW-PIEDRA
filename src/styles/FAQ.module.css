@@ -174,7 +174,9 @@
 /* Responsive Design */
 @media (max-width: 1200px) {
     .faqContainer {
-        margin: 6rem 4rem;
+        /* margin: 6rem 4rem; */
+        margin-left: 4rem;
+        margin-right: 4rem;
         gap: 2rem;
     }
     
@@ -186,7 +188,9 @@
 @media (max-width: 768px) {
     .faqContainer {
         flex-direction: column;
-        margin: 4rem 2rem;
+        /* margin: 4rem 2rem; */
+        margin-left: 2rem;
+        margin-right: 2rem;
         gap: 2rem;
         min-height: auto;
     }
@@ -227,7 +231,9 @@
 
 @media (max-width: 480px) {
     .faqContainer {
-        margin: 3rem 1rem;
+        /* margin: 3rem 1rem; */
+        margin-left: 1rem;
+        margin-right: 1rem;
         gap: 1.5rem;
     }
     
@@ -267,8 +273,10 @@
 
 @media (max-width: 360px) {
     .faqContainer {
-        margin: 2rem 0.5rem;
+        /* margin: 2rem 0.5rem; */
         gap: 1rem;
+        margin-left: .5rem;
+        margin-right: .5rem;
     }
     
     .imageContainer {

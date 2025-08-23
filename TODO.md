@@ -31,9 +31,10 @@
   - [ ] Works
   - [✅] Footer
   - [✅] Navigation
+  - [✅] Clients
   - [ ] Sats
   - [ ] Why us?
-  
+
 
 
 

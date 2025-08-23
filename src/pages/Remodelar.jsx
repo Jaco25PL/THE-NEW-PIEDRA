@@ -1,4 +1,4 @@
-import styles from '../styles/Remodelar.module.css'
+import styles from '../styles/pages/Remodelar.module.css'
 import { AboutUsCont } from '../components/features/AboutUs/AboutUsCont'
 import { Clients } from '../components/features/Clients/Clients'
 import { CTA } from '../components/features/CTA/CTA'
