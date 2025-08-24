@@ -22,20 +22,23 @@
 ## Responsive Design
 - [✅] Contactar Page
 - [✅] Nosotros Page
-- [ ] Constriir Page
-- [ ] Remodelar Page
+- [✅] Constriir Page
+- [✅] Remodelar Page
 - [✅] Blog Page
   - [✅] Piedra Hero
   - [✅] CTA 
   - [✅] FAQ
-  - [ ] Works
+  - [✅] Works
   - [✅] Footer
   - [✅] Navigation
   - [✅] Clients
-  - [ ] Sats
-  - [ ] Why us?
+  - [✅] Sats
+  - [✅] Why us?
 
 
+## Bugs
+- [ ] Go to the top when going to a new page
+- [ ] Fix gramar in steps in us page
 
 
 ## Content Updates
@@ -50,7 +53,7 @@
 - [ ] **Navigation**
   - Fix navbar behavior when scrolling
 
-- [ ] **FAQ Section**
+- [✅] **FAQ Section**
   - Fix footer movement when expanding FAQ items
   - Improve accordion animation
 
@@ -59,9 +62,9 @@
   - Consistent naming conventions
   - Better component organization
 
-- [ ] Add number increasing animation in Stats section
+- [✅] Add number increasing animation in Stats section
 
-- [ ] Review and fix header buttons
+- [✅] Review and fix header buttons
   - Check functionality
   - Improve styling
 

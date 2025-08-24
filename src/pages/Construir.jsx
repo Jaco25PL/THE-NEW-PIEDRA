@@ -1,7 +1,7 @@
 import styles from '../styles/pages/Construir.module.css'
 import { PiedraHero } from '../components/layout/Heroes/PiedraHero';
 import { Stats } from '../components/features/Stats/Stats';
-import { AboutUsCont } from '../components/features/AboutUs/AboutUsCont';
+import { AboutUsConstruir } from '../components/features/AboutUs/AboutUsConstruir';
 import { Works } from '../components/features/Works/Works';
 import { Clients } from '../components/features/Clients/Clients';
 import { FAQ } from '../components/features/FAQ/FAQ';
@@ -22,7 +22,7 @@ export function Construir() {
        
             <Stats />
     
-            <AboutUsCont />
+            <AboutUsConstruir />
     
             <Works/>
             

@@ -1,5 +1,5 @@
 import styles from '../styles/pages/Remodelar.module.css'
-import { AboutUsCont } from '../components/features/AboutUs/AboutUsCont'
+import { AboutUsRemodelar } from '../components/features/AboutUs/AboutUsRemodelar'
 import { Clients } from '../components/features/Clients/Clients'
 import { CTA } from '../components/features/CTA/CTA'
 import { FAQ } from '../components/features/FAQ/FAQ'
@@ -22,7 +22,7 @@ export function Remodelar() {
 
       <Stats />
 
-      <AboutUsCont />
+      <AboutUsRemodelar />
 
       <Works/>
       

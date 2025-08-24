@@ -130,7 +130,7 @@
     }
     
     .stepItem {
-        padding: 1.5rem 1rem;
+        padding: .5rem 1rem;
     }
     
     .stepTitle {
@@ -164,8 +164,8 @@
     }
     
     .stepItem {
-        padding: 1.2rem 0.8rem;
-        margin: 0 0.5rem;
+        /* padding: 1.2rem 0.8rem; */
+        /* margin: 0 0.5rem; */
     }
     
     .stepTitle {
@@ -196,7 +196,7 @@
     }
     
     .stepItem {
-        padding: 1rem 0.6rem;
+        /* padding: 1rem 0.6rem; */
         margin: 0 0.25rem;
     }
     

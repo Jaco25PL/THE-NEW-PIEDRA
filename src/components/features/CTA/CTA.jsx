@@ -38,7 +38,7 @@ export function CTA({
             <div className={styles.features}>
               <span>✓ Render 3D</span>
               <span>✓ Cuotas Sin Interés</span>
-              <span>✓ Garantía de por vida</span>
+              <span>✓ Garantizado</span>
             </div>
         </div>
       </div>
