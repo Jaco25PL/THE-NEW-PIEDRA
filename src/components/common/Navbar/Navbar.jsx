@@ -9,7 +9,7 @@ export function Navbar() {
 
   const { isScrolling } = useHeaderScroll()
 
-    console.log(isScrolling)
+    // console.log(isScrolling)
 
     return (
         <header className={`${styles.headerContainer} ${isScrolling ? styles.headerContainerScrolled : styles.headerContainerNotScrolled}`}>

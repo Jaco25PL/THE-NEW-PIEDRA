@@ -70,9 +70,8 @@
 
 
 
-- Do works with an slider to comera before and after
-- do the thing on stats compoent
 - fix nav
+- try smooth slider on the piedra header comp.
 
 
 ----------------------------

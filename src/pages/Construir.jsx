@@ -22,11 +22,11 @@ export function Construir() {
        
             <Stats />
     
-            <AboutUsConstruir />
-    
             <Works/>
+    
+            <AboutUsConstruir />
             
-            <Clients/>
+            <Clients/> 
     
             <FAQ/>
     

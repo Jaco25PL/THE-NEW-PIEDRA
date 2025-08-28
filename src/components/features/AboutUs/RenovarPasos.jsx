@@ -6,8 +6,8 @@ import propTypes from 'prop-types';
 export function RenovarPasos({ 
     title = '¿CÓMO PODÉS RENOVAR TU ESPACIO?',
     subtitle = 'Nuestro proceso en 3 simples pasos para transformar tu hogar sin complicaciones',
-    step1Title = <>Paso 1<br />Nos Contas Tu Idea</>,
-    step1Desc = 'Nos contactas, coordinamos una reunión para ver el espacio y que nos presentes el desafío',
+    step1Title = <>Paso 1<br />Nos Contás Tu Idea</>,
+    step1Desc = 'Nos contactás, coordinamos una reunión para ver el espacio y que nos presentes el desafío',
     step2Title = <>Paso 2<br />Diseño y Planificación</>,
     step2Desc = 'Juntos vamos armando la idea final en un Render 3D de alta calidad para que puedas ver el resultado antes de empezar.',
     step3Title = <>Paso 3<br />Construcción</>,
