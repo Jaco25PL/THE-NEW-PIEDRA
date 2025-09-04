@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import styles from '../styles/pages/Contacto.module.css';
 import { CTAButton } from '../components/common/Button/CTAButton';
 
@@ -12,6 +13,13 @@ export function Contacto() {
 
   return (
     <section className={styles.container} aria-labelledby="contacto-heading">
+      <Helmet>
+        <title>Contacto | Piedra Construcciones - Hablemos de Tu Proyecto</title>
+        <meta name="description" content="Contáctanos para asesoramiento sin costo y presupuesto a medida. Conversemos sobre tu proyecto de construcción o remodelación en Montevideo." />
+        <meta property="og:title" content="Contacto - Piedra Construcciones" />
+        <meta property="og:description" content="Asesoramiento sin costo y presupuesto a medida. Conversemos sobre tu proyecto." />
+        <link rel="canonical" href="https://piedraconstrucciones.com.uy/contacto" />
+      </Helmet>
       <div className={styles.contentOverlay}>
         <div className={styles.content}>
           <div className={styles.headingContainer}>
@@ -35,24 +43,24 @@ export function Contacto() {
               rel="noopener noreferrer"
               className={styles.link}
             >
-              <span className={styles.icon} aria-hidden="true"><img src="/images/whatsapp-logo.svg" alt="WhatsApp logo" /></span>
+              <span className={styles.icon} aria-hidden="true"><img src="/images/whatsapp-logo.svg" alt="WhatsApp logo" loading="lazy" /></span>
               <span className={styles.linkText}>093 595 589</span>
             </a>
 
             <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className={styles.link}>
-              <span className={styles.icon} aria-hidden="true"><img src="/images/instagram-logo.svg" alt="Instagram" /></span>
+              <span className={styles.icon} aria-hidden="true"><img src="/images/instagram-logo.svg" alt="Instagram" loading="lazy" /></span>
               <span className={styles.linkText}>{instagramUser}</span>
             </a>
 
             <a href={tiktokUrl} target="_blank" rel="noopener noreferrer" className={styles.link}>
-              <span className={styles.icon} aria-hidden="true"><img src="/images/tiktok-logo.svg" alt="TikTok" /></span>
+              <span className={styles.icon} aria-hidden="true"><img src="/images/tiktok-logo.svg" alt="TikTok" loading="lazy" /></span>
               <span className={styles.linkText}>{tiktokUser}</span>
             </a>
 
 
 
             <a href={`mailto:${email}`} className={styles.link}>
-              <span className={styles.icon} aria-hidden="true"><img src="/images/envelope-logo.svg" alt="Envelope logo" /></span>
+              <span className={styles.icon} aria-hidden="true"><img src="/images/envelope-logo.svg" alt="Envelope logo" loading="lazy" /></span>
               <span className={styles.linkText}>{email}</span>
             </a>
           </nav>

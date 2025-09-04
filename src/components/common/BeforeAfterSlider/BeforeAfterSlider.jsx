@@ -161,6 +161,7 @@ export function BeforeAfterSlider({ beforeImage, afterImage }) {
             transition: showHint ? 'clip-path 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)' : 'none'
           }}
           draggable={false}
+          loading="lazy"
         />
       </div>
 
@@ -175,6 +176,7 @@ export function BeforeAfterSlider({ beforeImage, afterImage }) {
             transition: showHint ? 'clip-path 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)' : 'none'
           }}
           draggable={false}
+          loading="lazy"
         />
       </div>
 

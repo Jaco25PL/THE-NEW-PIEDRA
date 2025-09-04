@@ -28,6 +28,7 @@ export function Services() {
                             src="/images/render-1.jpg" 
                             alt="Reforma Integral - Cocina moderna"
                             className={styles.serviceImage}
+                            loading="lazy"
                         />
                     </div>
                     <div className={styles.serviceContent}>
@@ -49,6 +50,7 @@ export function Services() {
                             src="/images/render-2.jpg" 
                             alt="Remodelación de Viviendas - Interior moderno"
                             className={styles.serviceImage}
+                            loading="lazy"
                         />
                     </div>
                     <div className={styles.serviceContent}>
@@ -70,6 +72,7 @@ export function Services() {
                             src="/images/render-6.png" 
                             alt="Diseño 3D - Visualización de proyecto"
                             className={styles.serviceImage}
+                            loading="lazy"
                         />
                     </div>
                     <div className={styles.serviceContent}>

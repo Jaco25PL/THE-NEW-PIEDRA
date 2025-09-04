@@ -1,0 +1,184 @@
+/* Service Boxes Component */
+.serviceBoxes {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    min-width: 320px;
+    z-index: 15;
+}
+
+/* Position variants */
+.right {
+    top: 50%;
+    right: 8%;
+    transform: translateY(-50%);
+}
+
+.left {
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+}
+
+.serviceBox {
+    position: relative;
+    height: 140px;
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+.serviceBox::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(0px);
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+
+.serviceBox:hover::before {
+    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.serviceBox::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease;
+    z-index: 3;
+    background-image: url('/images/noise.png');
+}
+
+.serviceBox:hover::after {
+    opacity: 0.6;
+}
+
+.serviceImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+}
+
+.serviceContent {
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 300;
+    text-align: center;
+    width: 90%;
+}
+
+.serviceTitle {
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin: 0;
+    transition: transform 0.5s ease;
+}
+
+.serviceBox:hover .serviceTitle {
+    transform: translateY(-8px);
+}
+
+.serviceReveal {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    font-size: 0.85rem;
+    line-height: 1.3;
+    margin-top: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+.serviceBox:hover .serviceReveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Individual box styling */
+.construirBox {
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.3), rgba(74, 144, 226, 0.1));
+}
+
+.remodelarBox {
+    background: linear-gradient(135deg, rgba(46, 125, 50, 0.3), rgba(46, 125, 50, 0.1));
+}
+
+.proyectosBox {
+    background: linear-gradient(135deg, rgba(156, 39, 176, 0.3), rgba(156, 39, 176, 0.1));
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .serviceBoxes {
+        position: relative;
+        flex-direction: row;
+        min-width: auto;
+        width: 100%;
+        margin-top: 2rem;
+        transform: none;
+        top: auto;
+        left: auto;
+        right: auto;
+    }
+
+    .serviceBox {
+        flex: 1;
+        height: 120px;
+    }
+
+    .serviceTitle {
+        font-size: 1.2rem;
+    }
+
+    .serviceReveal {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .serviceBoxes {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .serviceBox {
+        height: 80px;
+    }
+
+    .serviceTitle {
+        font-size: 1rem;
+    }
+
+    .serviceReveal {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .serviceBox {
+        height: 70px;
+    }
+
+    .serviceTitle {
+        font-size: 0.9rem;
+    }
+}

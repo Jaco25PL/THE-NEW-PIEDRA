@@ -1,5 +1,6 @@
 // import React from 'react'
 import { Routes, Route } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
 
 import './App.css'
 import styles from './styles/App.module.css'
@@ -19,22 +20,24 @@ function App() {
 
   return (
 
-    <div className={styles.appContainer}>
-      <Navbar/>
-      <main>
-          <Routes>
-            <Route path="/" element={<Home/>} />
-            <Route path='/construir' element={<Construir/>} />
-            <Route path='/remodelar' element={<Remodelar/>} />
-            <Route path='/nosotros' element={<Nosotros/>} />
-            <Route path='/blog' element={<Blog/>} />
-            <Route path='/contacto' element={<Contacto/>} />
-            <Route path='/test-reviews' element={<TestReviews/>} />
-            <Route path="*" element={<NotFound/>} />
-          </Routes>
-      </main>
-      <Footer/>
-    </div>
+    <HelmetProvider>
+      <div className={styles.appContainer}>
+        <Navbar/>
+        <main>
+            <Routes>
+              <Route path="/" element={<Home/>} />
+              <Route path='/construir' element={<Construir/>} />
+              <Route path='/remodelar' element={<Remodelar/>} />
+              <Route path='/nosotros' element={<Nosotros/>} />
+              <Route path='/blog' element={<Blog/>} />
+              <Route path='/contacto' element={<Contacto/>} />
+              <Route path='/test-reviews' element={<TestReviews/>} />
+              <Route path="*" element={<NotFound/>} />
+            </Routes>
+        </main>
+        <Footer/>
+      </div>
+    </HelmetProvider>
 
   )
 }

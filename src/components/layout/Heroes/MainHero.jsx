@@ -12,7 +12,7 @@ export function MainHero() {
               target='_blank'
               rel='noopener noreferrer'
               className={`${styles.splitImage} ${styles.leftImage}`}>
-              <img className={styles.image} src='./images/render-2.jpg' alt="sample house" />
+              <img className={styles.image} src='./images/render-2.jpg' alt="sample house" loading="lazy" />
               
               <div className={styles.content}>
                 <h2>CONSTRUIR</h2>
@@ -26,7 +26,7 @@ export function MainHero() {
             <Link 
               to="/remodelar" 
               className={`${styles.splitImage} ${styles.rightImage}`}>
-              <img className={styles.image} src='./images/works/pelado-karting-piedra-1.AVIF' alt="sample house" />
+              <img className={styles.image} src='./images/works/pelado-karting-piedra-1.AVIF' alt="sample house" loading="lazy" />
  
               <div className={styles.content}>
                 <h2>REMODELAR</h2>

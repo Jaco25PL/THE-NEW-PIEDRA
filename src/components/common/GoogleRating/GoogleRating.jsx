@@ -8,12 +8,14 @@ export function GoogleRating() {
                 src="/images/logos/google_logo_word.svg" 
                 alt="Google" 
                 className={styles.googleLogoDesktop}
+                loading="lazy"
             />
             {/* Mobile logo - icon version */}
             <img 
                 src="/images/logos/google_logo.svg" 
                 alt="Google" 
                 className={styles.googleLogoMobile}
+                loading="lazy"
             />
             <div className={styles.ratingSection}>
                 <p className={styles.googleRatingText}>Google Rating</p>

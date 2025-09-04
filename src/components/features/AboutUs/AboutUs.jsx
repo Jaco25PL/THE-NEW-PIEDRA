@@ -18,6 +18,7 @@ export function AboutUs({ content }) {
                     src={content.img} 
                     alt="Interior design rendering" 
                     className={styles.image}
+                    loading="lazy"
                 />
             </div>
 

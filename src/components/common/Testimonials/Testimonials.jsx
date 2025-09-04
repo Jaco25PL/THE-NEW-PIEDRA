@@ -11,9 +11,9 @@ export function Testimonials() {
         >
           <div className={styles.testimonial}>
             <div className={styles.faces}>
-              <div className={styles.face}><img src="/images/clients/jr_client.png" alt="" /></div>
-              <div className={styles.face}><img src="/images/clients/mf_client.png" alt="" /></div>
-              <div className={styles.face}><img src="/images/clients/zg_client.png" alt="" /></div>
+              <div className={styles.face}><img src="/images/clients/jr_client.png" alt="" loading="lazy" /></div>
+              <div className={styles.face}><img src="/images/clients/mf_client.png" alt="" loading="lazy" /></div>
+              <div className={styles.face}><img src="/images/clients/zg_client.png" alt="" loading="lazy" /></div>
             </div>
             <div className={styles.ratings}>
               <div className={styles.stars}>★★★★★</div>

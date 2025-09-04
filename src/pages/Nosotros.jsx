@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import styles from '../styles/pages/Nosotros.module.css';
 import { PiedraHero } from '../components/layout/Heroes/PiedraHero';
 // import { Stats } from '../components/features/Stats/Stats';
@@ -27,6 +28,14 @@ export function Nosotros () {
 
   return (
     <div className={styles.container}>
+
+        <Helmet>
+            <title>Sobre Nosotros | Piedra Construcciones - Empresa de Construcción en Montevideo</title>
+            <meta name="description" content="Conoce a Piedra Construcciones, una empresa familiar con +30 años transformando espacios en Uruguay. Servicios de construcción y remodelación con pasión y experiencia." />
+            <meta property="og:title" content="Sobre Piedra Construcciones" />
+            <meta property="og:description" content="30+ años más transformando espacios en Uruguay, con la misma pasión del primer día." />
+            <link rel="canonical" href="https://piedraconstrucciones.com.uy/nosotros" />
+        </Helmet>
 
         <PiedraHero
             bgImage='/images/render-2.jpg'

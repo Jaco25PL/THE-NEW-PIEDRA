@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import styles from '../styles/pages/Construir.module.css'
 import { PiedraHero } from '../components/layout/Heroes/PiedraHero';
 import { Stats } from '../components/features/Stats/Stats';
@@ -12,6 +13,14 @@ export function Construir() {
     return (
        <div className={styles.container}>
        
+            <Helmet>
+                <title>Construir Casa con Piedra Construcciones | Construcción Residencial en Montevideo</title>
+                <meta name="description" content="Construye la casa de tus sueños con Piedra Construcciones. Servicios de construcción residencial en Montevideo con +10 años de experiencia. Presupuesto gratis." />
+                <meta property="og:title" content="Construir Casa - Piedra Construcciones" />
+                <meta property="og:description" content="No solo levantamos paredes, creamos hogares que mejoran tu calidad de vida." />
+                <link rel="canonical" href="https://piedraconstrucciones.com.uy/construir" />
+            </Helmet>
+
             <PiedraHero
                 bgImage='/images/render-1.jpg'
                 title='Construye La Casa'

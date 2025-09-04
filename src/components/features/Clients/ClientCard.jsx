@@ -20,6 +20,7 @@ export const ReviewCard = ({ review }) => {
                             <img 
                                 src={review.profilePic} 
                                 alt={`Foto de perfil de ${review.name}`} 
+                                loading="lazy"
                             />
                         </div>
                     </div>
@@ -46,7 +47,7 @@ export const ReviewCard = ({ review }) => {
                 </div>
 
                 <div className={styles.googleLogo}>
-                    <img src="/images/logos/google_logo.svg" alt="Google logo" />
+                    <img src="/images/logos/google_logo.svg" alt="Google logo" loading="lazy" />
                 </div>
             </div>
             
