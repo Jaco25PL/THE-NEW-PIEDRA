@@ -133,12 +133,14 @@
     .aboutUsContainer {
       margin-left: 1rem;
       margin-right: 1rem;
+      /* gap: 3rem; */
     }
     
     .section {
       flex-direction: column !important;
       gap: 1.5rem;
-      margin-bottom: 3rem;
+      /* margin-bottom: 6rem; */
+      /* background-color: pink; */
     }
     
     .pair {

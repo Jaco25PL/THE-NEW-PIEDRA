@@ -5,11 +5,11 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  transition: max-height 0.3s ease, background-color 0.3s ease;
-  -webkit-transition: max-height 0.3s ease, background-color 0.3s ease;
-  -moz-transition: max-height 0.3s ease, background-color 0.3s ease;
-  -ms-transition: max-height 0.3s ease, background-color 0.3s ease;
-  -o-transition: max-height 0.3s ease, background-color 0.3s ease;
+  transition: max-height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -webkit-transition: max-height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -moz-transition: max-height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -ms-transition: max-height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -o-transition: max-height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .headerContainerNotScrolled{
@@ -50,29 +50,25 @@
   font-weight: 600;
 }
 
-.mainLogo{
-  height: 6rem;
+.logo {
   width: auto;
   margin: 0 5rem;
   background-color: #000;
-  transition: all .3s ease;
-  -webkit-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-  -ms-transition: all .3s ease;
-  -o-transition: all .3s ease;
+  transition: height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), padding 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -webkit-transition: height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), padding 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -moz-transition: height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), padding 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -ms-transition: height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), padding 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -o-transition: height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), padding 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.mainLogo{
+  height: 6rem;
+  padding: 0;
 }
 
 .scrollLogo {
   height: 4rem;
-  width: auto;
-  margin: 0 5rem;
   padding: 0;
-  background-color: #000;
-  transition: all .3s ease;
-  -webkit-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-  -ms-transition: all .3s ease;
-  -o-transition: all .3s ease;
 }
 
 .hideLogo{

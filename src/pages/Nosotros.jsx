@@ -56,7 +56,7 @@ export function Nosotros () {
         <Services/>
 
         {/* <FAQ/> */}
-        <FAQ faqItems={customFaqItems}/>
+        <FAQ faqItems={customFaqItems} id="faq"/>
 
         <CTA heading="¿Estás buscando una empresa" headingBottom='segura y confiable?'/> 
 

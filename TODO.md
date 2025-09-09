@@ -67,7 +67,10 @@
 -[✅] It seems that due to the home page does't have a description and title, the seo is bad
 
 -[✅] fix nav
--[] try smooth slider on the piedra header comp.
+-[✅] try smooth slider on the piedra header comp.
+
+-[✅] Optimze site, maybe adda a loder and charge things to cache 
+
 
 
 ----------------------------

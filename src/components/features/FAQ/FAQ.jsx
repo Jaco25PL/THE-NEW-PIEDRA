@@ -2,7 +2,7 @@ import styles from '../../../styles/FAQ.module.css';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 
-export function FAQ({ faqItems = [] }) {
+export function FAQ({ faqItems = [], id }) {
     const [activeIndex, setActiveIndex] = useState(null);
 
     // Default FAQ items as fallback if no props are provided
@@ -33,7 +33,7 @@ export function FAQ({ faqItems = [] }) {
     const itemsToRender = faqItems.length > 0 ? faqItems : defaultFaqItems;
 
     return (
-        <section className={styles.faqContainer}>
+        <section className={styles.faqContainer} id={id}>
 
             {/* Left Image Section */}
             <div className={styles.imageContainer}>
@@ -80,5 +80,6 @@ FAQ.propTypes = {
             question: PropTypes.string.isRequired,
             answer: PropTypes.string.isRequired
         })
-    )
+    ),
+    id: PropTypes.string
 };

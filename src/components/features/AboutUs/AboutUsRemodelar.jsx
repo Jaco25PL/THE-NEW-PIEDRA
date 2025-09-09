@@ -28,7 +28,7 @@ export function AboutUsRemodelar() {
           
             <AboutUs content={content[0]}/>
             
-            {/* <SectionDivider position='top'/> */}
+            <SectionDivider position='bottom'/>
 
             <RenovarPasos 
                 title='NUESTRO PROCESO DE REMODELACIÓN'

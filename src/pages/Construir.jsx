@@ -37,7 +37,7 @@ export function Construir() {
             
             <Clients/> 
     
-            <FAQ/>
+            <FAQ id="faq"/>
     
             <CTA
                 heading='Tu Casa Soñada Existe.'

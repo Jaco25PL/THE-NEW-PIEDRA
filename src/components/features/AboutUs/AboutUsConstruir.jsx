@@ -28,6 +28,8 @@ export function AboutUsConstruir() {
           
             <AboutUs content={content[0]}/>
             
+            <SectionDivider position='bottom'/>
+            
             <RenovarPasos 
                 title='NUESTRO PROCESO DE CONSTRUCCIÓN'
                 subtitle='Construimos tu casa en 3 simples pasos para que puedas disfrutar de tu hogar sin complicaciones'

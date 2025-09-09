@@ -4,8 +4,8 @@ import styles from '../../../styles/HeroWithServices.module.css';
 import PropTypes from 'prop-types';
 
 export function HeroWithServices({
-  title = 'Piedra Construcciones',
-  titleBottom = '',
+  title = 'Piedra',
+  titleBottom = 'Construcciones',
   subTitle = 'Empresa familiar especializada en construcción y remodelación',
   subTitleBottom = 'Con sede en Montevideo, Uruguay',
   bgImage = '/images/render-4.jpg'

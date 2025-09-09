@@ -3,7 +3,7 @@ import { useCounter } from '../../../hooks/useCounter'
 
 export function Stats () {
     const { count: projectsCount, elementRef: projectsRef } = useCounter(65, 2000, 0);
-    const { count: satisfactionCount, elementRef: satisfactionRef } = useCounter(97, 2200, 0);
+    const { count: satisfactionCount, elementRef: satisfactionRef } = useCounter(99.9, 2200, 0);
     const { count: coverageCount, elementRef: coverageRef } = useCounter(100, 2400, 0);
     const { count: experienceCount, elementRef: experienceRef } = useCounter(30, 2600, 0);
 

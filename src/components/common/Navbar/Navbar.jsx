@@ -7,12 +7,12 @@ import { Link } from 'react-router-dom';
 
 export function Navbar() {
 
-  const { isScrolling } = useHeaderScroll()
+  const { isScrolled } = useHeaderScroll()
 
     // console.log(isScrolling)
 
     return (
-        <header className={`${styles.headerContainer} ${isScrolling ? styles.headerContainerScrolled : styles.headerContainerNotScrolled}`}>
+        <header className={`${styles.headerContainer} ${isScrolled ? styles.headerContainerScrolled : styles.headerContainerNotScrolled}`}>
             <nav className={styles.headerGrid}>
   
               <Social />
@@ -26,20 +26,11 @@ export function Navbar() {
               {/* 4) Fourth column (Center - your logo, for example) */}
               <div className={`${styles.column} ${styles.logoColomn}`}>
                 <Link to="/">
-                    {isScrolling && (
-                      <img
-                        className={`${styles.showLogo} ${styles.scrollLogo}`}
-                        src="/images/PIEDRA-B-SM.svg"
-                        alt="Piedra Construcciones"
-                      />
-                    )}
-                    {!isScrolling && (
-                      <img
-                        className={`${styles.showLogo} ${styles.mainLogo} ${styles.mainLogoBlack}`}
-                        src="/images/PIEDRA-B.svg"
-                        alt="Piedra Construcciones"
-                      />
-                    )}
+                    <img
+                      className={`${styles.logo} ${isScrolled ? styles.scrollLogo : styles.mainLogo}`}
+                      src={isScrolled ? "/images/PIEDRA-B-SM.svg" : "/images/PIEDRA-B.svg"}
+                      alt="Piedra Construcciones"
+                    />
                 </Link>
               </div>
 
