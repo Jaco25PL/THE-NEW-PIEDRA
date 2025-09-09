@@ -60,6 +60,9 @@ export function MobileNav() {
               <Link to="/remodelar" onClick={closeMenu}>REMODELAR</Link>
             </li>
             <li className={styles.row}>
+              <Link to="/proyectos" onClick={closeMenu}>PROYECTOS</Link>
+            </li>
+            <li className={styles.row}>
               <Link to="/contacto" onClick={closeMenu}>CONTACTO</Link>
             </li>
         </ul>

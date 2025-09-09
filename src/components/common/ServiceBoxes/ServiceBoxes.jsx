@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom';
 import styles from '../../../styles/ServiceBoxes.module.css';
-import PropTypes from 'prop-types';
 
-export function ServiceBoxes({ position = 'right' }) {
+export function ServiceBoxes() {
   return (
-    <div className={`${styles.serviceBoxes} ${styles[position]}`}>
+    <div className={styles.serviceBoxes}>
       {/* Construir box */}
       <Link 
         to="/construir"
@@ -45,7 +44,7 @@ export function ServiceBoxes({ position = 'right' }) {
 
       {/* Proyectos box */}
       <Link 
-        to="/nosotros"
+        to="/proyectos"
         className={`${styles.serviceBox} ${styles.proyectosBox}`}
       >
         <img 
@@ -64,7 +63,3 @@ export function ServiceBoxes({ position = 'right' }) {
     </div>
   );
 }
-
-ServiceBoxes.propTypes = {
-  position: PropTypes.oneOf(['right', 'left']),
-};

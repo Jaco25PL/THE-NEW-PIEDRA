@@ -1,10 +1,19 @@
 
 // import { Remodelar } from '../../../pages/Remodelar';
+import { useState, useEffect } from 'react';
 import styles from '../../../styles/PiedraHero.module.css';
 import { CTAButton } from '../../common/Button/CTAButton';
 import { Testimonials } from '../../common/Testimonials/Testimonials';
 import PropTypes from 'prop-types';
 
+const defaultImages = [
+  '/images/render-4.jpg',
+  '/images/render-1.jpg', 
+  '/images/render-2.jpg',
+  '/images/render-5.png',
+  '/images/render-6.png',
+  '/images/render-7.png'
+];
 
 export function PiedraHero ({
     title = 'PIEDRA',
@@ -12,15 +21,44 @@ export function PiedraHero ({
     subTitle = 'Una empresa familiar',
     subTitleBottom = 'Una empresa de confianza',
     bgImage = '/images/render-4.jpg',
+    images = null, // Allow custom images array
+    autoSlide = true,
+    slideInterval = 5000
   } ) {
+
+    const sliderImages = images || (bgImage ? [bgImage, ...defaultImages.filter(img => img !== bgImage)] : defaultImages);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    useEffect(() => {
+      if (!autoSlide || sliderImages.length <= 1) return;
+
+      const interval = setInterval(() => {
+        setCurrentImageIndex((prevIndex) => 
+          prevIndex === sliderImages.length - 1 ? 0 : prevIndex + 1
+        );
+      }, slideInterval);
+
+      return () => clearInterval(interval);
+    }, [autoSlide, slideInterval, sliderImages.length]);
 
     return (
 
-      <div 
-        className={styles.heroContainer}
-        style={{ backgroundImage: `url(${bgImage})` }}
-      >
-      
+      <div className={styles.heroContainer}>
+        {/* Background Images Slider */}
+        <div className={styles.sliderContainer}>
+          {sliderImages.map((image, index) => (
+            <div
+              key={index}
+              className={`${styles.slideImage} ${
+                index === currentImageIndex ? styles.slideActive : ''
+              }`}
+              style={{ backgroundImage: `url(${image})` }}
+            />
+          ))}
+        </div>
+
+
+        
         <div className={styles.overlay}>
           <div className={styles.heroContent}>
             <div className={styles.titleContainer}>
@@ -74,4 +112,7 @@ PiedraHero.propTypes = {
   subTitle: PropTypes.string,
   subTitleBottom: PropTypes.string,
   bgImage: PropTypes.string,
+  images: PropTypes.arrayOf(PropTypes.string),
+  autoSlide: PropTypes.bool,
+  slideInterval: PropTypes.number,
 }

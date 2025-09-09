@@ -47,7 +47,7 @@ export function Navbar() {
               <div className={styles.column}><Link to="/remodelar">REMODELAR</Link> </div>
 
               {/* 6) Sixth column */}
-              <div className={styles.column}><Link to="/blog">BLOG</Link> </div>
+              <div className={styles.column}><Link to="/proyectos">PROYECTOS</Link> </div>
 
               {/* 7) Seventh column: “Contactar” button */}
               <div className={`${styles.column}`}>

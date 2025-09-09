@@ -3,4 +3,28 @@
     position: relative;
     width: 100%;
     height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .heroWrapper {
+        height: auto;
+        min-height: 90vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .heroWrapper {
+        height: auto;
+        min-height: 100vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .heroWrapper {
+        min-height: auto;
+        /* padding-bottom: 20rem; */
+    }
 }

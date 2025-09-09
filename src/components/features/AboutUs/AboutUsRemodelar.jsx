@@ -28,6 +28,8 @@ export function AboutUsRemodelar() {
           
             <AboutUs content={content[0]}/>
             
+            {/* <SectionDivider position='top'/> */}
+
             <RenovarPasos 
                 title='NUESTRO PROCESO DE REMODELACIÓN'
                 subtitle='Transformamos tu espacio en 3 simples pasos sin que tengas que mudarte'

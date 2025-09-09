@@ -9,11 +9,6 @@
   - Similar structure to remodelar page
   - Adapt content for construction focus
 
-<!-- 
-- [ ] **Blog Page**
-  - Create blog layout
-  - Implement article previews -->
-
 - [✅] **Contactar Page**
   - Create contact form
   - Add validation
@@ -37,17 +32,17 @@
 
 
 ## Bugs
-- [ ] Go to the top when going to a new page
-- [ ] Fix gramar in steps in us page
+- [✅] Go to the top when going to a new page
+- [✅] Fix gramar in steps in us page
 
 
 ## Content Updates
 - [ ] Replace placeholder data with real information:
-  - Phone numbers
-  - Email addresses
-  - Physical address
-  - Team photos
-  - Project images
+  -[✅] Phone numbers
+  -[✅] Email addresses
+  -[ ] Physical address
+  -[ ] Team photos
+  -[ ] Project images
 
 ## Bug Fixes
 - [ ] **Navigation**
@@ -69,10 +64,10 @@
   - Improve styling
 
 ## Check SEO
-- It seems that due to the home page does't have a description and title, the seo is bad
+-[✅] It seems that due to the home page does't have a description and title, the seo is bad
 
-- fix nav
-- try smooth slider on the piedra header comp.
+-[✅] fix nav
+-[] try smooth slider on the piedra header comp.
 
 
 ----------------------------

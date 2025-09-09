@@ -31,9 +31,9 @@ export function Remodelar() {
 
       <Stats />
 
-      <AboutUsRemodelar />
-
       <Works/>
+
+      <AboutUsRemodelar />
       
       <Clients/>
 

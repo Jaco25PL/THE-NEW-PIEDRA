@@ -8,9 +8,9 @@ export function HeroWithServices({
   titleBottom = '',
   subTitle = 'Empresa familiar especializada en construcción y remodelación',
   subTitleBottom = 'Con sede en Montevideo, Uruguay',
-  bgImage = '/images/render-4.jpg',
-  serviceBoxPosition = 'right'
+  bgImage = '/images/render-4.jpg'
 }) {
+
   return (
     <div className={styles.heroWrapper}>
       <PiedraHero
@@ -20,7 +20,7 @@ export function HeroWithServices({
         subTitleBottom={subTitleBottom}
         bgImage={bgImage}
       />
-      <ServiceBoxes position={serviceBoxPosition} />
+      <ServiceBoxes />
     </div>
   );
 }
@@ -31,5 +31,4 @@ HeroWithServices.propTypes = {
   subTitle: PropTypes.string,
   subTitleBottom: PropTypes.string,
   bgImage: PropTypes.string,
-  serviceBoxPosition: PropTypes.oneOf(['right', 'left']),
 };
