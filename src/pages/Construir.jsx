@@ -74,7 +74,7 @@ export function Construir() {
                 title='Construye La Casa'
                 titleBottom='De Tus Sueños'
                 subTitle='No solo levantamos paredes, creamos hogares que mejoran'
-                subTitleBottom='tu calidad de vida.'
+                subTitleBottom='tu calidad de vida'
             />
        
             <Stats />
@@ -88,7 +88,7 @@ export function Construir() {
             <FAQ id="faq"/>
     
             <CTA
-                heading='Tu Casa Soñada Existe.'
+                heading='Tu Casa Soñada Existe'
                 headingBottom='Nosotros La Construimos'
             />
        

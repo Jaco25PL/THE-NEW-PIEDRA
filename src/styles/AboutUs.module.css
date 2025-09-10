@@ -127,6 +127,10 @@
   .actionButton:hover {
     opacity: 0.9;
   }
+
+  @media (max-width: 1300px) {
+ 
+  }
   
   /* Responsive design */
   @media (max-width: 768px) {
@@ -156,11 +160,13 @@
     .textContainer {
       order: 2;
       padding: 0 1rem;
+      
     }
     
     .textContent {
       align-items: flex-start;
       text-align: left;
+      
     }
     
     .features {

@@ -11,7 +11,11 @@ const defaultImages = [
   '/images/renders/render-2.jpg',
   '/images/renders/render-5.png',
   '/images/renders/render-6.png',
-  '/images/renders/render-7.png'
+  '/images/renders/render-7.png',  
+  '/images/renders/render-8.avif',  
+  '/images/renders/render-9.avif',  
+  '/images/renders/render-10.avif',  
+  '/images/renders/render-11.avif',  
 ];
 
 export function PiedraHero ({

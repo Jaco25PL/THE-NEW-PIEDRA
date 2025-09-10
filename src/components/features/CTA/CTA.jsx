@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 export function CTA({
   heading = "¿Listo Para",
   headingBottom = "Transformar tu Casa?",
-  subheading = "Tu hogar merece lo mejor. Agenda una consulta gratuita sin compromiso y descubre cómo podemos hacer realidad tu visión."
+  subheading = "Tu hogar merece lo mejor. Agenda una consulta gratuita sin compromiso y descubre cómo podemos hacer realidad tu visión"
 
 }) {
 

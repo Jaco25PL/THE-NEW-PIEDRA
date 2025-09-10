@@ -70,7 +70,7 @@ export function MobileNav() {
           <ul className={styles.mobileContactInfo}>
             <li className={styles.mobileContactRow}>
               <img src="/images/logos/whatsapp-logo-black.svg" alt="phone icon" />
-              <a href="https://api.whatsapp.com/send?phone=59893595589" target="blank">094 159 591</a>
+              <a href="https://api.whatsapp.com/send?phone=59893595589" target="blank">+598 094 159 591</a>
             </li>
             <li className={styles.mobileContactRow}>
               <img src="/images/logos/blog-logo-black.svg" alt="blog" />

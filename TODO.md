@@ -71,11 +71,11 @@
 
 -[✅] Optimze site, maybe adda a loder and charge things to cache 
 
-sacar coma en el titulo en la parte de nosotros
+-[✅] sacar coma en el titulo en la parte de nosotros
 
-por wue remodelar text
+-[ ] por que remodelar text
 
-en contactar cambiar la posicion del texto
+-[✅] en contactar cambiar la posicion del texto
 
 ----------------------------
 

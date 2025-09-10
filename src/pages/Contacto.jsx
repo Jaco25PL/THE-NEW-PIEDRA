@@ -65,11 +65,12 @@ export function Contacto() {
         <div className={styles.content}>
           <div className={styles.headingContainer}>
             <h1 id="contacto-heading" className={styles.heading}>
-              ¿Listo para transformar tu espacio?
+              ¿Listo Para Transformar Tu Espacio?
             </h1>
             <p className={styles.subheading}>
-              Asesoramiento sin costo y presupuesto a medida. Conversemos sobre tu proyecto.
+              Asesoramiento sin costo y presupuesto a medida
             </p>
+            <p>Conversemos sobre tu proyecto</p>
           </div>
 
           <CTAButton

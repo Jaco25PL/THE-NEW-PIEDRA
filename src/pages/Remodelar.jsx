@@ -67,10 +67,10 @@ export function Remodelar() {
 
       <PiedraHero
         bgImage='/images/renders/render-4.jpg'
-        title='Renueva Tu Hogar,'
+        title='Renueva Tu Hogar'
         titleBottom='Mejora Tu Vida'
         subTitle='Remodelar tu casa es más que cambiar su apariencia'
-        subTitleBottom='ES MEJORAR TU DÍA A DÍA.'
+        subTitleBottom='ES MEJORAR TU DÍA A DÍA'
       />
 
       <Stats />

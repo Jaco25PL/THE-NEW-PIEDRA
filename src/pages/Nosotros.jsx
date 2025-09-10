@@ -39,10 +39,10 @@ export function Nosotros () {
 
         <PiedraHero
             bgImage='/images/renders/render-2.jpg'
-            title='Piedra Construcciones,'
+            title='Piedra Construcciones'
             titleBottom='Una Empresa Familiar'
             subTitle='30+ años más transformando espacios en Uruguay,'
-            subTitleBottom='con la misma pasión del primer día.'
+            subTitleBottom='con la misma pasión del primer día'
         />
                
         {/* <Stats /> */}

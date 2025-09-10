@@ -6,8 +6,8 @@ import { useState } from 'react';
 
 const SliderImages = [
     {
-      before: '/images/sample-house-1.jpg',
-      after: '/images/sample-house-2.jpg'
+      before: '/images/works/alicia-fondo-2.avif',
+      after: '/images/works/alicia-fondo-4.avif'
     },
     {
       before: '/images/sample-house-3.jpg',
