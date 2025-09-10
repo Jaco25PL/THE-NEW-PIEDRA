@@ -38,7 +38,7 @@ export function Nosotros () {
         </Helmet>
 
         <PiedraHero
-            bgImage='/images/render-2.jpg'
+            bgImage='/images/renders/render-2.jpg'
             title='Piedra Construcciones,'
             titleBottom='Una Empresa Familiar'
             subTitle='30+ años más transformando espacios en Uruguay,'

@@ -28,7 +28,7 @@ export function Navbar() {
                 <Link to="/">
                     <img
                       className={`${styles.logo} ${isScrolled ? styles.scrollLogo : styles.mainLogo}`}
-                      src={isScrolled ? "/images/PIEDRA-B-SM.svg" : "/images/PIEDRA-B.svg"}
+                      src={isScrolled ? "/images/logos/PIEDRA-B-SM.svg" : "/images/logos/PIEDRA-B.svg"}
                       alt="Piedra Construcciones"
                     />
                 </Link>

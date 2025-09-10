@@ -14,10 +14,51 @@ export function Contacto() {
   return (
     <section className={styles.container} aria-labelledby="contacto-heading">
       <Helmet>
+        {/* Primary Meta Tags */}
         <title>Contacto | Piedra Construcciones - Hablemos de Tu Proyecto</title>
         <meta name="description" content="Contáctanos para asesoramiento sin costo y presupuesto a medida. Conversemos sobre tu proyecto de construcción o remodelación en Montevideo." />
+        <meta name="keywords" content="contacto piedra construcciones, presupuesto construcción montevideo, consulta gratis remodelación, arquitecto montevideo" />
+        <meta name="robots" content="index, follow" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://piedraconstrucciones.com.uy/contacto" />
         <meta property="og:title" content="Contacto - Piedra Construcciones" />
         <meta property="og:description" content="Asesoramiento sin costo y presupuesto a medida. Conversemos sobre tu proyecto." />
+        <meta property="og:image" content="https://piedraconstrucciones.com.uy/images/logos/PIEDRA-B.svg" />
+        <meta property="og:locale" content="es_UY" />
+        <meta property="og:site_name" content="Piedra Construcciones" />
+        
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:url" content="https://piedraconstrucciones.com.uy/contacto" />
+        <meta property="twitter:title" content="Contacto - Piedra Construcciones" />
+        <meta property="twitter:description" content="Contáctanos para tu proyecto de construcción o remodelación en Montevideo." />
+        <meta property="twitter:image" content="https://piedraconstrucciones.com.uy/images/logos/PIEDRA-B.svg" />
+        
+        {/* Structured Data for Contact */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "mainEntity": {
+              "@type": "LocalBusiness",
+              "name": "Piedra Construcciones",
+              "telephone": "+59893595589",
+              "email": "piedraconstr.uy@gmail.com",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Montevideo",
+                "addressCountry": "UY"
+              },
+              "sameAs": [
+                `https://www.instagram.com/${instagramUser}/`,
+                `https://www.tiktok.com/@${tiktokUser}`
+              ]
+            }
+          })}
+        </script>
+        
         <link rel="canonical" href="https://piedraconstrucciones.com.uy/contacto" />
       </Helmet>
       <div className={styles.contentOverlay}>
@@ -43,24 +84,24 @@ export function Contacto() {
               rel="noopener noreferrer"
               className={styles.link}
             >
-              <span className={styles.icon} aria-hidden="true"><img src="/images/whatsapp-logo.svg" alt="WhatsApp logo" loading="lazy" /></span>
-              <span className={styles.linkText}>093 595 589</span>
+              <span className={styles.icon} aria-hidden="true"><img src="/images/logos/whatsapp-logo.svg" alt="WhatsApp logo" loading="lazy" /></span>
+              <span className={styles.linkText}>+598 093 595 589</span>
             </a>
 
             <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className={styles.link}>
-              <span className={styles.icon} aria-hidden="true"><img src="/images/instagram-logo.svg" alt="Instagram" loading="lazy" /></span>
+              <span className={styles.icon} aria-hidden="true"><img src="/images/logos/instagram-logo.svg" alt="Instagram" loading="lazy" /></span>
               <span className={styles.linkText}>{instagramUser}</span>
             </a>
 
             <a href={tiktokUrl} target="_blank" rel="noopener noreferrer" className={styles.link}>
-              <span className={styles.icon} aria-hidden="true"><img src="/images/tiktok-logo.svg" alt="TikTok" loading="lazy" /></span>
+              <span className={styles.icon} aria-hidden="true"><img src="/images/logos/tiktok-logo.svg" alt="TikTok" loading="lazy" /></span>
               <span className={styles.linkText}>{tiktokUser}</span>
             </a>
 
 
 
             <a href={`mailto:${email}`} className={styles.link}>
-              <span className={styles.icon} aria-hidden="true"><img src="/images/envelope-logo.svg" alt="Envelope logo" loading="lazy" /></span>
+              <span className={styles.icon} aria-hidden="true"><img src="/images/logos/envelope-logo.svg" alt="Envelope logo" loading="lazy" /></span>
               <span className={styles.linkText}>{email}</span>
             </a>
           </nav>

@@ -1,5 +1,4 @@
 
-// import { Remodelar } from '../../../pages/Remodelar';
 import { useState, useEffect } from 'react';
 import styles from '../../../styles/PiedraHero.module.css';
 import { CTAButton } from '../../common/Button/CTAButton';
@@ -7,12 +6,12 @@ import { Testimonials } from '../../common/Testimonials/Testimonials';
 import PropTypes from 'prop-types';
 
 const defaultImages = [
-  '/images/render-4.jpg',
-  '/images/render-1.jpg', 
-  '/images/render-2.jpg',
-  '/images/render-5.png',
-  '/images/render-6.png',
-  '/images/render-7.png'
+  '/images/renders/render-4.jpg',
+  '/images/renders/render-1.jpg', 
+  '/images/renders/render-2.jpg',
+  '/images/renders/render-5.png',
+  '/images/renders/render-6.png',
+  '/images/renders/render-7.png'
 ];
 
 export function PiedraHero ({
@@ -20,7 +19,7 @@ export function PiedraHero ({
     titleBottom = 'Construcciones',
     subTitle = 'Una empresa familiar',
     subTitleBottom = 'Una empresa de confianza',
-    bgImage = '/images/render-4.jpg',
+    bgImage = '/images/renders/render-4.jpg',
     images = null, // Allow custom images array
     autoSlide = true,
     slideInterval = 5000

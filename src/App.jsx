@@ -16,7 +16,6 @@ import { Nosotros } from './pages/Nosotros'
 import { Proyectos } from './pages/Proyectos'
 import { Blog } from './pages/Blog'
 import { Contacto } from './pages/Contacto'
-import TestReviews from './pages/TestReviews'
 
 function App() {
   useScrollToTop()
@@ -35,7 +34,6 @@ function App() {
               <Route path='/proyectos' element={<Proyectos/>} />
               <Route path='/blog' element={<Blog/>} />
               <Route path='/contacto' element={<Contacto/>} />
-              <Route path='/test-reviews' element={<TestReviews/>} />
               <Route path="*" element={<NotFound/>} />
             </Routes>
         </main>

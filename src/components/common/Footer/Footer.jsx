@@ -37,7 +37,7 @@ export function Footer() {
     <footer className={styles.footer}>
         <div className={`${styles.footerSection} ${styles.footerLeft}`}>
           <div className={styles.footerLeftTop}>
-              <a href="https://api.whatsapp.com/send?phone=59893595589" target="blank">094 159 591</a>
+              <a href="https://api.whatsapp.com/send?phone=59893595589" target="blank">+598 094 159 591</a>
             <span>|</span>
                 <a href="#faq" onClick={scrollToFAQ}>Preguntas Frecuentes</a>
             <span>|</span>

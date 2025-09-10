@@ -12,7 +12,7 @@ export function MainHero() {
               target='_blank'
               rel='noopener noreferrer'
               className={`${styles.splitImage} ${styles.leftImage}`}>
-              <img className={styles.image} src='./images/render-2.jpg' alt="sample house" loading="lazy" />
+              <img className={styles.image} src='./images/renders/render-2.jpg' alt="sample house" loading="lazy" />
               
               <div className={styles.content}>
                 <h2>CONSTRUIR</h2>

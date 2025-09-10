@@ -52,7 +52,7 @@
     height: 100%;
     transition: all 0.5s ease;
     z-index: 3;
-    background-image: url('/images/noise.png');
+    background-image: url('/images/logos/noise.png');
 }
 
 .serviceBox:hover::after {
@@ -160,8 +160,9 @@
         position: static;
         /* flex-direction: column; */
         /* gap: 1rem; */
+
         padding: 0 1rem;
-        margin: 2rem auto 0 auto;
+        margin: 1rem auto 0 auto;
         transform: none;
         top: auto;
         left: auto;

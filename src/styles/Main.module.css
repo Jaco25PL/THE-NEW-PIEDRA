@@ -40,7 +40,7 @@
     height: 100%;
     transition: all 0.5s ease;
     z-index: 4;
-    background-image: url('/images/noise.png');
+    background-image: url('/images/logos/noise.png');
   }
   
   .splitImage:hover::after {

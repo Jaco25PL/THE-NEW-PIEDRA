@@ -88,7 +88,7 @@ export function Works() {
                     className={styles.moreInfoButton}
                 >
                     <span>VER MÁS</span>
-                    <img src="/images/go-link.svg" alt="" loading="lazy" />
+                    <img src="/images/logos/go-link.svg" alt="" loading="lazy" />
                 </a>
 
                 {/* Before/After Slider */}
