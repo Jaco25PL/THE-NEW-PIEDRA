@@ -12,7 +12,13 @@ export function Proyectos() {
 
       <div className={styles.content}>
         <Titles title="En construcción..." />
-        
+        <p className={styles.subtitle}>
+          Conoce nuestros proyectos en nuestro{' '}
+          <a href="https://www.instagram.com/piedra.construcciones/" target="_blank" rel="noopener noreferrer" className={styles.instagramLink}>
+            Instagram
+            <img src="/images/logos/go-to.svg" alt="Ir a Instagram" className={styles.linkIcon} />
+          </a>
+        </p>
       </div>
     </div>
   )

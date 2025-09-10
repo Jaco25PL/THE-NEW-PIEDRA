@@ -69,6 +69,11 @@
 -[ ] Use web workers for heavy tasks
 -[ ] Optimize event handlers
 
+# Performance
+
+-[ ] Font optimization (preload, font-display: swap)
+-[ ] Critical CSS inlining for above-the-fold content
+
 --------------------------------------------------------------------------------
 
 # Tools to measuere results

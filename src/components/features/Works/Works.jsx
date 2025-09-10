@@ -10,16 +10,16 @@ const SliderImages = [
       after: '/images/works/alicia-fondo-4.avif'
     },
     {
-      before: '/images/sample-house-3.jpg',
-      after: '/images/sample-house-1.jpg'
+      before: '/images/works/bruno-dias-1.avif',
+      after: '/images/works/bruno-dias-2.avif'
     },
     {
-      before: '/images/sample-house-3.jpg',
-      after: '/images/sample-house-1.jpg'
+      before: '/images/works/dolores-1.avif',
+      after: '/images/works/dolores-2.avif'
     },
     {
-      before: '/images/sample-house-3.jpg',
-      after: '/images/sample-house-1.jpg'
+      before: '/images/works/reng-1.avif',
+      after: '/images/works/reng-2.avif'
     }
     // Add more images as needed
 ];

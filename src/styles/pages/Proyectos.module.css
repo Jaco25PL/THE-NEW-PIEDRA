@@ -44,6 +44,38 @@
     }
 }
 
+.subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    color: #666;
+}
+
+.instagramLink {
+    color: #000;
+    text-decoration: underline;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: color 0.3s ease;
+}
+
+.instagramLink:hover {
+    color: var(--gold-color);
+    text-decoration: underline;
+}
+
+.instagramLink:hover .linkIcon {
+    filter: brightness(0) saturate(100%) invert(77%) sepia(77%) saturate(1845%) hue-rotate(10deg) brightness(92%) contrast(86%);
+}
+
+.linkIcon {
+    width: 16px;
+    height: 16px;
+    transition: filter 0.3s ease;
+}
+
+
 /* Mobile Very Small */
 @media (max-width: 360px) {
     .container {
@@ -53,6 +85,10 @@
     .content h1 {
         font-size: 1.2rem;
         letter-spacing: 0.5px;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
     }
 }
 
