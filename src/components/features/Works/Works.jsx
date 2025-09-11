@@ -18,8 +18,8 @@ const SliderImages = [
       after: '/images/works/dolores-2.avif'
     },
     {
-      before: '/images/works/reng-1.avif',
-      after: '/images/works/reng-2.avif'
+      before: '/images/works/marita-1.png',
+      after: '/images/works/marita-2.png'
     }
     // Add more images as needed
 ];

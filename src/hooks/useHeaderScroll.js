@@ -10,9 +10,9 @@ export function useHeaderScroll() {
 
     useEffect(() => {
         // Stable thresholds with hysteresis to prevent loops
-        const SCROLL_THRESHOLD_DOWN = 50   // Switch to small logo when scrolling down past 50px
-        const SCROLL_THRESHOLD_UP = 30     // Switch to big logo when scrolling up past 30px
-        const DEBOUNCE_DELAY = 150         // Wait 150ms before switching logos
+        const SCROLL_THRESHOLD_DOWN = 120  // Switch to small logo when scrolling down past 120px
+        const SCROLL_THRESHOLD_UP = 80     // Switch to big logo when scrolling up past 80px
+        const DEBOUNCE_DELAY = 80          // Wait 80ms before switching logos
 
         const onScroll = () => {
             if (tickingRef.current) return
