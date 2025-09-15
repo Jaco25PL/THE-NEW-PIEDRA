@@ -24,6 +24,10 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+html {
+  background-color: #fff;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;

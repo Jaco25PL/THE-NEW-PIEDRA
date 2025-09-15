@@ -22,5 +22,33 @@ export const customerReviews = [
       rating: 5,
       date: 'hace 2 meses',
       comment: 'Son excelentes en lo que hacen y muy prolijos. Los precios son de acuerdo al trabajo que realizan. Son muy accesibles. Los súper recomiendo.'
+    },
+    {
+      id: 4,
+      name: 'Walter Accuosto',
+      profilePic: '/images/clients/wa_client.png',
+      rating: 5,
+      date: 'hace 2 meses',
+      comment: 'Trabajos impecables, profesionalismo, buen gusto a la hora de asesorar (Arreglos, materiales, colores) y además de confiabilidad...(algo muy importante en estos tiempos)... buena gente. Recomendable 100%.'
+    },
+    {
+      id: 5,
+      name: 'Claudia Fernández',
+      profilePic: '/images/clients/cf_client.png',
+      rating: 5,
+      date: 'hace 2 meses',
+      comment: 'Me encanto!!! La verdad súper recomendableEs muy amable y responsable … me ayudó a tener una idea más clara de cómo me gustaría que se viera mi casa con un estilo más moderno y me dio ejemplo también del color para que se viera iluminada y a la vez la haga más elegante ya que es una casa con muchos años y con agregado de segundo piso. Genio !!!! 🫶🏼muchas gracias!!!'
+    },
+    {
+      id: 6,
+      name: 'Evelin Balbin',
+      profilePic: '/images/clients/eb_client.png',
+      rating: 5,
+      date: 'hace 2 meses',
+      comment: '  Excelente trabajo, muy responsable y de confianza. Muy recomendable.'
     }
   ];
+
+
+
+

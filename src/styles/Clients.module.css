@@ -56,6 +56,7 @@
     border-radius: 3px;
     padding: 1rem 1.5rem;
     max-width: 27rem;
+    min-height: 200px; /* Add consistent minimum height */
     justify-self: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     height: 100%;
@@ -202,6 +203,7 @@
     
     .reviewCard {
         padding: 1rem 0.8rem;
+        min-height: 180px; /* Slightly smaller min-height for mobile */
     }
     
     .cardHeaderUser {
@@ -230,6 +232,7 @@
     
     .reviewCard {
         padding: 0.8rem 0.6rem;
+        min-height: 160px; /* Even smaller min-height for very small screens */
     }
     
     .reviewText {

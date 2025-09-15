@@ -6,22 +6,28 @@ import { useState } from 'react';
 
 const SliderImages = [
     {
-      before: '/images/works/alicia-fondo-2.avif',
-      after: '/images/works/alicia-fondo-4.avif'
+      before: '/images/works/stone-jose-2.png',
+      after: '/images/works/stone-jose-1.JPG'
     },
+{
+      before: '/images/works/dolores-8.png',
+      after: '/images/works/dolores-4.jpg'
+    },
+    // {
+    //   before: '/images/works/alicia-fondo-1.avif',
+    //   after: '/images/works/alicia-fondo-2.png'
+    // },
     {
+      before: '/images/works/marita-4.png',
+      after: '/images/works/marita-3.png'
+    },    {
       before: '/images/works/bruno-dias-1.avif',
       after: '/images/works/bruno-dias-2.avif'
     },
     {
-      before: '/images/works/dolores-1.avif',
-      after: '/images/works/dolores-2.avif'
+      before: '/images/works/alicia-fondo-5.png',
+      after: '/images/works/alicia-fondo-4.avif'
     },
-    {
-      before: '/images/works/marita-1.png',
-      after: '/images/works/marita-2.png'
-    }
-    // Add more images as needed
 ];
 
 

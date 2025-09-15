@@ -197,7 +197,7 @@
     
     .imageContainer {
         flex: none;
-        height: 250px;
+        height: 300px;
         aspect-ratio: auto;
         order: -1;
     }
@@ -238,7 +238,7 @@
     }
     
     .imageContainer {
-        height: 200px;
+        /* height: 200px; */
     }
     
     .title {
@@ -280,7 +280,7 @@
     }
     
     .imageContainer {
-        height: 180px;
+        height: 200px;
     }
     
     .title {
