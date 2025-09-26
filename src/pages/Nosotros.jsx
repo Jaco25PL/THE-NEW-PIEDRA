@@ -7,7 +7,7 @@ import { Clients } from '../components/features/Clients/Clients';
 import { Services } from '../components/features/AboutUs/Services';
 import { FAQ } from '../components/features/FAQ/FAQ';
 import { CTA } from '../components/features/CTA/CTA';
-// import { SectionDivider } from '../components/common/SectionDivider/SectionDivider';
+import { SectionDivider } from '../components/common/SectionDivider/SectionDivider';
 
 const customFaqItems = [
   {
@@ -47,11 +47,11 @@ export function Nosotros () {
                
         {/* <Stats /> */}
 
-        {/* <SectionDivider/> */}
+        <SectionDivider/>
 
         <RenovarPasos />
 
-        <Clients/>
+        <Clients pageType="nosotros"/>
 
         <Services/>
 

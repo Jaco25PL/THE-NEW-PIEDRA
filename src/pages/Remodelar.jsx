@@ -79,7 +79,7 @@ export function Remodelar() {
 
       <AboutUsRemodelar />
       
-      <Clients/>
+      <Clients pageType="renovar"/>
 
       <FAQ id="faq"/>
 

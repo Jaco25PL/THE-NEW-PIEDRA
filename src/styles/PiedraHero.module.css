@@ -1,7 +1,7 @@
 .heroContainer {
     position: relative;
     width: 100%;
-    height: 90vh;
+    height: 95vh;
     color: white;
     overflow: hidden;
 }
@@ -136,6 +136,10 @@
   }
   
   @media (max-width: 768px) {
+    .heroContainer {
+      height: 95vh;
+    }
+    
     .heroTitle {
       font-size: 2.5rem;
     }
@@ -164,7 +168,7 @@
   /* Extra mobile adjustments for smaller phones */
   @media (max-width: 480px) {
     .heroContainer {
-      height: 85vh;
+      height: 90vh;
     }
     
     .heroTitle {

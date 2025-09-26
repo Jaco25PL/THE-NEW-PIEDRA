@@ -83,7 +83,7 @@ export function Construir() {
     
             <AboutUsConstruir />
             
-            <Clients/> 
+            <Clients pageType="construir"/> 
     
             <FAQ id="faq"/>
     

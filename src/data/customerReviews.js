@@ -46,6 +46,30 @@ export const customerReviews = [
       rating: 5,
       date: 'hace 2 meses',
       comment: '  Excelente trabajo, muy responsable y de confianza. Muy recomendable.'
+    },
+    {
+      id: 7,
+      name: 'Carolina De los Santos',
+      profilePic: '/images/clients/cds_client.png',
+      rating: 5,
+      date: 'hace 1 mes',
+      comment: 'La verdad que son súper responsables,educados,serios en todos los trabajos que hacen,ya hace años que trabajan para nuestra familia ,en Montevideo y en soriano,en el campo hicieron una casa de más de 100 años a nuevo y quedó súper linda,reutilizando materiales,respetando lo antiguo,y diseñando lo nuevo,los recomiendo 100%.'
+    },
+    {
+      id: 8,
+      name: 'Rodrigo Valdez',
+      profilePic: '/images/clients/rv_client.png',
+      rating: 5,
+      date: 'hace 1 mes',
+      comment: 'Excelentes trabajos! En varias oportunidades me han resuelto problemas de sanitaria, albañilería, electricidad, etc. Siempre muy prolijo y detallista y cumpliendo con lo acordado. 100% recomendable.'
+    },
+    {
+      id: 9,
+      name: 'José Restaino',
+      profilePic: '/images/clients/jr_client.png',
+      rating: 5,
+      date: 'hace 1 mes',
+      comment: 'Quedo todo muy bien, están en los detalles para que quede todo impecable.'
     }
   ];
 
