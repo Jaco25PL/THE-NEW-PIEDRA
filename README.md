@@ -1,3 +1,39 @@
+# THE NEW PIEDRA
+
+## Getting Started
+
+### Prerequisites
+This project uses **pnpm** as the package manager. If you don't have pnpm installed:
+
+```bash
+# Install pnpm globally
+npm install -g pnpm
+```
+
+Or visit [pnpm.io](https://pnpm.io/installation) for other installation methods.
+
+### Installation and Running the Project
+
+1. **Install dependencies:**
+```bash
+pnpm install
+```
+
+2. **Run the development server (page on the web):**
+```bash
+pnpm run dev
+```
+*then click 'o' to open it*
+
+3. **Other available commands:**
+```bash
+pnpm run build    # Build for production
+pnpm run preview  # Preview production build
+pnpm run lint     # Run ESLint
+```
+
+---
+
 # How to contribute to this repository (Pull Request workflow)
 You must not push directly to `main`. All changes must go through a Pull Request.
 
