@@ -1,18 +1,18 @@
-import { Link } from 'react-router-dom';
-import styles from '../../../styles/ServiceBoxes.module.css';
+import { Link } from "react-router-dom";
+import styles from "../../../styles/ServiceBoxes.module.css";
 
 export function ServiceBoxes() {
   return (
     <div className={styles.serviceBoxes}>
       {/* Construir box */}
-      <Link 
+      <Link
         to="/construir"
         className={`${styles.serviceBox} ${styles.construirBox}`}
       >
-        <img 
-          className={styles.serviceImage} 
-          src='/images/renders/render-2.jpg' 
-          alt="Construcción de casas" 
+        <img
+          className={styles.serviceImage}
+          src="/images/renders/render-2.jpg"
+          alt="Construcción de casas"
           loading="lazy"
         />
         <div className={styles.serviceContent}>
@@ -24,14 +24,14 @@ export function ServiceBoxes() {
       </Link>
 
       {/* Remodelar box */}
-      <Link 
+      <Link
         to="/remodelar"
         className={`${styles.serviceBox} ${styles.remodelarBox}`}
       >
-        <img 
-          className={styles.serviceImage} 
-          src='/images/works/pelado-karting-piedra-1.AVIF' 
-          alt="Remodelación de espacios" 
+        <img
+          className={styles.serviceImage}
+          src="/images/works/pelado-karting-piedra-1.AVIF"
+          alt="Remodelación de espacios"
           loading="lazy"
         />
         <div className={styles.serviceContent}>
@@ -42,7 +42,7 @@ export function ServiceBoxes() {
         </div>
       </Link>
 
-      {/* Proyectos box */}
+      {/* Proyectos box 
       <Link 
         to="/proyectos"
         className={`${styles.serviceBox} ${styles.proyectosBox}`}
@@ -59,7 +59,7 @@ export function ServiceBoxes() {
             <p>Conoce nuestros trabajos y la calidad que nos distingue</p>
           </div>
         </div>
-      </Link>
+      </Link>*/}
     </div>
   );
 }
