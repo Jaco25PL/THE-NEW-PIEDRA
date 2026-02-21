@@ -229,9 +229,17 @@
   .navbarSkeletonMobile {
     display: flex;
   }
+
+  .hero {
+    border-radius: 0;
+  }
 }
 
 @media (max-width: 768px) {
+  .overlay {
+    transition: opacity 0.5s ease;
+  }
+
   .content {
     width: 85%;
   }

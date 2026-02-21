@@ -1,10 +1,11 @@
 import styles from "../../../styles/MobileNav.module.css";
 import { Social } from "../Social/Social";
 import { useState } from "react";
-import {Link} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 
 export function MobileNav() {
 
+  const { pathname } = useLocation();
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
@@ -51,19 +52,19 @@ export function MobileNav() {
       <div className={`${styles.mobileMenuContainer} ${isOpen ? styles.openNav : styles.closedNav}`}>
         <ul className={styles.mobileMenu}>
             <li className={styles.row}>
-              <Link to="/nosotros" onClick={closeMenu}>NOSOTROS</Link>
+              <Link to="/nosotros" onClick={closeMenu} className={pathname === '/nosotros' ? styles.activeLink : ''}>NOSOTROS</Link>
             </li>
             <li className={styles.row}>
-              <Link to="/construir" onClick={closeMenu}>CONSTRUIR</Link>
+              <Link to="/construir" onClick={closeMenu} className={pathname === '/construir' ? styles.activeLink : ''}>CONSTRUIR</Link>
             </li>
             <li className={styles.row}>
-              <Link to="/remodelar" onClick={closeMenu}>REMODELAR</Link>
+              <Link to="/remodelar" onClick={closeMenu} className={pathname === '/remodelar' ? styles.activeLink : ''}>REMODELAR</Link>
             </li>
             <li className={styles.row}>
-              <Link to="/proyectos" onClick={closeMenu}>PROYECTOS</Link>
+              <Link to="/proyectos" onClick={closeMenu} className={pathname === '/proyectos' ? styles.activeLink : ''}>PROYECTOS</Link>
             </li>
             <li className={styles.row}>
-              <Link to="/contacto" onClick={closeMenu}>CONTACTO</Link>
+              <Link to="/contacto" onClick={closeMenu} className={pathname === '/contacto' ? styles.activeLink : ''}>CONTACTO</Link>
             </li>
         </ul>
 

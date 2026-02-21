@@ -1,4 +1,4 @@
-import React, { Suspense, useState, useCallback, useEffect } from 'react'
+import React, { Suspense, useState, useCallback, useEffect, useRef } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -43,17 +43,35 @@ function SuspenseChildren({ onReady, children }) {
   return children
 }
 
-const pageVariants = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1 },
-  exit:    { opacity: 0 },
+const isMobile = window.innerWidth < 768
+
+const pageVariants = isMobile
+  ? { initial: {}, animate: {}, exit: {} }
+  : { initial: { opacity: 0 }, animate: { opacity: 1 }, exit: { opacity: 0 } }
+
+const pageTransition = isMobile
+  ? { duration: 0 }
+  : { duration: 0.2, ease: 'easeInOut' }
+
+/* Fires onMounted when the lazy page component renders (Suspense resolved) */
+function PageMounted({ onMounted, routeKey, children }) {
+  useEffect(() => {
+    if (onMounted) onMounted()
+  }, [routeKey, onMounted])
+  return children
 }
 
-const isMobile = window.innerWidth < 768
-const pageTransition = { duration: isMobile ? 0.12 : 0.2, ease: 'easeInOut' }
-
-function AnimatedRoutes() {
+function AnimatedRoutes({ onRouteChange, onPageMounted }) {
   const location = useLocation()
+  const isFirstRender = useRef(true)
+
+  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false
+      return
+    }
+    if (isMobile && onRouteChange) onRouteChange()
+  }, [location.pathname, onRouteChange])
 
   return (
     <AnimatePresence mode="wait">
@@ -65,16 +83,20 @@ function AnimatedRoutes() {
         exit="exit"
         transition={pageTransition}
       >
-        <Routes location={location}>
-          <Route path="/" element={<Home />} />
-          <Route path='/construir' element={<Construir />} />
-          <Route path='/remodelar' element={<Remodelar />} />
-          <Route path='/nosotros' element={<Nosotros />} />
-          <Route path='/proyectos' element={<Proyectos />} />
-          <Route path='/blog' element={<Blog />} />
-          <Route path='/contacto' element={<Contacto />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Suspense fallback={null}>
+          <PageMounted onMounted={onPageMounted} routeKey={location.pathname}>
+            <Routes location={location}>
+              <Route path="/" element={<Home />} />
+              <Route path='/construir' element={<Construir />} />
+              <Route path='/remodelar' element={<Remodelar />} />
+              <Route path='/nosotros' element={<Nosotros />} />
+              <Route path='/proyectos' element={<Proyectos />} />
+              <Route path='/blog' element={<Blog />} />
+              <Route path='/contacto' element={<Contacto />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </PageMounted>
+        </Suspense>
       </motion.div>
     </AnimatePresence>
   )
@@ -88,6 +110,12 @@ function App() {
   const [loading, setLoading] = useState(true)
   const [overlayVisible, setOverlayVisible] = useState(true)
 
+  // Mobile navigation skeleton
+  const [mobileNavLoading, setMobileNavLoading] = useState(false)
+  const [mobileNavFading, setMobileNavFading] = useState(false)
+  const mobileNavLoadingRef = useRef(false)
+  const fadeTimerRef = useRef(null)
+
   useEffect(() => {
     preloadImages(IMAGES_TO_PRELOAD).then(() => setImagesReady(true))
   }, [])
@@ -98,12 +126,45 @@ function App() {
 
   const handleReady = useCallback(() => setPageReady(true), [])
 
+  // Step 1: Route changes on mobile → show skeleton immediately
+  const handleRouteChange = useCallback(() => {
+    clearTimeout(fadeTimerRef.current)
+    mobileNavLoadingRef.current = true
+    setMobileNavLoading(true)
+    setMobileNavFading(false)
+  }, [])
+
+  // Step 2: Lazy page component mounted (Suspense resolved) → wait 500ms then fade out
+  const handlePageMounted = useCallback(() => {
+    if (!mobileNavLoadingRef.current) return
+    clearTimeout(fadeTimerRef.current)
+    fadeTimerRef.current = setTimeout(() => {
+      setMobileNavFading(true)
+    }, 300)
+  }, [])
+
+  // Step 3: Fade-out CSS transition ends → remove skeleton from DOM
+  const handleMobileNavFadeEnd = useCallback(() => {
+    mobileNavLoadingRef.current = false
+    setMobileNavLoading(false)
+    setMobileNavFading(false)
+  }, [])
+
   return (
     <HelmetProvider>
+      {/* Initial load skeleton */}
       {overlayVisible && (
         <PageSkeleton
           fadeOut={!loading}
           onFadeEnd={() => setOverlayVisible(false)}
+        />
+      )}
+      {/* Mobile navigation skeleton — below menu (z-index 98), above everything else */}
+      {mobileNavLoading && !overlayVisible && (
+        <PageSkeleton
+          fadeOut={mobileNavFading}
+          onFadeEnd={handleMobileNavFadeEnd}
+          behindNav
         />
       )}
       <div className={styles.appContainer}>
@@ -111,7 +172,10 @@ function App() {
         <main className={styles.main}>
           <Suspense fallback={null}>
             <SuspenseChildren onReady={handleReady}>
-              <AnimatedRoutes />
+              <AnimatedRoutes
+                onRouteChange={handleRouteChange}
+                onPageMounted={handlePageMounted}
+              />
             </SuspenseChildren>
           </Suspense>
         </main>

@@ -141,8 +141,8 @@
     }
 
     .sliderContainer {
-      transform: translateY(3rem);
-      height: calc(100% + 3rem);
+      transform: none;
+      height: 100%;
     }
     
     .heroTitle {

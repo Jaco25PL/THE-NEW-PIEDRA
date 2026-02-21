@@ -46,6 +46,10 @@
   font-weight: 600;
 }
 
+.activeLink {
+  font-weight: 600 !important;
+}
+
 /* Logo crossfade wrapper —
    PIEDRA-B.svg    is 314×151 → at 6rem height: width = 6rem × (314/151) ≈ 12.5rem
    PIEDRA-B-SM.svg is 151×151 → at 4rem height: width = 4rem (perfect square)       */

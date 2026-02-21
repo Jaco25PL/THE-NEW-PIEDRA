@@ -11,24 +11,18 @@ export function Navbar() {
   const { pathname } = useLocation()
   const effectiveScrolled = isScrolled && pathname !== '/contacto'
 
-    // console.log(isScrolling)
-
     return (
         <header className={`${styles.headerContainer} ${effectiveScrolled ? styles.headerContainerScrolled : styles.headerContainerNotScrolled}`}>
             <nav className={styles.headerGrid}>
-  
+
               <Social />
 
-              {/* 2) Second column */}
-              <div className={styles.column}><Link to="/nosotros">NOSOTROS</Link> </div>
+              <div className={styles.column}><Link to="/nosotros" className={pathname === '/nosotros' ? styles.activeLink : undefined}>NOSOTROS</Link></div>
 
-              {/* 3) Third column */}
-              <div className={styles.column}><Link to="/construir">CONSTRUIR</Link> </div>
+              <div className={styles.column}><Link to="/construir" className={pathname === '/construir' ? styles.activeLink : undefined}>CONSTRUIR</Link></div>
 
-              {/* 4) Fourth column (Center - your logo, for example) */}
               <div className={`${styles.column} ${styles.logoColomn}`}>
                 <Link to="/">
-                  {/* Both logos always in the DOM — crossfade with opacity, no src swap */}
                   <div className={`${styles.logoWrapper} ${effectiveScrolled ? styles.logoWrapperScrolled : ''}`}>
                     <img
                       className={`${styles.mainLogoImg} ${effectiveScrolled ? styles.logoOut : styles.logoIn}`}
@@ -49,14 +43,11 @@ export function Navbar() {
                 </Link>
               </div>
 
-              {/* 5) Fifth column */}
-              <div className={styles.column}><Link to="/remodelar">REMODELAR</Link> </div>
+              <div className={styles.column}><Link to="/remodelar" className={pathname === '/remodelar' ? styles.activeLink : undefined}>REMODELAR</Link></div>
 
-              {/* 6) Sixth column */}
-              <div className={styles.column}><Link to="/proyectos">PROYECTOS</Link> </div>
+              <div className={styles.column}><Link to="/proyectos" className={pathname === '/proyectos' ? styles.activeLink : undefined}>PROYECTOS</Link></div>
 
-              {/* 7) Seventh column: “Contactar” button */}
-              <div className={`${styles.column}`}>
+              <div className={styles.column}>
                 <Link to="/contacto"><span className={styles.contactButton}>CONTACTAR</span></Link>
               </div>
             </nav>

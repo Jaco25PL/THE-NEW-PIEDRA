@@ -152,8 +152,8 @@
     }
     
     .imageContainer {
-      height: 250px;
-      max-height: 250px;
+      height: 220px;
+      max-height: 220px;
       order: 1;
     }
     
@@ -214,8 +214,8 @@
     }
     
     .imageContainer {
-      height: 200px;
-      max-height: 200px;
+      height: 220px;
+      max-height: 220px;
     }
     
     .features {

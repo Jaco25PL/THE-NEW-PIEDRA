@@ -1,9 +1,10 @@
 import styles from './PageSkeleton.module.css';
 
-export function PageSkeleton({ fadeOut = false, onFadeEnd }) {
+export function PageSkeleton({ fadeOut = false, onFadeEnd, behindNav = false }) {
   return (
     <div
       className={`${styles.overlay} ${fadeOut ? styles.fadeOut : ''}`}
+      style={behindNav ? { zIndex: 98 } : undefined}
       onTransitionEnd={onFadeEnd}
     >
       {/* Navbar skeleton */}

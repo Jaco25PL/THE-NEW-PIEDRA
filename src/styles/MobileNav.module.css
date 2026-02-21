@@ -215,6 +215,10 @@
     text-decoration: underline;
 }
 
+.activeLink {
+    text-decoration: underline;
+}
+
 .row:active {
     background-color: #ddd;
 }
