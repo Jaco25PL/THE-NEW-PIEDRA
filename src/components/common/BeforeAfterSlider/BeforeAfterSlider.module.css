@@ -25,6 +25,7 @@
   object-fit: cover;
   display: block;
   pointer-events: none;
+  image-orientation: from-image;
 }
 
 .beforeImage {
@@ -70,12 +71,9 @@
 }
 
 .handleArrows {
-  display: flex;
-  align-items: center;
-  font-size: 12px;
-  color: #333;
-  font-weight: bold;
-  gap: 2px;
+  width: 22px;
+  height: 13px;
+  display: block;
 }
 
 /* Animation now handled by JavaScript with CSS transitions */
@@ -87,10 +85,8 @@
     height: 35px;
   }
   
-  .handleArrows {
-    font-size: 10px;
-  }
 }
+
 
 @media (max-width: 480px) {
   .handleCircle {
@@ -98,8 +94,4 @@
     height: 30px;
   }
   
-  .handleArrows {
-    font-size: 9px;
-    gap: 1px;
-  }
 }

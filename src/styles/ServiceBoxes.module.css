@@ -52,7 +52,7 @@
     height: 100%;
     transition: all 0.5s ease;
     z-index: 3;
-    background-image: url('/images/logos/noise.png');
+    background-image: url('/images/logos/noise.webp');
 }
 
 .serviceBox:hover::after {

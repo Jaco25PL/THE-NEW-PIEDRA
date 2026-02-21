@@ -37,11 +37,11 @@ export function Footer() {
     <footer className={styles.footer}>
         <div className={`${styles.footerSection} ${styles.footerLeft}`}>
           <div className={styles.footerLeftTop}>
-              <a href="https://api.whatsapp.com/send?phone=59893595589" target="blank">+598 094 159 591</a>
+              <a href="https://api.whatsapp.com/send?phone=59893595589" target="_blank" rel="noopener noreferrer">+598 093 595 589</a>
             <span>|</span>
                 <a href="#faq" onClick={scrollToFAQ}>Preguntas Frecuentes</a>
             <span>|</span>
-              <a href="mailto:piedraconstr.uy@gmail.com" target="blank">piedraconstr.uy@gmail.com</a>
+              <a href="mailto:piedraconstr.uy@gmail.com" target="_blank" rel="noopener noreferrer">piedraconstr.uy@gmail.com</a>
 
           </div>
 
@@ -50,7 +50,7 @@ export function Footer() {
             <span>|</span>
                 <span>Politica de Privacidad</span>
             <span>|</span>
-                <p>Copyright © 2025 Piedra Construcciones</p>
+                <p>Copyright © 2026 Piedra Construcciones</p>
           </div>
         </div>
 

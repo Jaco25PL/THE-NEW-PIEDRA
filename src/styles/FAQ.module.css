@@ -14,15 +14,19 @@
 
 .imageContainer {
     flex: 0 0 45%;
-    background-image: url('/images/works/truck.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100%; /* Set based on your needs */
+    min-height: 100%;
     height: 100%;
     overflow: hidden;
     position: relative;
     aspect-ratio: 1/1;
+}
+
+.faqImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 /* FAQ Content Section */

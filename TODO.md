@@ -168,3 +168,20 @@ src/
   ├── App.jsx
   ├── index.css
   └── main.jsx
+
+
+
+
+## Performance Optimization (Manual — Requires External Tools)
+
+- [ ] **G. Generate AVIF + responsive sizes**
+  - For every image in `public/images`, generate 3 sizes: 480w, 960w, 1440w in AVIF (primary) and keep WebP as fallback
+  - Tool: `npx @squoosh/cli` or `sharp` CLI
+  - Once files exist, Claude can wire up `srcset`/`sizes` in all JSX components
+
+- [ ] **H. Subset fonts to WOFF2**
+  - Tools: `pyftsubset` (fonttools) or `glyphhanger`
+  - Keep only used weights: Montserrat (400, 600), SabonNext (400, 900, italic), AbhayaLibre (400, 700)
+  - Subset to Latin + Spanish glyphs only
+  - Target: all fonts combined < 300KB
+  - Once `.woff2` files exist, Claude can update `@font-face` in `src/index.css`

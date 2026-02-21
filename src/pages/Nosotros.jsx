@@ -1,13 +1,23 @@
+import React, { Suspense } from 'react'
 import { Helmet } from 'react-helmet-async'
 import styles from '../styles/pages/Nosotros.module.css';
 import { PiedraHero } from '../components/layout/Heroes/PiedraHero';
-// import { Stats } from '../components/features/Stats/Stats';
 import { RenovarPasos } from '../components/features/AboutUs/RenovarPasos';
-import { Clients } from '../components/features/Clients/Clients';
-import { Services } from '../components/features/AboutUs/Services';
-import { FAQ } from '../components/features/FAQ/FAQ';
-import { CTA } from '../components/features/CTA/CTA';
 import { SectionDivider } from '../components/common/SectionDivider/SectionDivider';
+import { LazySection } from '../components/common/LazySection/LazySection';
+
+const Clients = React.lazy(() =>
+  import('../components/features/Clients/Clients').then((m) => ({ default: m.Clients }))
+)
+const Services = React.lazy(() =>
+  import('../components/features/AboutUs/Services').then((m) => ({ default: m.Services }))
+)
+const FAQ = React.lazy(() =>
+  import('../components/features/FAQ/FAQ').then((m) => ({ default: m.FAQ }))
+)
+const CTA = React.lazy(() =>
+  import('../components/features/CTA/CTA').then((m) => ({ default: m.CTA }))
+)
 
 const customFaqItems = [
   {
@@ -30,35 +40,82 @@ export function Nosotros () {
     <div className={styles.container}>
 
         <Helmet>
-            <title>Sobre Nosotros | Piedra Construcciones - Empresa de Construcción en Montevideo</title>
-            <meta name="description" content="Conoce a Piedra Construcciones, una empresa familiar con +30 años transformando espacios en Uruguay. Servicios de construcción y remodelación con pasión y experiencia." />
-            <meta property="og:title" content="Sobre Piedra Construcciones" />
-            <meta property="og:description" content="30+ años más transformando espacios en Uruguay, con la misma pasión del primer día." />
+            <title>Sobre Nosotros | Piedra Construcciones - Empresa Familiar en Montevideo</title>
+            <meta name="description" content="Conoce a Piedra Construcciones, empresa familiar con +30 años transformando hogares en Uruguay. Construcción y remodelación con pasión, experiencia y garantía extendida." />
+            <meta name="keywords" content="empresa construcción Montevideo, empresa familiar construcción Uruguay, historia Piedra Construcciones, constructora confiable Uruguay" />
+            <meta property="og:type" content="website" />
+            <meta property="og:site_name" content="Piedra Construcciones" />
+            <meta property="og:title" content="Sobre Nosotros | Piedra Construcciones - Empresa Familiar" />
+            <meta property="og:description" content="30+ años transformando espacios en Uruguay con la misma pasión del primer día. Empresa familiar, confiable y con garantía extendida." />
+            <meta property="og:image" content="https://piedraconstrucciones.com.uy/images/renders/render-2.webp" />
+            <meta property="og:url" content="https://piedraconstrucciones.com.uy/nosotros" />
+            <meta property="og:locale" content="es_UY" />
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content="Sobre Nosotros | Piedra Construcciones" />
+            <meta name="twitter:description" content="30+ años transformando espacios en Uruguay con la misma pasión del primer día." />
+            <meta name="twitter:image" content="https://piedraconstrucciones.com.uy/images/renders/render-2.webp" />
             <link rel="canonical" href="https://piedraconstrucciones.com.uy/nosotros" />
+            <script type="application/ld+json">{JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Piedra Construcciones",
+              "url": "https://piedraconstrucciones.com.uy",
+              "logo": "https://piedraconstrucciones.com.uy/images/logos/PIEDRA-B.svg",
+              "description": "Empresa familiar con +30 años en construcción y remodelación en Montevideo, Uruguay.",
+              "foundingDate": "1994",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Montevideo",
+                "addressCountry": "UY"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+598-93-595-589",
+                "contactType": "customer service",
+                "availableLanguage": "Spanish"
+              },
+              "sameAs": [
+                "https://www.instagram.com/piedra.construcciones/",
+                "https://www.facebook.com/piedra.construcciones.uy"
+              ]
+            })}</script>
         </Helmet>
 
         <PiedraHero
-            bgImage='/images/renders/render-2.jpg'
+            bgImage='/images/renders/render-2.webp'
             title='Piedra Construcciones'
             titleBottom='Una Empresa Familiar'
             subTitle='30+ años más transformando espacios en Uruguay,'
             subTitleBottom='con la misma pasión del primer día'
         />
-               
-        {/* <Stats /> */}
 
         <SectionDivider/>
 
         <RenovarPasos />
 
-        <Clients pageType="nosotros"/>
+        <LazySection minHeight="420px">
+          <Suspense fallback={<div style={{ minHeight: '420px' }} />}>
+            <Clients />
+          </Suspense>
+        </LazySection>
 
-        <Services/>
+        <LazySection minHeight="420px">
+          <Suspense fallback={<div style={{ minHeight: '420px' }} />}>
+            <Services/>
+          </Suspense>
+        </LazySection>
 
-        {/* <FAQ/> */}
-        <FAQ faqItems={customFaqItems} id="faq"/>
+        <LazySection minHeight="420px">
+          <Suspense fallback={<div style={{ minHeight: '420px' }} />}>
+            <FAQ faqItems={customFaqItems} id="faq"/>
+          </Suspense>
+        </LazySection>
 
-        <CTA heading="¿Estás buscando una empresa" headingBottom='segura y confiable?'/> 
+        <LazySection minHeight="320px">
+          <Suspense fallback={<div style={{ minHeight: '320px' }} />}>
+            <CTA heading="¿Estás buscando una empresa" headingBottom='segura y confiable?'/>
+          </Suspense>
+        </LazySection>
 
     </div>
   );

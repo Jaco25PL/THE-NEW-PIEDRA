@@ -8,7 +8,7 @@ export function HeroWithServices({
   titleBottom = 'Construcciones',
   subTitle = 'Empresa familiar especializada en construcción y remodelación',
   subTitleBottom = 'Con sede en Montevideo, Uruguay',
-  bgImage = '/images/renders/render-4.jpg'
+  bgImage = '/images/renders/render-4.webp'
 }) {
 
   return (

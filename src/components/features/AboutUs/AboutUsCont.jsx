@@ -5,7 +5,7 @@ import { SectionDivider } from '../../common/SectionDivider/SectionDivider'
 const content = [
   {
     id: 1,
-    img: '/images/render-sample.jpeg',
+    img: '/images/render-sample.webp',
     title: '¿POR QUÉ ELEGIRNOS?',   
     sub1: 'Render 3D Personalizado',
     sub2: 'Garantía De Por Vida',
@@ -18,7 +18,7 @@ const content = [
   },
   {
     id: 2,
-    img: '/images/render-2.jpg',
+    img: '/images/render-2.webp',
     title: 'NUESTRO PROCESO',
     sub1: 'Paso 1: Presupuesto',
     sub2: 'Paso 2: Diseño 3D',

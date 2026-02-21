@@ -190,10 +190,15 @@ export function BeforeAfterSlider({ beforeImage, afterImage }) {
       >
         <div className={styles.handleLine}></div>
         <div className={styles.handleCircle}>
-          <div className={styles.handleArrows}>
-            <span>←</span>
-            <span>→</span>
-          </div>
+          <svg
+            className={styles.handleArrows}
+            viewBox="0 0 28 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polyline points="9,1 2,8 9,15" stroke="#000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <polyline points="19,1 26,8 19,15" stroke="#000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
         </div>
       </div>
     </div>

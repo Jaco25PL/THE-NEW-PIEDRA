@@ -16,6 +16,18 @@ export function CTA({
 
     return (
     <section className={styles.container}>
+      {/* Background image — use <picture> so lazy loading and srcset work natively */}
+      <picture className={styles.bgPicture} aria-hidden="true">
+        {/* Add AVIF source here once generated: <source srcSet="/images/renders/render-4.avif" type="image/avif" /> */}
+        <source srcSet="/images/renders/render-4.webp" type="image/webp" />
+        <img
+          src="/images/renders/render-4.webp"
+          alt=""
+          className={styles.bgImage}
+          loading="lazy"
+          decoding="async"
+        />
+      </picture>
       <div className={styles.contentOverlay}>
         <div className={styles.content}>
             <div className={styles.headingContainer}>
@@ -47,9 +59,9 @@ export function CTA({
 
       {/* <div className={styles.testimonial}>
         <div className={styles.faces}>
-          <div className={styles.face}><img src="'/images/face-1.png" alt="" loading="lazy" /></div>
-          <div className={styles.face}><img src="'/images/face-2.png" alt="" loading="lazy" /></div>
-          <div className={styles.face}><img src="'/images/face-3.jpeg" alt="" loading="lazy" /></div>
+          <div className={styles.face}><img src="'/images/face-1.webp" alt="" loading="lazy" /></div>
+          <div className={styles.face}><img src="'/images/face-2.webp" alt="" loading="lazy" /></div>
+          <div className={styles.face}><img src="'/images/face-3.webp" alt="" loading="lazy" /></div>
         </div>
         <div className={styles.ratings}>
           <p className={styles.ratingText}>150+ hogares renovados</p>

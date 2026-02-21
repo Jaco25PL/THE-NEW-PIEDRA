@@ -37,8 +37,18 @@ export function FAQ({ faqItems = [], id }) {
 
             {/* Left Image Section */}
             <div className={styles.imageContainer}>
-                {/* <img src="/images/faq-img.jpeg" alt="FAQ Illustration" className={styles.faqImage} /> */}
-                <div className={styles.faqImage}></div>
+                <picture>
+                    {/* Add AVIF source here once generated: <source srcSet="/images/works/truck.avif" type="image/avif" /> */}
+                    <source srcSet="/images/works/truck.webp" type="image/webp" />
+                    <img
+                        src="/images/works/truck.webp"
+                        alt=""
+                        aria-hidden="true"
+                        className={styles.faqImage}
+                        loading="lazy"
+                        decoding="async"
+                    />
+                </picture>
             </div>
 
             {/* Right FAQ Section */}

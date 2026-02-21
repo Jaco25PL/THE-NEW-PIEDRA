@@ -1,65 +1,68 @@
+import { useState, useEffect, useRef } from 'react'
 import styles from '../../../styles/Clients.module.css'
-import { Titles } from '../../common/Titles/Titles';
-import { ReviewCard } from './ClientCard';
-import { customerReviews } from '../../../data/customerReviews';
-import { SectionDivider } from '../../common/SectionDivider/SectionDivider';
-import { GoogleRating } from '../../common/GoogleRating/GoogleRating';
-import PropTypes from 'prop-types';
+import { Titles } from '../../common/Titles/Titles'
+import { ReviewCard } from './ClientCard'
+import { customerReviews } from '../../../data/customerReviews'
+import { SectionDivider } from '../../common/SectionDivider/SectionDivider'
+import { GoogleRating } from '../../common/GoogleRating/GoogleRating'
 
-// More efficient object lookup for review ranges
-const reviewRanges = {
-    nosotros: [0, 3],
-    construir: [3, 6],
-    renovar: [6, 9]
-};
+const VISIBLE = 3
+const INTERVAL = 10000
+const FADE_MS = 500
 
-// Helper function to get reviews by page type
-const getReviewsByPage = (pageType) => {
-    const [start, end] = reviewRanges[pageType] || [0, 3];
-    return customerReviews.slice(start, end);
-};
+export function Clients() {
+  const [slots, setSlots] = useState([0, 1, 2])
+  const [fadingSlot, setFadingSlot] = useState(null)
+  const nextReviewRef = useRef(VISIBLE)
+  const nextSlotRef = useRef(0)
 
-export function Clients ({ pageType = 'nosotros' }) {
-    const selectedReviews = getReviewsByPage(pageType);
-    
-    return (
-        <div className={styles.satisfiedCustomersContainer}>
+  useEffect(() => {
+    const timer = setInterval(() => {
+      const slotToFade = nextSlotRef.current
+      const nextReview = nextReviewRef.current % customerReviews.length
 
-            <SectionDivider position='top'/>
+      setFadingSlot(slotToFade)
 
-            <Titles title="CLIENTES SATISFECHOS"/>
-            
-            <a 
-                href="https://www.google.com/search?q=Piedra+Construcciones&ie=UTF-8#mpd=~13252831935698052680/customers/reviews&lrd=0x959f81b539eb72cf:0xd8c34054d85c5ad0,1,,,,"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
+      setTimeout(() => {
+        setSlots(prev => {
+          const next = [...prev]
+          next[slotToFade] = nextReview
+          return next
+        })
+        setFadingSlot(null)
+        nextReviewRef.current = (nextReviewRef.current + 1) % customerReviews.length
+        nextSlotRef.current = (nextSlotRef.current + 1) % VISIBLE
+      }, FADE_MS)
+    }, INTERVAL)
 
-                <GoogleRating />
+    return () => clearInterval(timer)
+  }, [])
 
-            </a>
-
-            <div className={styles.reviewsContainer}>
-                {selectedReviews.map(review => (
-                    <a 
-                        href="https://www.google.com/search?q=Piedra+Construcciones&ie=UTF-8#mpd=~13252831935698052680/customers/reviews&lrd=0x959f81b539eb72cf:0xd8c34054d85c5ad0,1,,,,"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        key={review.id}
-                    >
-                        <ReviewCard review={review} />
-                    </a>
-                ))} 
-            </div>
-
-            <SectionDivider position='bottom'/>
-            
-        </div>
-    )
+  return (
+    <div className={styles.satisfiedCustomersContainer}>
+      <SectionDivider position='top'/>
+      <Titles title="CLIENTES SATISFECHOS"/>
+      <a
+        href="https://www.google.com/search?q=Piedra+Construcciones&ie=UTF-8#mpd=~13252831935698052680/customers/reviews&lrd=0x959f81b539eb72cf:0xd8c34054d85c5ad0,1,,,,"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <GoogleRating />
+      </a>
+      <div className={styles.reviewsContainer}>
+        {slots.map((reviewIndex, slotIndex) => (
+          <a
+            href="https://www.google.com/search?q=Piedra+Construcciones&ie=UTF-8#mpd=~13252831935698052680/customers/reviews&lrd=0x959f81b539eb72cf:0xd8c34054d85c5ad0,1,,,,"
+            target="_blank"
+            rel="noopener noreferrer"
+            key={slotIndex}
+            className={`${styles.cardSlot} ${fadingSlot === slotIndex ? styles.cardFading : ''}`}
+          >
+            <ReviewCard review={customerReviews[reviewIndex]} />
+          </a>
+        ))}
+      </div>
+      <SectionDivider position='bottom'/>
+    </div>
+  )
 }
-
-// PropTypes validation
-Clients.propTypes = {
-    pageType: PropTypes.oneOf(['nosotros', 'construir', 'renovar'])
-};
-  

@@ -11,7 +11,7 @@ export function ServiceBoxes() {
       >
         <img 
           className={styles.serviceImage} 
-          src='/images/renders/render-2.jpg' 
+          src='/images/renders/render-2.webp' 
           alt="Construcción de casas" 
           loading="lazy"
         />
@@ -49,7 +49,7 @@ export function ServiceBoxes() {
       >
         <img 
           className={styles.serviceImage} 
-          src='/images/renders/render-5.png' 
+          src='/images/renders/render-5.webp' 
           alt="Nuestros proyectos" 
           loading="lazy"
         />

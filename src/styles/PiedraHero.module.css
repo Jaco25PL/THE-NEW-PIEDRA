@@ -139,6 +139,11 @@
     .heroContainer {
       height: 95vh;
     }
+
+    .sliderContainer {
+      transform: translateY(3rem);
+      height: calc(100% + 3rem);
+    }
     
     .heroTitle {
       font-size: 2.5rem;

@@ -43,9 +43,9 @@
 
 
 .imageContainer {
-    flex: 1;    
+    flex: 1;
+    aspect-ratio: 4/3;
     max-height: 26rem;
-    /* aspect-ratio: 2/1; */
     overflow: hidden;
 }
   

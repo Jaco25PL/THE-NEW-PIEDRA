@@ -1,12 +1,23 @@
+import React, { Suspense } from 'react'
 import { Helmet } from 'react-helmet-async'
 import styles from '../styles/pages/Remodelar.module.css'
 import { AboutUsRemodelar } from '../components/features/AboutUs/AboutUsRemodelar'
-import { Clients } from '../components/features/Clients/Clients'
-import { CTA } from '../components/features/CTA/CTA'
-import { FAQ } from '../components/features/FAQ/FAQ'
-import { Works } from '../components/features/Works/Works'
 import { Stats } from '../components/features/Stats/Stats'
 import { PiedraHero } from '../components/layout/Heroes/PiedraHero'
+import { LazySection } from '../components/common/LazySection/LazySection'
+
+const Works = React.lazy(() =>
+  import('../components/features/Works/Works').then((m) => ({ default: m.Works }))
+)
+const Clients = React.lazy(() =>
+  import('../components/features/Clients/Clients').then((m) => ({ default: m.Clients }))
+)
+const FAQ = React.lazy(() =>
+  import('../components/features/FAQ/FAQ').then((m) => ({ default: m.FAQ }))
+)
+const CTA = React.lazy(() =>
+  import('../components/features/CTA/CTA').then((m) => ({ default: m.CTA }))
+)
 
 export function Remodelar() {
 
@@ -25,7 +36,7 @@ export function Remodelar() {
         <meta property="og:url" content="https://piedraconstrucciones.com.uy/remodelar" />
         <meta property="og:title" content="Remodelar Casa - Piedra Construcciones" />
         <meta property="og:description" content="Remodelar tu casa es más que cambiar su apariencia, es mejorar tu día a día." />
-        <meta property="og:image" content="https://piedraconstrucciones.com.uy/images/renders/render-4.jpg" />
+        <meta property="og:image" content="https://piedraconstrucciones.com.uy/images/renders/render-4.webp" />
         <meta property="og:locale" content="es_UY" />
         <meta property="og:site_name" content="Piedra Construcciones" />
         
@@ -34,7 +45,7 @@ export function Remodelar() {
         <meta property="twitter:url" content="https://piedraconstrucciones.com.uy/remodelar" />
         <meta property="twitter:title" content="Remodelación de Casas - Piedra Construcciones" />
         <meta property="twitter:description" content="Transformamos tu hogar con renovaciones que mejoran tu calidad de vida." />
-        <meta property="twitter:image" content="https://piedraconstrucciones.com.uy/images/renders/render-4.jpg" />
+        <meta property="twitter:image" content="https://piedraconstrucciones.com.uy/images/renders/render-4.webp" />
         
         {/* Structured Data */}
         <script type="application/ld+json">
@@ -66,7 +77,7 @@ export function Remodelar() {
       </Helmet>
 
       <PiedraHero
-        bgImage='/images/renders/render-4.jpg'
+        bgImage='/images/renders/render-4.webp'
         title='Renueva Tu Hogar'
         titleBottom='Mejora Tu Vida'
         subTitle='Remodelar tu casa es más que cambiar su apariencia'
@@ -75,17 +86,32 @@ export function Remodelar() {
 
       <Stats />
 
-      <Works/>
+      <LazySection minHeight="520px">
+        <Suspense fallback={<div style={{ minHeight: '520px' }} />}>
+          <Works/>
+        </Suspense>
+      </LazySection>
 
       <AboutUsRemodelar />
       
-      <Clients pageType="renovar"/>
+      <LazySection minHeight="420px">
+        <Suspense fallback={<div style={{ minHeight: '420px' }} />}>
+          <Clients />
+        </Suspense>
+      </LazySection>
 
-      <FAQ id="faq"/>
+      <LazySection minHeight="420px">
+        <Suspense fallback={<div style={{ minHeight: '420px' }} />}>
+          <FAQ id="faq"/>
+        </Suspense>
+      </LazySection>
 
-      <CTA/>
+      <LazySection minHeight="320px">
+        <Suspense fallback={<div style={{ minHeight: '320px' }} />}>
+          <CTA/>
+        </Suspense>
+      </LazySection>
 
     </div>
   )
 }
-

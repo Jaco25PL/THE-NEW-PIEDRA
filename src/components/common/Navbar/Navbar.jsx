@@ -3,16 +3,18 @@ import styles from '../../../styles/Header.module.css'
 import { Social } from '../Social/Social';
 import { MobileNav } from './MobileNav';
 import { useHeaderScroll } from '../../../hooks/useHeaderScroll';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export function Navbar() {
 
   const { isScrolled } = useHeaderScroll()
+  const { pathname } = useLocation()
+  const effectiveScrolled = isScrolled && pathname !== '/contacto'
 
     // console.log(isScrolling)
 
     return (
-        <header className={`${styles.headerContainer} ${isScrolled ? styles.headerContainerScrolled : styles.headerContainerNotScrolled}`}>
+        <header className={`${styles.headerContainer} ${effectiveScrolled ? styles.headerContainerScrolled : styles.headerContainerNotScrolled}`}>
             <nav className={styles.headerGrid}>
   
               <Social />
@@ -26,11 +28,24 @@ export function Navbar() {
               {/* 4) Fourth column (Center - your logo, for example) */}
               <div className={`${styles.column} ${styles.logoColomn}`}>
                 <Link to="/">
+                  {/* Both logos always in the DOM — crossfade with opacity, no src swap */}
+                  <div className={`${styles.logoWrapper} ${effectiveScrolled ? styles.logoWrapperScrolled : ''}`}>
                     <img
-                      className={`${styles.logo} ${isScrolled ? styles.scrollLogo : styles.mainLogo}`}
-                      src={isScrolled ? "/images/logos/PIEDRA-B-SM.svg" : "/images/logos/PIEDRA-B.svg"}
+                      className={`${styles.mainLogoImg} ${effectiveScrolled ? styles.logoOut : styles.logoIn}`}
+                      src="/images/logos/PIEDRA-B.svg"
                       alt="Piedra Construcciones"
+                      height="96"
+                      width="auto"
                     />
+                    <img
+                      className={`${styles.scrollLogoImg} ${effectiveScrolled ? styles.logoIn : styles.logoOut}`}
+                      src="/images/logos/PIEDRA-B-SM.svg"
+                      alt=""
+                      aria-hidden="true"
+                      height="64"
+                      width="auto"
+                    />
+                  </div>
                 </Link>
               </div>
 

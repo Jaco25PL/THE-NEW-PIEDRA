@@ -36,27 +36,36 @@
 
 .reviewsContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
-    gap: .5rem;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
     width: 100%;
+    max-width: calc(27rem * 3 + 1.5rem * 2);
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 1rem;
+    justify-items: center;
 }
 
-/* Make anchor tags display as block and maintain consistent height */
-.reviewsContainer a {
+.cardSlot {
     display: block;
     text-decoration: none;
     color: inherit;
     height: 100%;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.cardFading {
+    opacity: 0;
 }
     
 /* CARDS */
 
 .reviewCard {
     border-radius: 3px;
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.5rem 1.5rem;
     max-width: 27rem;
-    min-height: 200px; /* Add consistent minimum height */
+    min-height: 240px; /* Add consistent minimum height */
     justify-self: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     height: 100%;
@@ -72,7 +81,7 @@
     display: flex;
     justify-content: space-between;
     align-items: start;
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem;
 }
 
 .cardHeaderUser {
@@ -87,7 +96,7 @@
     width: 3.5rem;
     height: 3.5rem;
     /* border-radius: 50%; */
-    margin-left: -10px;
+    margin-left: 0;
     overflow: hidden;
 }
 
@@ -112,6 +121,7 @@
 .reviewContent {
     display: flex;
     flex-direction: column;
+    flex: 1;
 }
   
 .reviewerInfo {
@@ -148,6 +158,11 @@
   .reviewText {
     line-height: 1.5;
     letter-spacing: 0;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
   }
 
 /* Responsive Design */
@@ -180,7 +195,9 @@
     
     .reviewCard {
         max-width: 100%;
-        padding: 1.2rem 1rem;
+        padding: 1.2rem 1rem 1.6rem;
+        height: 240px;
+        overflow: hidden;
     }
 }
 
@@ -202,8 +219,8 @@
     }
     
     .reviewCard {
-        padding: 1rem 0.8rem;
-        min-height: 180px; /* Slightly smaller min-height for mobile */
+        padding: 1rem 0.8rem 1.4rem;
+        min-height: 220px;
     }
     
     .cardHeaderUser {
@@ -217,6 +234,7 @@
     
     .reviewText {
         font-size: 0.9rem;
+        -webkit-line-clamp: 6;
     }
 }
 
@@ -231,11 +249,12 @@
     }
     
     .reviewCard {
-        padding: 0.8rem 0.6rem;
-        min-height: 160px; /* Even smaller min-height for very small screens */
+        padding: 0.8rem 0.6rem 1.2rem;
+        min-height: 200px;
     }
     
     .reviewText {
         font-size: 0.85rem;
+        -webkit-line-clamp: 6;
     }
 } 

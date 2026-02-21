@@ -13,6 +13,19 @@ export function Contacto() {
 
   return (
     <section className={styles.container} aria-labelledby="contacto-heading">
+      {/* Background image — <picture> allows srcset and native loading control */}
+      <picture className={styles.bgPicture} aria-hidden="true">
+        {/* Add AVIF source here once generated: <source srcSet="/images/renders/render-5.avif" type="image/avif" /> */}
+        <source srcSet="/images/renders/render-5.webp" type="image/webp" />
+        <img
+          src="/images/renders/render-5.webp"
+          alt=""
+          className={styles.bgImage}
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
+        />
+      </picture>
       <Helmet>
         {/* Primary Meta Tags */}
         <title>Contacto | Piedra Construcciones - Hablemos de Tu Proyecto</title>

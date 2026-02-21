@@ -1,17 +1,17 @@
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import styles from '../../../styles/PiedraHero.module.css';
 import { CTAButton } from '../../common/Button/CTAButton';
 import { Testimonials } from '../../common/Testimonials/Testimonials';
 import PropTypes from 'prop-types';
 
 const defaultImages = [
-  '/images/renders/render-4.jpg',
-  '/images/renders/render-1.jpg', 
-  '/images/renders/render-2.jpg',
-  '/images/renders/render-5.png',
-  '/images/renders/render-6.png',
-  '/images/renders/render-7.png',  
+  '/images/renders/render-4.webp',
+  '/images/renders/render-1.webp', 
+  '/images/renders/render-2.webp',
+  '/images/renders/render-5.webp',
+  '/images/renders/render-6.webp',
+  '/images/renders/render-7.webp',  
   '/images/renders/render-8.avif',  
   '/images/renders/render-9.avif',  
   '/images/renders/render-10.avif',  
@@ -23,7 +23,7 @@ export function PiedraHero ({
     titleBottom = 'Construcciones',
     subTitle = 'Una empresa familiar',
     subTitleBottom = 'Una empresa de confianza',
-    bgImage = '/images/renders/render-4.jpg',
+    bgImage = '/images/renders/render-4.webp',
     images = null, // Allow custom images array
     autoSlide = true,
     slideInterval = 5000
@@ -31,31 +31,53 @@ export function PiedraHero ({
 
     const sliderImages = images || (bgImage ? [bgImage, ...defaultImages.filter(img => img !== bgImage)] : defaultImages);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [isInView, setIsInView] = useState(true);
+    const containerRef = useRef(null);
 
     useEffect(() => {
-      if (!autoSlide || sliderImages.length <= 1) return;
+      if (!autoSlide || sliderImages.length <= 1 || !isInView) return;
 
       const interval = setInterval(() => {
-        setCurrentImageIndex((prevIndex) => 
+        setCurrentImageIndex((prevIndex) =>
           prevIndex === sliderImages.length - 1 ? 0 : prevIndex + 1
         );
       }, slideInterval);
 
       return () => clearInterval(interval);
-    }, [autoSlide, slideInterval, sliderImages.length]);
+    }, [autoSlide, slideInterval, sliderImages.length, isInView]);
+
+    useEffect(() => {
+      const el = containerRef.current;
+      if (!el) return;
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          setIsInView(entry.isIntersecting);
+        },
+        { threshold: 0.3 }
+      );
+
+      observer.observe(el);
+      return () => observer.disconnect();
+    }, []);
+
+    useEffect(() => {
+      if (!isInView || sliderImages.length <= 1) return;
+      const nextIndex = currentImageIndex === sliderImages.length - 1 ? 0 : currentImageIndex + 1;
+      const img = new Image();
+      img.src = sliderImages[nextIndex];
+    }, [currentImageIndex, isInView, sliderImages]);
 
     return (
 
-      <div className={styles.heroContainer}>
+      <div ref={containerRef} className={styles.heroContainer}>
         {/* Background Images Slider */}
         <div className={styles.sliderContainer}>
-          {sliderImages.map((image, index) => (
+          {sliderImages.map((img, index) => (
             <div
-              key={index}
-              className={`${styles.slideImage} ${
-                index === currentImageIndex ? styles.slideActive : ''
-              }`}
-              style={{ backgroundImage: `url(${image})` }}
+              key={img}
+              className={`${styles.slideImage} ${index === currentImageIndex ? styles.slideActive : ''}`}
+              style={{ backgroundImage: `url(${img})` }}
             />
           ))}
         </div>

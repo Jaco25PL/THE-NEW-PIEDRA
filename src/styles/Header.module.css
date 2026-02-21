@@ -1,23 +1,19 @@
 
 .headerContainer {
   background-color: #ffffff;
-  max-height: 6rem;
+  height: 6rem;
   position: sticky;
   top: 0;
   z-index: 1000;
-  transition: max-height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
-  -webkit-transition: max-height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
-  -moz-transition: max-height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
-  -ms-transition: max-height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
-  -o-transition: max-height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.headerContainerNotScrolled{
-  max-height: 6rem;
+.headerContainerNotScrolled {
+  height: 6rem;
 }
 
 .headerContainerScrolled {
-  max-height: 4rem;
+  height: 4rem;
 }
   
 /* Show/Hide handled via opacity to allow smooth transitions (avoid display toggling) */
@@ -50,51 +46,58 @@
   font-weight: 600;
 }
 
-.logo {
-  width: auto;
-  margin: 0 5rem;
+/* Logo crossfade wrapper —
+   PIEDRA-B.svg    is 314×151 → at 6rem height: width = 6rem × (314/151) ≈ 12.5rem
+   PIEDRA-B-SM.svg is 151×151 → at 4rem height: width = 4rem (perfect square)       */
+.logoColomn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoWrapper {
+  position: relative;
+  margin: 0;
   background-color: #000;
-  transition: height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), padding 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
-  -webkit-transition: height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), padding 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
-  -moz-transition: height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), padding 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
-  -ms-transition: height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), padding 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
-  -o-transition: height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), padding 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
-}
-
-.mainLogo{
   height: 6rem;
-  padding: 0;
+  width: 12.5rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              width  0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.scrollLogo {
+.logoWrapperScrolled {
   height: 4rem;
-  padding: 0;
+  width: 4rem;
 }
 
-.hideLogo{
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity .25s ease;
+.mainLogoImg,
+.scrollLogoImg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  transition: opacity 0.3s ease;
 }
 
-.showLogo{
+.mainLogoImg {
+  height: 6rem;
+}
+
+.scrollLogoImg {
+  height: 4rem;
+}
+
+.logoIn {
   opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transition: opacity .25s ease;
 }
 
-.adjustHeightOff{
-  height: 6rem;
-}
-
-.adjustHeightOn{
-  height: 4rem;
-}
-
-.mainLogoBlack {
-  display: block;
+.logoOut {
+  opacity: 0;
 }
 
 .contactButton {

@@ -1,0 +1,247 @@
+@keyframes shimmer {
+  0%   { background-position: -600px 0; }
+  100% { background-position:  600px 0; }
+}
+
+/* ── Overlay ─────────────────────────────────────────────── */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  transition: opacity 0.35s ease;
+  pointer-events: all;
+}
+
+.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ── Navbar skeleton (desktop) ───────────────────────────── */
+.navbarSkeleton {
+  height: 6rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  gap: 0;
+  flex-shrink: 0;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.navLogo {
+  width: 12.5rem;
+  height: 6rem;
+  background-color: #000;
+  flex-shrink: 0;
+}
+
+/* Shimmer base */
+.block {
+  background: linear-gradient(
+    90deg,
+    #d0d0d0 25%,
+    #e8e8e8 50%,
+    #d0d0d0 75%
+  );
+  background-size: 600px 100%;
+  animation: shimmer 1.4s infinite linear;
+  border-radius: 0.5rem;
+}
+
+.navLink {
+  height: 0.7rem;
+  width: 4.5rem;
+  border-radius: 0.3rem;
+}
+
+.navLinkWide {
+  height: 1.8rem;
+  width: 5.5rem;
+  border-radius: 0.3rem;
+}
+
+/* ── Navbar skeleton (mobile) ────────────────────────────── */
+.navbarSkeletonMobile {
+  display: none;
+  height: 6rem;
+  background-color: #fff;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 1.5rem;
+  flex-shrink: 0;
+}
+
+.navHamburger {
+  height: 1.2rem;
+  width: 2rem;
+  border-radius: 0.25rem;
+}
+
+/* ── Hero skeleton ───────────────────────────────────────── */
+.hero {
+  flex: 1;
+  background-color: #ebebeb;
+  border-radius: 0 0 1.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  width: 55%;
+  max-width: 480px;
+}
+
+/* Title */
+.titleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.titleLine1 {
+  height: 3.8rem;
+  width: 55%;
+}
+
+.titleLine2 {
+  height: 3.8rem;
+  width: 80%;
+}
+
+/* Subtitle */
+.subtitleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.subtitleLine {
+  height: 0.9rem;
+  width: 90%;
+}
+
+.subtitleLineShort {
+  height: 0.9rem;
+  width: 70%;
+}
+
+/* Button */
+.button {
+  height: 3rem;
+  width: 16rem;
+  border-radius: 0.4rem;
+}
+
+/* Features */
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.featureRow {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.check {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.featureText {
+  height: 0.8rem;
+  width: 8rem;
+}
+
+.featureTextShort {
+  height: 0.8rem;
+  width: 6.5rem;
+}
+
+/* Avatars + rating */
+.social {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.avatars {
+  display: flex;
+}
+
+.avatar {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  flex-shrink: 0;
+}
+
+.avatarOffset {
+  margin-left: -0.7rem;
+}
+
+.ratingGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.stars {
+  height: 0.85rem;
+  width: 7rem;
+  border-radius: 0.4rem;
+}
+
+.ratingText {
+  height: 0.75rem;
+  width: 8.5rem;
+  border-radius: 0.4rem;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 1000px) {
+  .navbarSkeleton {
+    display: none;
+  }
+
+  .navbarSkeletonMobile {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    width: 85%;
+  }
+
+  .titleLine1,
+  .titleLine2 {
+    height: 2.8rem;
+  }
+
+  .button {
+    width: 100%;
+  }
+}

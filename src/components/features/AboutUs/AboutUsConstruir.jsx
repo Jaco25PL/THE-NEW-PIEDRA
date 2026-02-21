@@ -6,7 +6,7 @@ import { SectionDivider } from '../../common/SectionDivider/SectionDivider'
 const content = [
   {
     id: 1,
-    img: '/images/render-sample.jpeg',
+    img: '/images/render-sample.webp',
     title: '¿SECO O TRADICIONAL?',   
     sub1: 'Construcción en Seco',
     sub2: 'Construcción Tradicional',

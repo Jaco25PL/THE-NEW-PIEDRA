@@ -29,7 +29,7 @@ export function MobileNav() {
 
         <div className={styles.logoContainer}>
             <Link  to="/" onClick={closeMenu}>
-                <img src="/images/logos/PIEDRA-W.svg" alt="PIEDRA logo" />
+                <img src="/images/logos/PIEDRA-W.svg" alt="PIEDRA logo" height="48" width="auto" />
             </Link>
         </div>
 
@@ -69,16 +69,16 @@ export function MobileNav() {
 
           <ul className={styles.mobileContactInfo}>
             <li className={styles.mobileContactRow}>
-              <img src="/images/logos/whatsapp-logo-black.svg" alt="phone icon" />
-              <a href="https://api.whatsapp.com/send?phone=59893595589" target="blank">+598 094 159 591</a>
+              <img src="/images/logos/whatsapp-logo-black.svg" alt="phone icon" width="20" height="20" />
+              <a href="https://api.whatsapp.com/send?phone=59893595589" target="_blank" rel="noopener noreferrer">+598 093 595 589</a>
             </li>
             <li className={styles.mobileContactRow}>
-              <img src="/images/logos/blog-logo-black.svg" alt="blog" />
+              <img src="/images/logos/blog-logo-black.svg" alt="blog" width="20" height="20" />
               <Link to="/blog" target="_blank">BLOG</Link>
             </li>
             <li  className={styles.mobileContactRow}>
-              <img src="/images/logos/envelope-logo-black.svg" alt="email icon" />
-              <a href="mailto:piedraconstr.uy@gmail.com" target="blank">PIEDRACONSTR.UY@gmail.com</a>
+              <img src="/images/logos/envelope-logo-black.svg" alt="email icon" width="20" height="20" />
+              <a href="mailto:piedraconstr.uy@gmail.com" target="_blank" rel="noopener noreferrer">PIEDRACONSTR.UY@gmail.com</a>
             </li>
           </ul>
 

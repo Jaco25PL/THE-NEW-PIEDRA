@@ -1,12 +1,23 @@
+import React, { Suspense } from 'react'
 import { Helmet } from 'react-helmet-async'
 import styles from '../styles/pages/Construir.module.css'
 import { PiedraHero } from '../components/layout/Heroes/PiedraHero';
 import { Stats } from '../components/features/Stats/Stats';
 import { AboutUsConstruir } from '../components/features/AboutUs/AboutUsConstruir';
-import { Works } from '../components/features/Works/Works';
-import { Clients } from '../components/features/Clients/Clients';
-import { FAQ } from '../components/features/FAQ/FAQ';
-import { CTA } from '../components/features/CTA/CTA';
+import { LazySection } from '../components/common/LazySection/LazySection';
+
+const Works = React.lazy(() =>
+  import('../components/features/Works/Works').then((m) => ({ default: m.Works }))
+)
+const Clients = React.lazy(() =>
+  import('../components/features/Clients/Clients').then((m) => ({ default: m.Clients }))
+)
+const FAQ = React.lazy(() =>
+  import('../components/features/FAQ/FAQ').then((m) => ({ default: m.FAQ }))
+)
+const CTA = React.lazy(() =>
+  import('../components/features/CTA/CTA').then((m) => ({ default: m.CTA }))
+)
 
 export function Construir() {
 
@@ -25,7 +36,7 @@ export function Construir() {
                 <meta property="og:url" content="https://piedraconstrucciones.com.uy/construir" />
                 <meta property="og:title" content="Construir Casa - Piedra Construcciones" />
                 <meta property="og:description" content="No solo levantamos paredes, creamos hogares que mejoran tu calidad de vida." />
-                <meta property="og:image" content="https://piedraconstrucciones.com.uy/images/renders/render-1.jpg" />
+                <meta property="og:image" content="https://piedraconstrucciones.com.uy/images/renders/render-1.webp" />
                 <meta property="og:locale" content="es_UY" />
                 <meta property="og:site_name" content="Piedra Construcciones" />
                 
@@ -34,7 +45,7 @@ export function Construir() {
                 <meta property="twitter:url" content="https://piedraconstrucciones.com.uy/construir" />
                 <meta property="twitter:title" content="Construcción Residencial - Piedra Construcciones" />
                 <meta property="twitter:description" content="Construye la casa de tus sueños con nosotros. +10 años creando hogares en Montevideo." />
-                <meta property="twitter:image" content="https://piedraconstrucciones.com.uy/images/renders/render-1.jpg" />
+                <meta property="twitter:image" content="https://piedraconstrucciones.com.uy/images/renders/render-1.webp" />
                 
                 {/* Structured Data for Service */}
                 <script type="application/ld+json">
@@ -70,7 +81,7 @@ export function Construir() {
             </Helmet>
 
             <PiedraHero
-                bgImage='/images/renders/render-1.jpg'
+                bgImage='/images/renders/render-1.webp'
                 title='Construye La Casa'
                 titleBottom='De Tus Sueños'
                 subTitle='No solo levantamos paredes, creamos hogares que mejoran'
@@ -79,18 +90,34 @@ export function Construir() {
        
             <Stats />
     
-            <Works/>
+            <LazySection minHeight="520px">
+              <Suspense fallback={<div style={{ minHeight: '520px' }} />}>
+                <Works/>
+              </Suspense>
+            </LazySection>
     
             <AboutUsConstruir />
             
-            <Clients pageType="construir"/> 
+            <LazySection minHeight="420px">
+              <Suspense fallback={<div style={{ minHeight: '420px' }} />}>
+                <Clients /> 
+              </Suspense>
+            </LazySection>
     
-            <FAQ id="faq"/>
+            <LazySection minHeight="420px">
+              <Suspense fallback={<div style={{ minHeight: '420px' }} />}>
+                <FAQ id="faq"/>
+              </Suspense>
+            </LazySection>
     
-            <CTA
-                heading='Tu Casa Soñada Existe'
-                headingBottom='Nosotros La Construimos'
-            />
+            <LazySection minHeight="320px">
+              <Suspense fallback={<div style={{ minHeight: '320px' }} />}>
+                <CTA
+                    heading='Tu Casa Soñada Existe'
+                    headingBottom='Nosotros La Construimos'
+                />
+              </Suspense>
+            </LazySection>
        
            </div>
     )

@@ -17,10 +17,13 @@ export const ReviewCard = ({ review }) => {
                     <div className={styles.profilePictureContainer}>
 
                         <div className={styles.profilePicture}>
-                            <img 
-                                src={review.profilePic} 
-                                alt={`Foto de perfil de ${review.name}`} 
+                            <img
+                                src={review.profilePic}
+                                alt={`Foto de perfil de ${review.name}`}
+                                width="56"
+                                height="56"
                                 loading="lazy"
+                                decoding="async"
                             />
                         </div>
                     </div>
@@ -47,7 +50,7 @@ export const ReviewCard = ({ review }) => {
                 </div>
 
                 <div className={styles.googleLogo}>
-                    <img src="/images/logos/google_logo.svg" alt="Google logo" loading="lazy" />
+                    <img src="/images/logos/google_logo.svg" alt="Google logo" width="30" height="30" loading="lazy" decoding="async" />
                 </div>
             </div>
             

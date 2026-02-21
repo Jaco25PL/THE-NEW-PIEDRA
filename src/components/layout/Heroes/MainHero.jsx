@@ -7,12 +7,10 @@ export function MainHero() {
         <main className={styles.mainContent}>
           <section className={styles.splitContainer}>
             {/* Left half: Construcciones */}
-            <Link 
+            <Link
               to="/construir"
-              target='_blank'
-              rel='noopener noreferrer'
               className={`${styles.splitImage} ${styles.leftImage}`}>
-              <img className={styles.image} src='./images/renders/render-2.jpg' alt="sample house" loading="lazy" />
+              <img className={styles.image} src='./images/renders/render-2.webp' alt="sample house" loading="lazy" />
               
               <div className={styles.content}>
                 <h2>CONSTRUIR</h2>
