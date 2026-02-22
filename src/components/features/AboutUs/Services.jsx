@@ -21,11 +21,14 @@ export function Services() {
                 {/* Reforma Integral */}
                 <div className={styles.serviceCard}>
                     <div className={styles.imageContainer}>
-                        <img 
-                            src="/images/renders/render-1.webp" 
-                            alt="Reforma Integral - Cocina moderna"
+                        <video
+                            src="/images/renders/render-3.mp4"
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            preload="auto"
                             className={styles.serviceImage}
-                            loading="lazy"
                         />
                     </div>
                     <div className={styles.serviceContent}>
