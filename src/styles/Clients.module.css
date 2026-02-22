@@ -3,29 +3,8 @@
     flex-direction: column;
     align-items: center;
     margin: 8rem 8rem;
-    /* padding: 2rem 0; */
 }
 
-/* .satisfiedCustomersContainer::after {
-    content: "";
-    display: block;
-    width: 20%;
-    height: 2.5px;
-    position: relative;
-    top: 2rem;
-    background-color: var(--gold-color);
-}
-
-.satisfiedCustomersContainer::before {
-    content: "";
-    display: block;
-    width: 20%;
-    height: 2.5px;
-    position: relative;
-    top: -2rem;
-    background-color: var(--gold-color);
-} */
-  
 .subtitle {
     color: #000;
     margin: 1rem 0;
@@ -95,7 +74,6 @@
 .profilePicture {
     width: 3.5rem;
     height: 3.5rem;
-    /* border-radius: 50%; */
     margin-left: 0;
     overflow: hidden;
 }

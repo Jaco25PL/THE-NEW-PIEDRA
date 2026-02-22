@@ -25,6 +25,5 @@
 @media (max-width: 480px) {
     .heroWrapper {
         min-height: auto;
-        /* padding-bottom: 20rem; */
     }
 }

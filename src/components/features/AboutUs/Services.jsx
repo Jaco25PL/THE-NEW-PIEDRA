@@ -11,9 +11,6 @@ export function Services() {
     return (
         <section className={styles.container}>
 
-            {/* <SectionDivider /> */}
-
-
             <Titles title='NUESTROS SERVICIOS'/>
             
             <p className={styles.subtitle}>
@@ -37,9 +34,6 @@ export function Services() {
                             <p><strong>Baño y Cocina:</strong> Diseño personalizado de tu espacio soñado, demolición, actualización de instalaciones eléctricas, sanitarias y de fontanería, revestimientos, y montaje de mobiliario y accesorios.</p>
                         </div>
                         <CTAButton text='AGENDA UNA REUNIÓN HOY' action={btn_action} color='dark'/>
-                        {/* <button className={styles.ctaButton}>
-                            AGENDA UNA REUNIÓN HOY
-                        </button> */}
                     </div>
                 </div>
 
@@ -47,7 +41,7 @@ export function Services() {
                 <div className={styles.serviceCard}>
                     <div className={styles.imageContainer}>
                         <img 
-                            src="/images/renders/render-2.webp" 
+                            src="/images/works/constr-floor.jpg"
                             alt="Remodelación de Viviendas - Interior moderno"
                             className={styles.serviceImage}
                             loading="lazy"
@@ -59,20 +53,20 @@ export function Services() {
                             <p>Remodelamos cualquier espacio de <strong>tu hogar</strong> con un enfoque integral: diseño, renovación, instalaciones, acabados y decoración, todo pensado para que tu hogar refleje tu estilo y se adapte a tu vida.</p>
                         </div>
                         <CTAButton text='COTIZAR AL INSTANTE' action={btn_action} color='dark'/>
-                        {/* <button className={styles.ctaButton}>
-                            COTIZAR AL INSTANTE
-                        </button> */}
                     </div>
                 </div>
 
                 {/* Diseño */}
                 <div className={styles.serviceCard}>
                     <div className={styles.imageContainer}>
-                        <img 
-                            src="/images/renders/render-6.webp" 
-                            alt="Diseño 3D - Visualización de proyecto"
+                        <video
+                            src="/images/renders/render.mp4"
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            preload="auto"
                             className={styles.serviceImage}
-                            loading="lazy"
                         />
                     </div>
                     <div className={styles.serviceContent}>
@@ -81,9 +75,6 @@ export function Services() {
                             <p>Transformamos tus ideas en un <strong>Render 3D</strong> personalizado para que veas tu proyecto hecho realidad antes de empezar. Lo ajustamos hasta que sea exactamente como lo imaginaste.</p>
                         </div>
                         <CTAButton text='CONTACTA UN ASESOR' action={btn_action} color='dark'/>
-                        {/* <button className={styles.ctaButton}>
-                            CONTACTA UN ASESOR
-                        </button> */}
                     </div>
                 </div>
             </div>

@@ -4,28 +4,7 @@
     align-items: center;
     margin: 0 8rem;
     margin: 8rem 0 2rem;
-    /* background-color: #f9f9f9; */
 }
-
-/* .container::after {
-    content: "";
-    display: block;
-    width: 20%;
-    height: 2.5px;
-    position: relative;
-    top: 2rem;
-    background-color: var(--gold-color);
-} */
-
-/* .container::before {
-    content: "";
-    display: block;
-    width: 20%;
-    height: 2.5px;
-    position: relative;
-    top: -2rem;
-    background-color: var(--gold-color);
-} */
 
 .subtitle {
     color: #000;
@@ -61,7 +40,6 @@
     margin-bottom: 1.5rem;
     letter-spacing: 0.5px;
     color: #333;
-    /* font-family: Montserrat, sans-serif; */
     font-family: SabonNext, sans-serif;
 
 
@@ -86,7 +64,6 @@
     .container {
         margin-bottom: 2rem;
         margin-top: 8rem;
-        /* background-color: red; */
     }
     
     .stepsContainer {
@@ -96,7 +73,6 @@
 
 @media (max-width: 1000px) {
     .container {
-        /* margin: 6rem 2rem 2rem; */
     }
     
     .stepsContainer {
@@ -117,8 +93,6 @@
 
 @media (max-width: 768px) {
     .container {
-        /* margin: 0rem 1rem 2rem; */
-        /* padding: 0 0.5rem; */
     }
     
     .subtitle {
@@ -150,7 +124,6 @@
 /* Mobile Small - 480px and below */
 @media (max-width: 480px) {
     .container {
-        /* margin: 0rem 0.5rem 1.5rem; */
         padding: 0;
     }
     
@@ -166,8 +139,6 @@
     }
     
     .stepItem {
-        /* padding: 1.2rem 0.8rem; */
-        /* margin: 0 0.5rem; */
     }
     
     .stepTitle {
@@ -185,7 +156,6 @@
 /* Mobile Very Small - 360px and below */
 @media (max-width: 360px) {
     .container {
-        /* margin: 4rem 0.25rem 1rem; */
     }
     
     .subtitle {
@@ -198,7 +168,6 @@
     }
     
     .stepItem {
-        /* padding: 1rem 0.6rem; */
         margin: 0 0.25rem;
     }
     

@@ -38,17 +38,14 @@
 
 .header {
     position: relative;
-    /* margin-bottom: 1rem; */
 }
 
 .title {
-    /* position: absolute; */
     text-align: center;
     text-transform: uppercase;
     font-size: 2.5rem;
     letter-spacing: 2px;
     line-height: .7;
-    /* color: #d1b371; */
     color: var(--gold-color);
     margin-bottom: 2rem;
     font-family: sabonNext, serif;
@@ -80,7 +77,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* gap: 1rem; */
 }
 
 .question {
@@ -178,7 +174,6 @@
 /* Responsive Design */
 @media (max-width: 1200px) {
     .faqContainer {
-        /* margin: 6rem 4rem; */
         margin-left: 4rem;
         margin-right: 4rem;
         gap: 2rem;
@@ -192,7 +187,6 @@
 @media (max-width: 768px) {
     .faqContainer {
         flex-direction: column;
-        /* margin: 4rem 2rem; */
         margin-left: 2rem;
         margin-right: 2rem;
         gap: 2rem;
@@ -235,14 +229,12 @@
 
 @media (max-width: 480px) {
     .faqContainer {
-        /* margin: 3rem 1rem; */
         margin-left: 1rem;
         margin-right: 1rem;
         gap: 1.5rem;
     }
     
     .imageContainer {
-        /* height: 200px; */
     }
     
     .title {
@@ -277,7 +269,6 @@
 
 @media (max-width: 360px) {
     .faqContainer {
-        /* margin: 2rem 0.5rem; */
         gap: 1rem;
         margin-left: .5rem;
         margin-right: .5rem;

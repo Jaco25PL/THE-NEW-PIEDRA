@@ -39,14 +39,6 @@ export function CTA({
             </p>
 
             <CTAButton text="QUIERO MÁS INFORMACIÓN" action={`https://wa.me/${whatsappNumber}`} />
-            {/* <a
-              href={`https://wa.me/${whatsappNumber}`}
-              className={styles.whatsappButton}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              ESCRIBIR POR WHATSAPP
-            </a> */}
             <div className={styles.features}>
               <span>✓ Render 3D</span>
               <span>✓ Cuotas Sin Interés</span>
@@ -57,18 +49,6 @@ export function CTA({
       
       <Testimonials/>
 
-      {/* <div className={styles.testimonial}>
-        <div className={styles.faces}>
-          <div className={styles.face}><img src="'/images/face-1.webp" alt="" loading="lazy" /></div>
-          <div className={styles.face}><img src="'/images/face-2.webp" alt="" loading="lazy" /></div>
-          <div className={styles.face}><img src="'/images/face-3.webp" alt="" loading="lazy" /></div>
-        </div>
-        <div className={styles.ratings}>
-          <p className={styles.ratingText}>150+ hogares renovados</p>
-          <div className={styles.stars}>★★★★★</div>
-        </div>
-      </div> */}
-      
     </section>
   );
 

@@ -126,7 +126,6 @@
 }
 
 .contactButton:hover {
-    /* background-color: #d1b371; */
         background-color: var(--gold);
 }
 

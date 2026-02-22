@@ -8,7 +8,6 @@
     z-index: 15;
     top: 50%; 
     right: 8%;
-    /* background-color: red; */
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);

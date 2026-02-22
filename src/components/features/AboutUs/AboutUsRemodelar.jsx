@@ -6,7 +6,7 @@ import { SectionDivider } from '../../common/SectionDivider/SectionDivider'
 const content = [
   {
     id: 1,
-    img: '/images/renders/render-4.webp',
+    video: '/images/renders/render-2.mp4',
     title: '¿POR QUÉ REMODELAR?',   
     sub1: 'Aumenta el Valor',
     sub2: 'Mejora Tu Calidad de Vida',

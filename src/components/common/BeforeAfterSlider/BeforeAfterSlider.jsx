@@ -66,13 +66,10 @@ export function BeforeAfterSlider({ beforeImage, afterImage }) {
     const currentContainer = containerRef.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // console.log('Intersection observer triggered:', entry.isIntersecting, 'hasInteracted:', hasInteracted);
         if (entry.isIntersecting && !hasInteracted) {
-          // console.log('Starting 3 second timer for hint animation');
           // Start hint animation after 3 seconds
           inViewTimeoutRef.current = setTimeout(() => {
             if (!hasInteracted) {
-              // console.log('Showing hint animation');
               setShowHint(true);
               
               // Animate slider position to 70% (showing more before image)
@@ -85,14 +82,12 @@ export function BeforeAfterSlider({ beforeImage, afterImage }) {
               
               // Reset hint after animation
               hintTimeoutRef.current = setTimeout(() => {
-                // console.log('Hiding hint animation');
                 setShowHint(false);
                 setAnimationPosition(50); // Ensure it's back to center
               }, 2400); // Total animation duration
             }
           }, 3000);
         } else {
-          // console.log('Clearing timeouts - not in view or has interacted');
           // Clear timeouts if not in view
           if (inViewTimeoutRef.current) {
             clearTimeout(inViewTimeoutRef.current);

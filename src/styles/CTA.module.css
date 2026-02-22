@@ -96,7 +96,6 @@
 }
   
 .testimonial {
-    /* margin-top: 1rem; */
     position: relative;
     z-index: 2;
     display: flex;
@@ -196,11 +195,6 @@
 @media (max-width: 480px) {
   .container {
     min-height: 20rem;
-    /* padding: 1.5rem 0.8rem; */
-  }
-  
-  .content {
-    /* gap: 1rem; */
   }
   
   .headingContainer {
@@ -236,16 +230,8 @@
     padding: 1rem 0.5rem;
   }
   
-  .content {
-    /* gap: 0.8rem; */
-  }
-  
   .headingContainer {
     line-height: 2rem;
-  }
-  
-  .heading {
-    /* font-size: 1.8rem; */
   }
   
   .subheading {

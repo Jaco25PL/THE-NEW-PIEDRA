@@ -14,12 +14,24 @@ export function AboutUs({ content }) {
             <div className={styles.imageContainer}>
 
 
-                <img 
-                    src={content.img} 
-                    alt="Interior design rendering" 
-                    className={styles.image}
-                    loading="lazy"
-                />
+                {content.video ? (
+                    <video
+                        src={content.video}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        preload="auto"
+                        className={styles.image}
+                    />
+                ) : (
+                    <img
+                        src={content.img}
+                        alt="Interior design rendering"
+                        className={styles.image}
+                        loading="lazy"
+                    />
+                )}
             </div>
 
             <div className={styles.textContainer}>
