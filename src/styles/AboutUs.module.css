@@ -152,8 +152,10 @@
     }
     
     .imageContainer {
+      width: 100%;
       height: 220px;
-      max-height: 220px;
+      max-height: none;
+      aspect-ratio: unset;
       order: 1;
     }
     
@@ -214,8 +216,8 @@
     }
     
     .imageContainer {
+      width: 100%;
       height: 220px;
-      max-height: 220px;
     }
     
     .features {

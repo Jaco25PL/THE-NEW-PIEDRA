@@ -25,8 +25,8 @@ export function Works() {
           after: '/images/works/dolores-A.webp'
         },
         {
-          before: isMobile ? '/images/works/marita-B.webp' : '/images/works/marita-2-B.webp',
-          after:  isMobile ? '/images/works/marita-A.webp' : '/images/works/marita-2-A.webp'
+          before: isMobile ? '/images/works/marita-mobile-B.png' : '/images/works/marita-2-B.webp',
+          after:  isMobile ? '/images/works/marita-mobile-A.png' : '/images/works/marita-2-A.webp'
         },
         {
           before: '/images/works/bruno-dias-B.avif',

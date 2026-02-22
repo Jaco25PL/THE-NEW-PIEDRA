@@ -216,7 +216,7 @@
 }
 
 .activeLink {
-    text-decoration: underline;
+    text-decoration: underline !important;
 }
 
 .row:active {
