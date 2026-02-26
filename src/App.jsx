@@ -82,6 +82,7 @@ function AnimatedRoutes({ onRouteChange, onPageMounted }) {
         animate="animate"
         exit="exit"
         transition={pageTransition}
+        style={{ display: 'flex', flexDirection: 'column', flex: 1 }}
       >
         <Suspense fallback={null}>
           <PageMounted onMounted={onPageMounted} routeKey={location.pathname}>
@@ -97,6 +98,7 @@ function AnimatedRoutes({ onRouteChange, onPageMounted }) {
             </Routes>
           </PageMounted>
         </Suspense>
+        <Footer />
       </motion.div>
     </AnimatePresence>
   )
@@ -179,7 +181,6 @@ function App() {
             </SuspenseChildren>
           </Suspense>
         </main>
-        <Footer />
       </div>
     </HelmetProvider>
   )
