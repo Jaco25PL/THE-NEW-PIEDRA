@@ -107,8 +107,16 @@
     opacity: 0.9;
   }
 
+  /* 13" laptop (MacBook Air - 1280x800) */
+  @media (max-width: 1280px) and (min-width: 1025px) {
+    .renovarWrapper > *:first-child {
+      margin-top: 110px;
+      margin-bottom: 0;
+    }
+  }
+
   @media (max-width: 1300px) {
- 
+
   }
   
   /* Responsive design */

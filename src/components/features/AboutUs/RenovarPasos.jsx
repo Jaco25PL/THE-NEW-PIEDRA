@@ -8,9 +8,9 @@ export function RenovarPasos({
     step1Title = <>Paso 1<br />Nos Contás Tu Idea</>,
     step1Desc = 'Nos contactás, coordinamos una reunión para ver el espacio y que nos presentes el desafío',
     step2Title = <>Paso 2<br />Diseño y Planificación</>,
-    step2Desc = 'Juntos vamos armando la idea final en un Render 3D de alta calidad para que puedas ver el resultado antes de empezar.',
+    step2Desc = 'Juntos vamos armando la idea final en un Render 3D de alta calidad para que puedas ver el resultado antes de empezar',
     step3Title = <>Paso 3<br />Construcción</>,
-    step3Desc = 'Te contamos cómo será cada paso, así sabés qué esperar desde el principio. Después, nos ponemos manos a la obra.'
+    step3Desc = 'Te contamos cómo será cada paso, así sabés qué esperar desde el principio. Después, nos ponemos manos a la obra'
 }) {
     return (
         <section className={styles.container}>

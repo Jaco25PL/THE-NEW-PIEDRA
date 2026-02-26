@@ -121,8 +121,40 @@
     background: linear-gradient(135deg, rgba(156, 39, 176, 0.3), rgba(156, 39, 176, 0.1));
 }
 
+/* 13" laptop (MacBook Air - 1280x800) - keep desktop layout */
+@media (max-width: 1300px) and (min-width: 1025px) {
+    .serviceBoxes {
+        position: absolute;
+        flex-direction: column;
+        gap: 0.8rem;
+        min-width: auto;
+        top: 50%;
+        right: 5%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        margin: 0;
+    }
+
+    .serviceBox {
+        height: 9rem;
+        width: 18rem;
+        flex: none;
+    }
+
+    .serviceTitle {
+        font-size: 1.2rem;
+    }
+
+    .serviceReveal {
+        font-size: 0.75rem;
+    }
+}
+
 /* Responsive design */
-@media (max-width: 1300px) {
+@media (max-width: 1024px) {
         .serviceBoxes {
             position: static ;
             flex-direction: row;

@@ -41,6 +41,24 @@
 
 
 
+  /* 13" laptop (MacBook Air - 1280x800) */
+  @media (max-width: 1280px) and (min-width: 1025px) {
+    .statsBannerContainer {
+      padding: 0 4rem;
+      gap: 3rem;
+      margin: 3rem auto 6rem;
+    }
+
+    .statsNumber {
+      font-size: 3.5rem;
+      letter-spacing: 8px;
+    }
+
+    .statsDescription {
+      font-size: 1rem;
+    }
+  }
+
   /* Enhanced Responsive styling */
   @media (max-width: 1200px) {
     .statsBannerContainer {

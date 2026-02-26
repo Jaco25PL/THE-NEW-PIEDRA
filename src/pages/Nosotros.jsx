@@ -30,7 +30,7 @@ const customFaqItems = [
   },
   {
     question: "¿Cuál es el horario de atención?",
-    answer: "Estamos abiertos de Lunes a Viernes de 9 a 19 horas."
+    answer: "Estamos abiertos de Lunes a Viernes de 9 a 19 horas"
   }
 ];
 
@@ -91,7 +91,9 @@ export function Nosotros () {
 
         <SectionDivider/>
 
-        <RenovarPasos />
+        <div className={styles.renovarWrapper}>
+          <RenovarPasos />
+        </div>
 
         <LazySection minHeight="420px">
           <Suspense fallback={<div style={{ minHeight: '420px' }} />}>

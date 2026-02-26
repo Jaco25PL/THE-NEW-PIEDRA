@@ -171,16 +171,31 @@
     text-align: left;
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
+/* 13" laptop (MacBook Air - 1280x800) */
+@media (max-width: 1280px) and (min-width: 1025px) {
     .faqContainer {
         margin-left: 4rem;
         margin-right: 4rem;
         gap: 2rem;
     }
-    
+
     .title {
         font-size: 2rem;
+        line-height: 1.1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .faqContainer {
+        margin-left: 4rem;
+        margin-right: 4rem;
+        gap: 2rem;
+    }
+
+    .title {
+        font-size: 2rem;
+        line-height: 1.1;
     }
 }
 

@@ -59,13 +59,25 @@
     display: none;
 }
 
+/* 13" laptop (MacBook Air - 1280x800) */
+@media (max-width: 1280px) and (min-width: 1025px) {
+    .container {
+        margin-top: 8rem;
+        margin-bottom: 2rem;
+    }
+
+    .stepsContainer {
+        gap: 2rem;
+    }
+}
+
 /* Responsive design */
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
     .container {
         margin-bottom: 2rem;
         margin-top: 8rem;
     }
-    
+
     .stepsContainer {
         gap: 2rem;
     }

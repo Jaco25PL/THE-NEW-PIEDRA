@@ -10,6 +10,13 @@
     /* font-weight: 400; */
 }
 
+/* 13" laptop (MacBook Air - 1280x800) */
+@media (max-width: 1280px) and (min-width: 1025px) {
+    .title {
+        line-height: 1.1;
+    }
+}
+
 /* Responsive styles */
 @media (max-width: 1000px) {
     .title{

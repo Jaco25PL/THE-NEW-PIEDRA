@@ -143,14 +143,31 @@
     overflow: hidden;
   }
 
+/* 13" laptop (MacBook Air - 1280x800) */
+@media (max-width: 1280px) and (min-width: 1025px) {
+    .satisfiedCustomersContainer {
+        margin: 5rem 3rem;
+    }
+
+    .reviewsContainer {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .reviewCard {
+        min-height: 220px;
+    }
+}
+
 /* Responsive Design */
- @media (max-width: 1200px) {
+ @media (max-width: 1024px) {
     .satisfiedCustomersContainer {
         margin: 6rem 4rem;
     }
-    
+
     .reviewsContainer {
         grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+        justify-items: center;
     }
 }
 

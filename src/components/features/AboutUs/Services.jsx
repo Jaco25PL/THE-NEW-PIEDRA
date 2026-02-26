@@ -34,7 +34,7 @@ export function Services() {
                     <div className={styles.serviceContent}>
                         <h3 className={styles.serviceTitle}>REFORMA INTEGRAL</h3>
                         <div className={styles.serviceDescription}>
-                            <p><strong>Baño y Cocina:</strong> Diseño personalizado de tu espacio soñado, demolición, actualización de instalaciones eléctricas, sanitarias y de fontanería, revestimientos, y montaje de mobiliario y accesorios.</p>
+                            <p><strong>Baño y Cocina:</strong> Diseño personalizado de tu espacio soñado, demolición, actualización de instalaciones eléctricas, sanitarias y de fontanería, revestimientos, y montaje de mobiliario y accesorios</p>
                         </div>
                         <CTAButton text='AGENDA UNA REUNIÓN HOY' action={btn_action} color='dark'/>
                     </div>
@@ -53,7 +53,7 @@ export function Services() {
                     <div className={styles.serviceContent}>
                         <h3 className={styles.serviceTitle}>REMODELACIÓN DE VIVIENDAS</h3>
                         <div className={styles.serviceDescription}>
-                            <p>Remodelamos cualquier espacio de <strong>tu hogar</strong> con un enfoque integral: diseño, renovación, instalaciones, acabados y decoración, todo pensado para que tu hogar refleje tu estilo y se adapte a tu vida.</p>
+                            <p>Remodelamos cualquier espacio de <strong>tu hogar</strong> con un enfoque integral: diseño, renovación, instalaciones, acabados y decoración, todo pensado para que tu hogar refleje tu estilo y se adapte a tu vida</p>
                         </div>
                         <CTAButton text='COTIZAR AL INSTANTE' action={btn_action} color='dark'/>
                     </div>
@@ -75,7 +75,7 @@ export function Services() {
                     <div className={styles.serviceContent}>
                         <h3 className={styles.serviceTitle}>DISEÑO</h3>
                         <div className={styles.serviceDescription}>
-                            <p>Transformamos tus ideas en un <strong>Render 3D</strong> personalizado para que veas tu proyecto hecho realidad antes de empezar. Lo ajustamos hasta que sea exactamente como lo imaginaste.</p>
+                            <p>Transformamos tus ideas en un <strong>Render 3D</strong> personalizado para que veas tu proyecto hecho realidad antes de empezar. Lo ajustamos hasta que sea exactamente como lo imaginaste</p>
                         </div>
                         <CTAButton text='CONTACTA UN ASESOR' action={btn_action} color='dark'/>
                     </div>

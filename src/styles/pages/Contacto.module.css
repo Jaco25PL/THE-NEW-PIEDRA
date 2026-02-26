@@ -108,6 +108,13 @@
   font-size: 1.2rem;
 }
 
+/* 13" laptop (MacBook Air - 1280x800) */
+@media (max-width: 1280px) and (min-width: 1025px) {
+  .container {
+    min-height: calc(100vh - 4.5rem);
+  }
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .heading {

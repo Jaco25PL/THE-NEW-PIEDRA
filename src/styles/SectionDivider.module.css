@@ -1,5 +1,5 @@
 .sectionDividerT, .sectionDividerB {
-    width: 95vw;
+    width: 100%;
 }
 
 .sectionDividerT::before {
@@ -22,4 +22,15 @@
     margin: 0 auto;
     top: 4rem;
     background-color: var(--gold-color);
+}
+
+/* 13" laptop (MacBook Air - 1280x800) */
+@media (max-width: 1280px) and (min-width: 1025px) {
+    .sectionDividerT::before {
+        top: -3.5rem;
+    }
+
+    .sectionDividerB::after {
+        top: 3.5rem;
+    }
 }

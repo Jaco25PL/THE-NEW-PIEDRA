@@ -7,6 +7,13 @@
     flex-direction: column;
 }
 
+/* 13" laptop (MacBook Air - 1280x800) */
+@media (max-width: 1280px) and (min-width: 1025px) {
+    .heroWrapper {
+        height: 100vh;
+    }
+}
+
 /* Responsive adjustments */
 @media (max-width: 1024px) {
     .heroWrapper {

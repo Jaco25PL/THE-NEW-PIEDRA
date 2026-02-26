@@ -118,6 +118,13 @@
   
 
   
+  /* 13" laptop (MacBook Air - 1280x800) */
+  @media (max-width: 1280px) and (min-width: 1025px) {
+    .heroContainer {
+      height: 100vh;
+    }
+  }
+
   /* Responsive styles */
   @media (max-width: 992px) {
     .heroTitle {

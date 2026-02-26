@@ -9,23 +9,23 @@ export function FAQ({ faqItems = [], id }) {
     const defaultFaqItems = [
         { 
             question: '¿Cuánto tiempo toma completar una remodelación?',
-            answer: 'Depende del alcance del proyecto. La mayoría de nuestras remodelaciones se completan en 4-6 semanas. Nos comprometemos con fechas específicas y le entregamos un cronograma detallado antes de iniciar.'
+            answer: 'Depende del alcance del proyecto. La mayoría de nuestras remodelaciones se completan en 4-6 semanas. Nos comprometemos con fechas específicas y le entregamos un cronograma detallado antes de iniciar'
         },
         { 
             question: '¿Cuánto cuesta remodelar mi casa y cómo sé que no habrá costos inesperados?',
-            answer: 'Proporcionamos presupuestos detallados y transparentes desde el inicio. Incluimos un margen para imprevistos y nos comprometemos a comunicar cualquier cambio antes de proceder.'
+            answer: 'Proporcionamos presupuestos detallados y transparentes desde el inicio. Incluimos un margen para imprevistos y nos comprometemos a comunicar cualquier cambio antes de proceder'
         },
         { 
             question: '¿Ofrecen financiamiento o facilidades de pago?',
-            answer: 'Sí, ofrecemos diferentes opciones de pago y financiamiento. Podemos trabajar con planes de pago flexibles adaptados a tu presupuesto y necesidades.'
+            answer: 'Sí, ofrecemos diferentes opciones de pago y financiamiento. Podemos trabajar con planes de pago flexibles adaptados a tu presupuesto y necesidades'
         },
         { 
             question: '¿Qué pasa si no me gusta el resultado final?',
-            answer: 'Tu satisfacción es nuestra prioridad. Ofrecemos garantía en todos nuestros trabajos y trabajamos contigo hasta asegurar que el resultado cumpla con tus expectativas.'
+            answer: 'Tu satisfacción es nuestra prioridad. Ofrecemos garantía en todos nuestros trabajos y trabajamos contigo hasta asegurar que el resultado cumpla con tus expectativas'
         },
         { 
             question: '¿En qué zonas ofrecen servicio?',
-            answer: 'Atendemos toda el área metropolitana y zonas aledañas. Contáctanos para confirmar si llegamos a tu ubicación específica.'
+            answer: 'Atendemos toda el área metropolitana y zonas aledañas. Contáctanos para confirmar si llegamos a tu ubicación específica'
         },
     ];
 

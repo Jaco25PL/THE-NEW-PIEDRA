@@ -165,6 +165,18 @@
     }
 }
 
+/* 13" laptop (MacBook Air - 1280x800) */
+@media (max-width: 1280px) and (min-width: 1025px) {
+    .container {
+        margin-left: 6rem;
+        margin-right: 6rem;
+    }
+
+    .sliderWrapper {
+        height: 40rem;
+    }
+}
+
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
     .container {

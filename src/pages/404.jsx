@@ -14,7 +14,7 @@ export function NotFound() {
       <div className={styles.content}>
         <span className={styles.code}>404</span>
         <h1 className={styles.title}>Página no encontrada</h1>
-        <p className={styles.subtitle}>La página que buscás no existe o fue movida.</p>
+        <p className={styles.subtitle}>La página que buscás no existe o fue movida</p>
 
         <div className={styles.links}>
           <Link to="/" className={styles.primary}>Ir al inicio</Link>

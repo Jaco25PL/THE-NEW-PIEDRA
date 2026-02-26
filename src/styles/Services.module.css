@@ -31,6 +31,21 @@
     flex-direction: column;
 }
 
+/* Swap first two cards on desktop for better visual balance (video/photo alternation) */
+@media (min-width: 1001px) {
+    .serviceCard:first-child {
+        order: 2;
+    }
+
+    .serviceCard:nth-child(2) {
+        order: 1;
+    }
+
+    .serviceCard:nth-child(3) {
+        order: 3;
+    }
+}
+
 /* Third service card spans 2 columns at bottom */
 .serviceCard:nth-child(3) {
     grid-column: 1 / -1;
@@ -100,6 +115,22 @@
 .serviceDescription strong {
     color: #333;
     font-weight: 600;
+}
+
+/* 13" laptop (MacBook Air - 1280x800) */
+@media (max-width: 1280px) and (min-width: 1025px) {
+    .container {
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+
+    .serviceContent {
+        flex: 1;
+    }
+
+    .serviceDescription {
+        flex: 1;
+    }
 }
 
 /* Responsive design */
