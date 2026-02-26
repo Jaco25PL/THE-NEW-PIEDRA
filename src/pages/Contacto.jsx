@@ -7,7 +7,7 @@ export function Contacto() {
   const whatsappNumber = '59893595589';
   const email = 'piedraconstr.uy@gmail.com';
   const instagramUser = 'piedra.construcciones';
-  const tiktokUser = 'piedra.construcciones';
+  const tiktokUser = 'piedraconstrucciones';
   const instagramUrl = `https://www.instagram.com/${instagramUser}/`;
   const tiktokUrl = `https://www.tiktok.com/@${tiktokUser}`;
 

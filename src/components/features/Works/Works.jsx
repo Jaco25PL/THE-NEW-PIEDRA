@@ -22,7 +22,7 @@ export function Works() {
         },
         {
           before: '/images/works/dolores-B.webp',
-          after: '/images/works/dolores-A.webp'
+          after: '/images/works/dolores-A-optimized.webp'
         },
         {
           before: isMobile ? '/images/works/marita-mobile-B.png' : '/images/works/marita-2-B.webp',
