@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://piedraconstrucciones.com.uy/sitemap.xml
+Sitemap: https://www.piedraconstrucciones.com.uy/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1

@@ -15,19 +15,19 @@ export function Home() {
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://piedraconstrucciones.com.uy/" />
+        <meta property="og:url" content="https://www.piedraconstrucciones.com.uy/" />
         <meta property="og:title" content="Piedra Construcciones - Construcción y Remodelación en Uruguay" />
         <meta property="og:description" content="Transformamos tus ideas en realidad. Construcción y remodelación profesional en Montevideo con garantía extendida." />
-        <meta property="og:image" content="https://piedraconstrucciones.com.uy/images/logos/PIEDRA-B.svg" />
+        <meta property="og:image" content="https://www.piedraconstrucciones.com.uy/images/logos/PIEDRA-B.svg" />
         <meta property="og:locale" content="es_UY" />
         <meta property="og:site_name" content="Piedra Construcciones" />
         
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://piedraconstrucciones.com.uy/" />
+        <meta property="twitter:url" content="https://www.piedraconstrucciones.com.uy/" />
         <meta property="twitter:title" content="Piedra Construcciones - Construcción en Uruguay" />
         <meta property="twitter:description" content="Empresa familiar especializada en construcción y remodelación en Montevideo. Consulta gratis + diseño 3D." />
-        <meta property="twitter:image" content="https://piedraconstrucciones.com.uy/images/logos/PIEDRA-B.svg" />
+        <meta property="twitter:image" content="https://www.piedraconstrucciones.com.uy/images/logos/PIEDRA-B.svg" />
         
         {/* Structured Data for Local Business */}
         <script type="application/ld+json">
@@ -35,7 +35,7 @@ export function Home() {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "Piedra Construcciones",
-            "image": "https://piedraconstrucciones.com.uy/images/logos/PIEDRA-B.svg",
+            "image": "https://www.piedraconstrucciones.com.uy/images/logos/PIEDRA-B.svg",
             "description": "Empresa familiar especializada en construcción y remodelación en Montevideo, Uruguay",
             "address": {
               "@type": "PostalAddress",
@@ -43,7 +43,7 @@ export function Home() {
               "addressCountry": "UY"
             },
             "telephone": "+59893595589",
-            "url": "https://piedraconstrucciones.com.uy/",
+            "url": "https://www.piedraconstrucciones.com.uy/",
             "priceRange": "$$",
             "serviceArea": {
               "@type": "Place",
@@ -80,7 +80,7 @@ export function Home() {
         </script>
         
         {/* Canonical URL */}
-        <link rel="canonical" href="https://piedraconstrucciones.com.uy/" />
+        <link rel="canonical" href="https://www.piedraconstrucciones.com.uy/" />
         
         {/* Additional SEO */}
         <meta name="language" content="Spanish" />

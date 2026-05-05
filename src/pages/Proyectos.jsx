@@ -13,12 +13,12 @@ export function Proyectos() {
         <meta property="og:site_name" content="Piedra Construcciones" />
         <meta property="og:title" content="Proyectos | Piedra Construcciones" />
         <meta property="og:description" content="Obras reales de construcción y remodelación en Montevideo. Ver galería completa en Instagram." />
-        <meta property="og:image" content="https://piedraconstrucciones.com.uy/images/renders/render-1.webp" />
-        <meta property="og:url" content="https://piedraconstrucciones.com.uy/proyectos" />
+        <meta property="og:image" content="https://www.piedraconstrucciones.com.uy/images/renders/render-1.webp" />
+        <meta property="og:url" content="https://www.piedraconstrucciones.com.uy/proyectos" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Proyectos | Piedra Construcciones" />
-        <meta name="twitter:image" content="https://piedraconstrucciones.com.uy/images/renders/render-1.webp" />
-        <link rel="canonical" href="https://piedraconstrucciones.com.uy/proyectos" />
+        <meta name="twitter:image" content="https://www.piedraconstrucciones.com.uy/images/renders/render-1.webp" />
+        <link rel="canonical" href="https://www.piedraconstrucciones.com.uy/proyectos" />
       </Helmet>
 
       <div className={styles.content}>

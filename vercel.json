@@ -29,6 +29,14 @@
         "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
       }
     ],
+    "redirects": [
+      {
+        "source": "/:path(.*)",
+        "has": [{ "type": "host", "value": "piedraconstrucciones.com.uy" }],
+        "destination": "https://www.piedraconstrucciones.com.uy/:path",
+        "permanent": true
+      }
+    ],
     "rewrites": [
       { "source": "/(.*)", "destination": "/index.html" }
     ]

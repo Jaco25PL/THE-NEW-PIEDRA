@@ -14,13 +14,13 @@ export function Blog() {
                 <meta property="og:site_name" content="Piedra Construcciones" />
                 <meta property="og:title" content="Blog | Piedra Construcciones - Consejos de Construcción" />
                 <meta property="og:description" content="Consejos, tips y tendencias en construcción y remodelación en Montevideo, Uruguay." />
-                <meta property="og:image" content="https://piedraconstrucciones.com.uy/images/renders/render-5.webp" />
-                <meta property="og:url" content="https://piedraconstrucciones.com.uy/blog" />
+                <meta property="og:image" content="https://www.piedraconstrucciones.com.uy/images/renders/render-5.webp" />
+                <meta property="og:url" content="https://www.piedraconstrucciones.com.uy/blog" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Blog | Piedra Construcciones" />
                 <meta name="twitter:description" content="Consejos y tendencias en construcción y remodelación en Montevideo." />
-                <meta name="twitter:image" content="https://piedraconstrucciones.com.uy/images/renders/render-5.webp" />
-                <link rel="canonical" href="https://piedraconstrucciones.com.uy/blog" />
+                <meta name="twitter:image" content="https://www.piedraconstrucciones.com.uy/images/renders/render-5.webp" />
+                <link rel="canonical" href="https://www.piedraconstrucciones.com.uy/blog" />
             </Helmet>
             <Titles title='próximamente...'/>
         </div>

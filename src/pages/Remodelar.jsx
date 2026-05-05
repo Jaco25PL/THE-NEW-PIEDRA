@@ -33,19 +33,19 @@ export function Remodelar() {
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="service" />
-        <meta property="og:url" content="https://piedraconstrucciones.com.uy/remodelar" />
+        <meta property="og:url" content="https://www.piedraconstrucciones.com.uy/remodelar" />
         <meta property="og:title" content="Remodelar Casa - Piedra Construcciones" />
         <meta property="og:description" content="Remodelar tu casa es más que cambiar su apariencia, es mejorar tu día a día." />
-        <meta property="og:image" content="https://piedraconstrucciones.com.uy/images/renders/render-4.webp" />
+        <meta property="og:image" content="https://www.piedraconstrucciones.com.uy/images/renders/render-4.webp" />
         <meta property="og:locale" content="es_UY" />
         <meta property="og:site_name" content="Piedra Construcciones" />
         
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://piedraconstrucciones.com.uy/remodelar" />
+        <meta property="twitter:url" content="https://www.piedraconstrucciones.com.uy/remodelar" />
         <meta property="twitter:title" content="Remodelación de Casas - Piedra Construcciones" />
         <meta property="twitter:description" content="Transformamos tu hogar con renovaciones que mejoran tu calidad de vida." />
-        <meta property="twitter:image" content="https://piedraconstrucciones.com.uy/images/renders/render-4.webp" />
+        <meta property="twitter:image" content="https://www.piedraconstrucciones.com.uy/images/renders/render-4.webp" />
         
         {/* Structured Data */}
         <script type="application/ld+json">
@@ -57,7 +57,7 @@ export function Remodelar() {
             "provider": {
               "@type": "LocalBusiness",
               "name": "Piedra Construcciones",
-              "image": "https://piedraconstrucciones.com.uy/images/logos/PIEDRA-B.svg",
+              "image": "https://www.piedraconstrucciones.com.uy/images/logos/PIEDRA-B.svg",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Montevideo",
@@ -73,7 +73,7 @@ export function Remodelar() {
           })}
         </script>
         
-        <link rel="canonical" href="https://piedraconstrucciones.com.uy/remodelar" />
+        <link rel="canonical" href="https://www.piedraconstrucciones.com.uy/remodelar" />
       </Helmet>
 
       <PiedraHero

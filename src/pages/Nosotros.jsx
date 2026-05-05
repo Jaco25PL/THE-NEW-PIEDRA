@@ -47,20 +47,20 @@ export function Nosotros () {
             <meta property="og:site_name" content="Piedra Construcciones" />
             <meta property="og:title" content="Sobre Nosotros | Piedra Construcciones - Empresa Familiar" />
             <meta property="og:description" content="30+ años transformando espacios en Uruguay con la misma pasión del primer día. Empresa familiar, confiable y con garantía extendida." />
-            <meta property="og:image" content="https://piedraconstrucciones.com.uy/images/renders/render-2.webp" />
-            <meta property="og:url" content="https://piedraconstrucciones.com.uy/nosotros" />
+            <meta property="og:image" content="https://www.piedraconstrucciones.com.uy/images/renders/render-2.webp" />
+            <meta property="og:url" content="https://www.piedraconstrucciones.com.uy/nosotros" />
             <meta property="og:locale" content="es_UY" />
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:title" content="Sobre Nosotros | Piedra Construcciones" />
             <meta name="twitter:description" content="30+ años transformando espacios en Uruguay con la misma pasión del primer día." />
-            <meta name="twitter:image" content="https://piedraconstrucciones.com.uy/images/renders/render-2.webp" />
-            <link rel="canonical" href="https://piedraconstrucciones.com.uy/nosotros" />
+            <meta name="twitter:image" content="https://www.piedraconstrucciones.com.uy/images/renders/render-2.webp" />
+            <link rel="canonical" href="https://www.piedraconstrucciones.com.uy/nosotros" />
             <script type="application/ld+json">{JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Piedra Construcciones",
-              "url": "https://piedraconstrucciones.com.uy",
-              "logo": "https://piedraconstrucciones.com.uy/images/logos/PIEDRA-B.svg",
+              "url": "https://www.piedraconstrucciones.com.uy",
+              "logo": "https://www.piedraconstrucciones.com.uy/images/logos/PIEDRA-B.svg",
               "description": "Empresa familiar con +30 años en construcción y remodelación en Montevideo, Uruguay.",
               "foundingDate": "1994",
               "address": {
