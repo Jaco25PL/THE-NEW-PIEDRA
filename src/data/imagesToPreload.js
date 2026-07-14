@@ -35,6 +35,10 @@ export const IMAGES_TO_PRELOAD = [
   '/images/works/parrillero-B.webp',
   '/images/works/parrillero-3-A.webp',
   '/images/works/parrillero-3-B.webp',
+  '/images/works/bathroom-1-A.jpeg',
+  '/images/works/bathroom-1-B.jpeg',
+  '/images/works/bathroom-2-A.jpeg',
+  '/images/works/bathroom-2-B.jpeg',
   '/images/works/truck.webp',
 
   // Client avatars

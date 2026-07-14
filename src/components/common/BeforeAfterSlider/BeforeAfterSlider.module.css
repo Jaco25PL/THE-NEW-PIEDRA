@@ -76,6 +76,18 @@
   display: block;
 }
 
+/* Portrait images: contain on desktop so tall photos aren't over-cropped */
+@media (min-width: 769px) {
+  .portraitContainer {
+    background-color: #1a1a1a;
+  }
+
+  .portrait {
+    object-fit: contain;
+    background-color: #1a1a1a;
+  }
+}
+
 /* Animation now handled by JavaScript with CSS transitions */
 
 /* Mobile responsiveness */

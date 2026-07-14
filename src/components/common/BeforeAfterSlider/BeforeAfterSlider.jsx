@@ -2,7 +2,7 @@ import { useState, useRef, useCallback, useEffect } from 'react';
 import styles from './BeforeAfterSlider.module.css';
 import PropTypes from 'prop-types';
 
-export function BeforeAfterSlider({ beforeImage, afterImage }) {
+export function BeforeAfterSlider({ beforeImage, afterImage, portrait }) {
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
   const [showHint, setShowHint] = useState(false);
@@ -141,16 +141,16 @@ export function BeforeAfterSlider({ beforeImage, afterImage }) {
   return (
     <div 
       ref={containerRef}
-      className={styles.container}
+      className={`${styles.container}${portrait ? ` ${styles.portraitContainer}` : ''}`}
       onMouseDown={handleMouseDown}
       onTouchStart={handleTouchStart}
     >
       {/* Before Image */}
       <div className={styles.imageContainer}>
-        <img 
-          src={beforeImage} 
-          alt="Before" 
-          className={styles.beforeImage}
+        <img
+          src={beforeImage}
+          alt="Before"
+          className={`${styles.beforeImage}${portrait ? ` ${styles.portrait}` : ''}`}
           style={{ 
             clipPath: `inset(0 ${100 - currentPosition}% 0 0)`,
             transition: showHint ? 'clip-path 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)' : 'none'
@@ -162,10 +162,10 @@ export function BeforeAfterSlider({ beforeImage, afterImage }) {
 
       {/* After Image */}
       <div className={styles.imageContainer}>
-        <img 
-          src={afterImage} 
-          alt="After" 
-          className={styles.afterImage}
+        <img
+          src={afterImage}
+          alt="After"
+          className={`${styles.afterImage}${portrait ? ` ${styles.portrait}` : ''}`}
           style={{ 
             clipPath: `inset(0 0 0 ${currentPosition}%)`,
             transition: showHint ? 'clip-path 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)' : 'none'
@@ -203,4 +203,5 @@ export function BeforeAfterSlider({ beforeImage, afterImage }) {
 BeforeAfterSlider.propTypes = {
   beforeImage: PropTypes.string.isRequired,
   afterImage: PropTypes.string.isRequired,
+  portrait: PropTypes.bool,
 };

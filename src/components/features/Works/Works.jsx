@@ -21,6 +21,11 @@ export function Works() {
           after: '/images/works/stone-jose-A.webp'
         },
         {
+          before: '/images/works/bathroom-1-B.jpeg',
+          after: '/images/works/bathroom-1-A.jpeg',
+          portrait: true
+        },
+        {
           before: '/images/works/dolores-B.webp',
           after: '/images/works/dolores-A-optimized.webp'
         },
@@ -51,6 +56,11 @@ export function Works() {
         {
           before: '/images/works/parrillero-3-B.webp',
           after: '/images/works/parrillero-3-A.webp'
+        },
+        {
+          before: '/images/works/bathroom-2-B.jpeg',
+          after: '/images/works/bathroom-2-A.jpeg',
+          portrait: true
         },
     ];
 
@@ -130,6 +140,7 @@ export function Works() {
                     <BeforeAfterSlider
                         beforeImage={sliderImages[currentImageIndex].before}
                         afterImage={sliderImages[currentImageIndex].after}
+                        portrait={sliderImages[currentImageIndex].portrait}
                     />
                     <a
                         href="https://www.instagram.com/piedra.construcciones/"
